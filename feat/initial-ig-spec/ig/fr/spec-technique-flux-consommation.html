@@ -240,19 +240,19 @@ Cette page s'adresse aux développeurs et intégrateurs. Elle décrit les opéra
 
 <p>Une BAL PER peut être portée par un <code class="language-plaintext highlighter-rouge">Practitioner</code> (identifiant RPPS seul) ou un <code class="language-plaintext highlighter-rouge">PractitionerRole</code> (RPPS + structure) :</p>
 
-<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">GET [base]/Practitioner?mailbox-mss-type=https://mos.esante.gouv.fr/NOS/TRE_R256-TypeMessagerie/FHIR/TRE-R256-TypeMessagerie|PER
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [base]/Practitioner?mailbox-mss-type=https://mos.esante.gouv.fr/NOS/TRE_R256-TypeMessagerie/FHIR/TRE-R256-TypeMessagerie|PER
 GET [base]/PractitionerRole?mailbox-mss-type=https://mos.esante.gouv.fr/NOS/TRE_R256-TypeMessagerie/FHIR/TRE-R256-TypeMessagerie|PER
-</span></code></pre></div></div>
+</code></pre></div></div>
 
 <p>Ces deux requêtes peuvent être regroupées via <code class="language-plaintext highlighter-rouge">_type</code> :</p>
 
-<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">GET [base]?_type=Practitioner,PractitionerRole&amp;mailbox-mss-type=https://mos.esante.gouv.fr/NOS/TRE_R256-TypeMessagerie/FHIR/TRE-R256-TypeMessagerie|PER
-</span></code></pre></div></div>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [base]?_type=Practitioner,PractitionerRole&amp;mailbox-mss-type=https://mos.esante.gouv.fr/NOS/TRE_R256-TypeMessagerie/FHIR/TRE-R256-TypeMessagerie|PER
+</code></pre></div></div>
 
 <p>Le paramètre <code class="language-plaintext highlighter-rouge">_elements</code> permet de limiter la réponse aux champs utiles :</p>
 
-<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">GET [base]?_type=Practitioner,PractitionerRole&amp;mailbox-mss-type=https://mos.esante.gouv.fr/NOS/TRE_R256-TypeMessagerie/FHIR/TRE-R256-TypeMessagerie|PER&amp;_elements=identifier,telecom
-</span></code></pre></div></div>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [base]?_type=Practitioner,PractitionerRole&amp;mailbox-mss-type=https://mos.esante.gouv.fr/NOS/TRE_R256-TypeMessagerie/FHIR/TRE-R256-TypeMessagerie|PER&amp;_elements=identifier,telecom
+</code></pre></div></div>
 
 <p>Il est également possible de regrouper les deux requêtes via un batch FHIR :</p>
 
@@ -290,13 +290,13 @@ GET [base]/PractitionerRole?mailbox-mss-type=https://mos.esante.gouv.fr/NOS/TRE_
 
 <h3 id="bal-organisationnelles-org">BAL organisationnelles (ORG)</h3>
 
-<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">GET [base]/Organization?mailbox-mss-type=https://mos.esante.gouv.fr/NOS/TRE_R256-TypeMessagerie/FHIR/TRE-R256-TypeMessagerie|ORG
-</span></code></pre></div></div>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [base]/Organization?mailbox-mss-type=https://mos.esante.gouv.fr/NOS/TRE_R256-TypeMessagerie/FHIR/TRE-R256-TypeMessagerie|ORG
+</code></pre></div></div>
 
 <h3 id="bal-applicatives-app">BAL applicatives (APP)</h3>
 
-<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">GET [base]/Organization?mailbox-mss-type=https://mos.esante.gouv.fr/NOS/TRE_R256-TypeMessagerie/FHIR/TRE-R256-TypeMessagerie|APP
-</span></code></pre></div></div>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [base]/Organization?mailbox-mss-type=https://mos.esante.gouv.fr/NOS/TRE_R256-TypeMessagerie/FHIR/TRE-R256-TypeMessagerie|APP
+</code></pre></div></div>
 
 <h3 id="bal-de-cabinet-cab">BAL de cabinet (CAB)</h3>
 
@@ -304,8 +304,8 @@ GET [base]/PractitionerRole?mailbox-mss-type=https://mos.esante.gouv.fr/NOS/TRE_
 <p>La prise en charge des BAL CAB est en cours de travaux. Les spécifications ci-dessous sont susceptibles d'évoluer.</p>
 </blockquote>
 
-<div class="language-http highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">GET [base]/Practitioner?mailbox-mss-type=https://mos.esante.gouv.fr/NOS/TRE_R256-TypeMessagerie/FHIR/TRE-R256-TypeMessagerie|CAB
-</span></code></pre></div></div>
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [base]/Practitioner?mailbox-mss-type=https://mos.esante.gouv.fr/NOS/TRE_R256-TypeMessagerie/FHIR/TRE-R256-TypeMessagerie|CAB
+</code></pre></div></div>
 
 <h3 id="paramètres-de-recherche-disponibles">Paramètres de recherche disponibles</h3>
 
@@ -319,12 +319,12 @@ GET [base]/PractitionerRole?mailbox-mss-type=https://mos.esante.gouv.fr/NOS/TRE_
   </thead>
   <tbody>
     <tr>
-      <td><a name="l705">​</a><a href="SearchParameter-as-sp-mailbox-mss-type.html"><code class="language-plaintext highlighter-rouge">mailbox-mss-type</code></a></td>
+      <td><a name="l699">​</a><a href="SearchParameter-as-sp-mailbox-mss-type.html"><code class="language-plaintext highlighter-rouge">mailbox-mss-type</code></a></td>
       <td>token</td>
       <td>Filtre par type de BAL (<code class="language-plaintext highlighter-rouge">PER</code>, <code class="language-plaintext highlighter-rouge">ORG</code>, <code class="language-plaintext highlighter-rouge">APP</code>, <code class="language-plaintext highlighter-rouge">CAB</code>)</td>
     </tr>
     <tr>
-      <td><a name="l731">​</a><a href="SearchParameter-as-sp-mailbox-mss.html"><code class="language-plaintext highlighter-rouge">mailbox-mss</code></a></td>
+      <td><a name="l725">​</a><a href="SearchParameter-as-sp-mailbox-mss.html"><code class="language-plaintext highlighter-rouge">mailbox-mss</code></a></td>
       <td>string</td>
       <td>Filtre par adresse MSSanté (<code class="language-plaintext highlighter-rouge">:contains</code>, <code class="language-plaintext highlighter-rouge">:exact</code>)</td>
     </tr>
@@ -448,7 +448,7 @@ GET [base]/PractitionerRole?mailbox-mss-type=https://mos.esante.gouv.fr/NOS/TRE_
           IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris</a>.  
           Le package ans.fhir.fr.mss#0.1.0 est basé sur <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Date de génération : 
-  <span title="2026-06-12 13:09:00 +0000">
+  <span title="2026-06-12 13:12:00 +0000">
     2026-06-12
   </span>
 
