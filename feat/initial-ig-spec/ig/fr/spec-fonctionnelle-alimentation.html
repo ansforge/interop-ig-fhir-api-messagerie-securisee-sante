@@ -240,9 +240,12 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p>  <!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#données-par-type-de-bal" id="markdown-toc-données-par-type-de-bal">Données par type de BAL</a></li>
+  <li><a href="#vue-densemble-des-données" id="markdown-toc-vue-densemble-des-données">Vue d'ensemble des données</a></li>
+  <li><a href="#bal-personnelle-per" id="markdown-toc-bal-personnelle-per">BAL personnelle (PER)</a></li>
+  <li><a href="#bal-organisationnelle-org" id="markdown-toc-bal-organisationnelle-org">BAL organisationnelle (ORG)</a></li>
+  <li><a href="#bal-applicative-app" id="markdown-toc-bal-applicative-app">BAL applicative (APP)</a></li>
+  <li><a href="#bal-de-cabinet-cab" id="markdown-toc-bal-de-cabinet-cab">BAL de cabinet (CAB)</a></li>
   <li><a href="#champs-modifiables" id="markdown-toc-champs-modifiables">Champs modifiables</a></li>
-  <li><a href="#modèles-logiques" id="markdown-toc-modèles-logiques">Modèles logiques</a></li>
 </ul>
 
 </div>
@@ -250,7 +253,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 Cette page s'adresse à tous les profils. Elle décrit les données associées à chaque type de BAL MSSanté.
 </div>
 
-<h3 id="données-par-type-de-bal">Données par type de BAL</h3>
+<h3 id="vue-densemble-des-données">Vue d'ensemble des données</h3>
+
+<p>Le tableau ci-dessous récapitule l'ensemble des données portées par une BAL selon son type :</p>
 
 <table>
   <thead>
@@ -260,7 +265,6 @@ Cette page s'adresse à tous les profils. Elle décrit les données associées �
       <th style="text-align: center">ORG</th>
       <th style="text-align: center">APP</th>
       <th style="text-align: center">CAB</th>
-      <th>Chemin FHIR</th>
     </tr>
   </thead>
   <tbody>
@@ -270,7 +274,6 @@ Cette page s'adresse à tous les profils. Elle décrit les données associées �
       <td style="text-align: center">X</td>
       <td style="text-align: center">X</td>
       <td style="text-align: center">X</td>
-      <td><code class="language-plaintext highlighter-rouge">telecom.value</code></td>
     </tr>
     <tr>
       <td>Type de BAL</td>
@@ -278,7 +281,6 @@ Cette page s'adresse à tous les profils. Elle décrit les données associées �
       <td style="text-align: center">X</td>
       <td style="text-align: center">X</td>
       <td style="text-align: center">X</td>
-      <td><code class="language-plaintext highlighter-rouge">telecom.extension[as-mailbox-mss-metadata].extension[type]</code></td>
     </tr>
     <tr>
       <td>Liste rouge</td>
@@ -286,31 +288,6 @@ Cette page s'adresse à tous les profils. Elle décrit les données associées �
       <td style="text-align: center">X</td>
       <td style="text-align: center">X</td>
       <td style="text-align: center">X</td>
-      <td><code class="language-plaintext highlighter-rouge">telecom.extension[as-mailbox-mss-metadata].extension[listeRouge]</code></td>
-    </tr>
-    <tr>
-      <td>Description</td>
-      <td style="text-align: center">&nbsp;</td>
-      <td style="text-align: center">X</td>
-      <td style="text-align: center">X</td>
-      <td style="text-align: center">X</td>
-      <td><code class="language-plaintext highlighter-rouge">telecom.extension[as-mailbox-mss-metadata].extension[description]</code></td>
-    </tr>
-    <tr>
-      <td>Service de rattachement</td>
-      <td style="text-align: center">&nbsp;</td>
-      <td style="text-align: center">X</td>
-      <td style="text-align: center">X</td>
-      <td style="text-align: center">&nbsp;</td>
-      <td><code class="language-plaintext highlighter-rouge">telecom.extension[as-mailbox-mss-metadata].extension[service]</code></td>
-    </tr>
-    <tr>
-      <td>Responsable</td>
-      <td style="text-align: center">&nbsp;</td>
-      <td style="text-align: center">X</td>
-      <td style="text-align: center">X</td>
-      <td style="text-align: center">&nbsp;</td>
-      <td><code class="language-plaintext highlighter-rouge">telecom.extension[as-mailbox-mss-metadata].extension[responsible]</code></td>
     </tr>
     <tr>
       <td>BAL préférentielle</td>
@@ -318,7 +295,27 @@ Cette page s'adresse à tous les profils. Elle décrit les données associées �
       <td style="text-align: center">X</td>
       <td style="text-align: center">X</td>
       <td style="text-align: center">X</td>
-      <td><code class="language-plaintext highlighter-rouge">telecom.rank</code> (1 = priorité la plus haute)</td>
+    </tr>
+    <tr>
+      <td>Description</td>
+      <td style="text-align: center">&nbsp;</td>
+      <td style="text-align: center">X</td>
+      <td style="text-align: center">X</td>
+      <td style="text-align: center">X</td>
+    </tr>
+    <tr>
+      <td>Service de rattachement</td>
+      <td style="text-align: center">&nbsp;</td>
+      <td style="text-align: center">X</td>
+      <td style="text-align: center">X</td>
+      <td style="text-align: center">&nbsp;</td>
+    </tr>
+    <tr>
+      <td>Responsable</td>
+      <td style="text-align: center">&nbsp;</td>
+      <td style="text-align: center">X</td>
+      <td style="text-align: center">X</td>
+      <td style="text-align: center">&nbsp;</td>
     </tr>
     <tr>
       <td>Identifiant PP (RPPS)</td>
@@ -326,7 +323,6 @@ Cette page s'adresse à tous les profils. Elle décrit les données associées �
       <td style="text-align: center">&nbsp;</td>
       <td style="text-align: center">&nbsp;</td>
       <td style="text-align: center">X</td>
-      <td><code class="language-plaintext highlighter-rouge">Practitioner.identifier</code> / <code class="language-plaintext highlighter-rouge">PractitionerRole.identifier</code></td>
     </tr>
     <tr>
       <td>Identifiant national de structure</td>
@@ -334,18 +330,195 @@ Cette page s'adresse à tous les profils. Elle décrit les données associées �
       <td style="text-align: center">X</td>
       <td style="text-align: center">X</td>
       <td style="text-align: center">&nbsp;</td>
-      <td><code class="language-plaintext highlighter-rouge">Organization.identifier</code></td>
     </tr>
   </tbody>
 </table>
 
-<p>Le <strong>discriminant</strong> d'une BAL est son adresse mail (<code class="language-plaintext highlighter-rouge">ContactPoint.value</code>), qui l'identifie de façon unique au sein d'une ressource porteuse.</p>
+<p>Le <strong>discriminant</strong> d'une BAL est son adresse mail, qui l'identifie de façon unique au sein de son porteur.</p>
 
-<p>La <strong>BAL préférentielle</strong> peut être désignée via le champ <code class="language-plaintext highlighter-rouge">rank</code> du ContactPoint (entier, 1 = priorité la plus haute).</p>
+<p>La <strong>BAL préférentielle</strong> peut être désignée parmi plusieurs BAL d'un même porteur (1 = priorité la plus haute).</p>
+
+<p>L'adresse et le type d'une BAL ne sont <strong>pas modifiables</strong> après création.</p>
+
+<hr/>
+
+<h3 id="bal-personnelle-per">BAL personnelle (PER)</h3>
+
+<p><a href="StructureDefinition-as-bal-mss-per.html">Modèle logique AS BAL MSS PER</a></p>
+
+<p>Une BAL PER est attachée à l'identité d'un professionnel de santé, identifié par son numéro RPPS. Elle lui appartient en propre, indépendamment de toute structure d'exercice.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Donnée</th>
+      <th>Card.</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Adresse BAL</td>
+      <td>1..1</td>
+      <td>Adresse de messagerie MSSanté</td>
+    </tr>
+    <tr>
+      <td>Identifiant PP</td>
+      <td>1..1</td>
+      <td>Identifiant national du professionnel de santé (RPPS)</td>
+    </tr>
+    <tr>
+      <td>Liste rouge</td>
+      <td>0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">true</code> : la BAL ne doit pas être publiée</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr/>
+
+<h3 id="bal-organisationnelle-org">BAL organisationnelle (ORG)</h3>
+
+<p><a href="StructureDefinition-as-bal-mss-org.html">Modèle logique AS BAL MSS ORG</a></p>
+
+<p>Une BAL ORG est rattachée à une structure de santé (entité juridique ou entité géographique). Elle représente une boîte aux lettres fonctionnelle d'une organisation (ex. service hospitalier, cabinet de groupe).</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Donnée</th>
+      <th>Card.</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Adresse BAL</td>
+      <td>1..1</td>
+      <td>Adresse de messagerie MSSanté</td>
+    </tr>
+    <tr>
+      <td>Identifiant national de structure</td>
+      <td>1..1</td>
+      <td>Identifiant de la structure porteuse (EJ ou EG)</td>
+    </tr>
+    <tr>
+      <td>Description</td>
+      <td>0..1</td>
+      <td>Description fonctionnelle de la BAL</td>
+    </tr>
+    <tr>
+      <td>Service de rattachement</td>
+      <td>0..1</td>
+      <td>Nom et description du service de rattachement</td>
+    </tr>
+    <tr>
+      <td>Responsable</td>
+      <td>0..1</td>
+      <td>Coordonnées de la ou des personnes responsables au niveau opérationnel</td>
+    </tr>
+    <tr>
+      <td>Liste rouge</td>
+      <td>0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">true</code> : la BAL ne doit pas être publiée</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr/>
+
+<h3 id="bal-applicative-app">BAL applicative (APP)</h3>
+
+<p><a href="StructureDefinition-as-bal-mss-app.html">Modèle logique AS BAL MSS APP</a></p>
+
+<p>Une BAL APP est également rattachée à une structure, mais destinée à un usage applicatif (système d'information, logiciel métier). Elle partage le même modèle de données que la BAL ORG.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Donnée</th>
+      <th>Card.</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Adresse BAL</td>
+      <td>1..1</td>
+      <td>Adresse de messagerie MSSanté</td>
+    </tr>
+    <tr>
+      <td>Identifiant national de structure</td>
+      <td>1..1</td>
+      <td>Identifiant de la structure porteuse (EJ ou EG)</td>
+    </tr>
+    <tr>
+      <td>Description</td>
+      <td>0..1</td>
+      <td>Description fonctionnelle de la BAL</td>
+    </tr>
+    <tr>
+      <td>Service de rattachement</td>
+      <td>0..1</td>
+      <td>Nom et description du service de rattachement</td>
+    </tr>
+    <tr>
+      <td>Responsable</td>
+      <td>0..1</td>
+      <td>Coordonnées de la ou des personnes responsables au niveau opérationnel</td>
+    </tr>
+    <tr>
+      <td>Liste rouge</td>
+      <td>0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">true</code> : la BAL ne doit pas être publiée</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr/>
+
+<h3 id="bal-de-cabinet-cab">BAL de cabinet (CAB)</h3>
+
+<blockquote class="stu-note">
+<p>La prise en charge des BAL CAB est en cours de travaux. Les spécifications ci-dessous sont susceptibles d'évoluer.</p>
+</blockquote>
+
+<p><a href="StructureDefinition-as-bal-mss-cab.html">Modèle logique AS BAL MSS CAB</a></p>
+
+<p>Une BAL CAB est rattachée à un professionnel de santé, mais représente une boîte partagée au niveau d'un cabinet (ex. secrétariat, cabinet de groupe). Contrairement à la BAL PER, elle n'est pas strictement personnelle.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Donnée</th>
+      <th>Card.</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Adresse BAL</td>
+      <td>1..1</td>
+      <td>Adresse de messagerie MSSanté</td>
+    </tr>
+    <tr>
+      <td>Description</td>
+      <td>0..1</td>
+      <td>Description fonctionnelle de la BAL</td>
+    </tr>
+    <tr>
+      <td>Liste rouge</td>
+      <td>0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">true</code> : la BAL ne doit pas être publiée</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr/>
 
 <h3 id="champs-modifiables">Champs modifiables</h3>
 
-<p>Seules les métadonnées portées par l'extension <code class="language-plaintext highlighter-rouge">as-ext-mailbox-mss-metadata</code> peuvent être mises à jour via l'endpoint PATCH :</p>
+<p>Seules les métadonnées d'une BAL peuvent être mises à jour. L'adresse et le type sont non modifiables.</p>
 
 <table>
   <thead>
@@ -359,28 +532,28 @@ Cette page s'adresse à tous les profils. Elle décrit les données associées �
   </thead>
   <tbody>
     <tr>
-      <td>Liste rouge (<code class="language-plaintext highlighter-rouge">listeRouge</code>)</td>
+      <td>Liste rouge</td>
       <td style="text-align: center">X</td>
       <td style="text-align: center">X</td>
       <td style="text-align: center">X</td>
       <td style="text-align: center">X</td>
     </tr>
     <tr>
-      <td>Description (<code class="language-plaintext highlighter-rouge">description</code>)</td>
+      <td>Description</td>
       <td style="text-align: center">&nbsp;</td>
       <td style="text-align: center">X</td>
       <td style="text-align: center">X</td>
       <td style="text-align: center">X</td>
     </tr>
     <tr>
-      <td>Service de rattachement (<code class="language-plaintext highlighter-rouge">service</code>)</td>
+      <td>Service de rattachement</td>
       <td style="text-align: center">&nbsp;</td>
       <td style="text-align: center">X</td>
       <td style="text-align: center">X</td>
       <td style="text-align: center">&nbsp;</td>
     </tr>
     <tr>
-      <td>Responsable (<code class="language-plaintext highlighter-rouge">responsible</code>)</td>
+      <td>Responsable</td>
       <td style="text-align: center">&nbsp;</td>
       <td style="text-align: center">X</td>
       <td style="text-align: center">X</td>
@@ -388,19 +561,6 @@ Cette page s'adresse à tous les profils. Elle décrit les données associées �
     </tr>
   </tbody>
 </table>
-
-<p>L'adresse de la BAL (<code class="language-plaintext highlighter-rouge">telecom.value</code>) et le type (<code class="language-plaintext highlighter-rouge">type</code>) ne sont <strong>pas modifiables</strong>.</p>
-
-<h3 id="modèles-logiques">Modèles logiques</h3>
-
-<p>Les quatre types de BAL sont formalisés par des modèles logiques :</p>
-
-<ul>
-  <li><a href="StructureDefinition-as-bal-mss-per.html">AS BAL MSS PER</a></li>
-  <li><a href="StructureDefinition-as-bal-mss-org.html">AS BAL MSS ORG</a></li>
-  <li><a href="StructureDefinition-as-bal-mss-app.html">AS BAL MSS APP</a></li>
-  <li><a href="StructureDefinition-as-bal-mss-cab.html">AS BAL MSS CAB</a></li>
-</ul>
 
 
 
@@ -451,7 +611,7 @@ Cette page s'adresse à tous les profils. Elle décrit les données associées �
           IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris</a>.  
           Le package ans.fhir.fr.mss#0.1.0 est basé sur <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Date de génération : 
-  <span title="2026-06-12 12:51:00 +0000">
+  <span title="2026-06-12 12:53:00 +0000">
     2026-06-12
   </span>
 
