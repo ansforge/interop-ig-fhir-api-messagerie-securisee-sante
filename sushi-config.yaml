@@ -57,12 +57,6 @@ pages:
             title: Écriture (PATCH)
     change-log.md:
         title: Historique des versions
-    autres_ressources.md:
-        title: Autres Ressources
-        annexe-securite.md:
-            title: Sécurité
-        annexe-downloads.md:
-            title: Téléchargements et usages
     translationinfo.md:
         title: Informations sur la traduction
 
@@ -76,11 +70,6 @@ menu:
         Architecture de l'API: spec-technique-vue-ensemble.html
         Récupération (GET): spec-technique-flux-consommation.html
         Écriture (PATCH): spec-technique-flux-alimentation.html
-    Vol. 3 - Annexes:
-        Sécurité: securite.html
-        Téléchargements et usage: downloads.html
-        "Spécifications FHIR ": new-tab {{site.data.fhir.path}}index.html
-        "Site de l'ANS ": new-tab https://esante.gouv.fr/
     Ressources de conformité: artifacts.html
     Documentation: new-tab https://interop.esante.gouv.fr/ig/documentation/
     Historique: change-log.html

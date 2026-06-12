@@ -3,7 +3,7 @@ Cette page s'adresse aux développeurs et intégrateurs. Elle décrit les opéra
 </div>
 
 <blockquote class="stu-note">
-<p>L'API Annuaire Santé est actuellement en lecture seule. Cette page décrit le comportement attendu pour les opérations d'écriture, en vue d'une future ouverture de l'endpoint PATCH.</p>
+<p>L'endpoint PATCH de l'API MSSanté est en cours de développement. Cette page décrit le comportement attendu des opérations d'écriture, qui seront disponibles lors de l'ouverture de cet endpoint.</p>
 </blockquote>
 
 Une BAL étant modélisée comme un élément `telecom` au sein de sa ressource porteuse, toutes les opérations d'écriture s'effectuent par un `PATCH` ciblé sur cette ressource. L'opération `PUT` (remplacement complet) est déconseillée car elle expose à des écrasements non intentionnels.
