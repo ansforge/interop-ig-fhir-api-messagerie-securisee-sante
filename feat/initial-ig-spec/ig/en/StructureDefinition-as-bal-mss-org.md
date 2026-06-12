@@ -32,7 +32,7 @@ Other representations of profile: [CSV](../StructureDefinition-as-bal-mss-org.cs
   "name" : "AsBalMssOrgLogicalModel",
   "title" : "AS BAL MSS ORG - Modèle logique",
   "status" : "draft",
-  "date" : "2026-06-12T13:14:22+00:00",
+  "date" : "2026-06-12T13:14:17+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
