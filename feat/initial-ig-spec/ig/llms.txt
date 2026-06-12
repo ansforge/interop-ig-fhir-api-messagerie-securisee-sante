@@ -7,13 +7,10 @@
 * [Informations sur la traduction](fr/translationinfo.md)
 * [Récupération (GET)](fr/spec-technique-flux-consommation.md)
 * [Architecture de l'API](fr/spec-technique-vue-ensemble.md)
-* [Autres Ressources](fr/autres_ressources.md)
 * [Résumé des artefacts](fr/artifacts.md)
 * [Vue d'ensemble](fr/spec-fonctionnelle-intro.md)
-* [Téléchargements et usages](fr/annexe-downloads.md)
 * [Historique des versions](fr/change-log.md)
 * [Modèle de données](fr/spec-fonctionnelle-alimentation.md)
-* [Sécurité](fr/annexe-securite.md)
 * [Écriture (PATCH)](fr/spec-technique-flux-alimentation.md)
 
 ## Resources

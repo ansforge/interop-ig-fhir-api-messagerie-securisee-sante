@@ -94,3 +94,31 @@ GET [base]/Practitioner?mailbox-mss-type=https://mos.esante.gouv.fr/NOS/TRE_R256
 | [`mailbox-mss-type`](SearchParameter-as-sp-mailbox-mss-type.md) | token | Filtre par type de BAL (`PER`,`ORG`,`APP`,`CAB`) |
 | [`mailbox-mss`](SearchParameter-as-sp-mailbox-mss.md) | string | Filtre par adresse MSSanté (`:contains`,`:exact`) |
 
+-------
+
+### Bilan des tests sur l'API Annuaire Santé v2
+
+Tests effectués sur `https://gateway.api.esante.gouv.fr/fhir/v2` (2026-06-12).
+
+#### Paramètres de recherche
+
+| | |
+| :--- | :--- |
+| `Practitioner?mailbox-mss:contains=mssante.fr` | ✅ Résultats retournés |
+| `PractitionerRole?mailbox-mss:contains=mssante.fr` | ✅ Résultats retournés |
+| `Organization?mailbox-mss:contains=mssante.fr` | ✅ Résultats retournés |
+| `Practitioner?mailbox-mss:exact=<adresse>` | ✅ Syntaxe reconnue (0 résultats avec l'adresse de test) |
+| `Practitioner?mailbox-mss:contains=...&_elements=identifier,telecom` | ✅ Restriction aux champs demandés |
+| `Practitioner?mailbox-mss-type=...\|PER` | ❌ Paramètre non reconnu (`Parameter mailbox-mss-type not found`) |
+
+Le paramètre `mailbox-mss-type` (token) est défini dans l'IG Annuaire Santé mais n'est pas encore exposé par le serveur (absent du CapabilityStatement). Le filtrage par type de BAL doit actuellement s'effectuer côté client en inspectant `as-ext-mailbox-mss-metadata.extension[type]` dans les résultats.
+
+#### Requêtes multi-ressources
+
+| | |
+| :--- | :--- |
+| `GET [base]?_type=Practitioner,PractitionerRole&mailbox-mss:contains=...` | ❌ Non supporté (route root non gérée par la gateway) |
+| `POST [base]`(batch FHIR) | ❌ Non supporté (route root non gérée par la gateway) |
+
+Le regroupement de requêtes sur plusieurs types de ressources via `_type` ou batch n'est pas disponible sur l'API v2. Il faut effectuer des requêtes séparées sur chaque ressource.
+

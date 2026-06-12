@@ -14,7 +14,7 @@
   "name" : "MSS",
   "title" : "API Messagerie Sécurisée de Santé (MSSanté)",
   "status" : "draft",
-  "date" : "2026-06-12T12:57:59+00:00",
+  "date" : "2026-06-12T13:09:22+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -1086,33 +1086,6 @@
         "nameUrl" : "change-log.html",
         "title" : "Historique des versions",
         "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "autres_ressources.html"
-        }],
-        "nameUrl" : "autres_ressources.html",
-        "title" : "Autres Ressources",
-        "generation" : "markdown",
-        "page" : [{
-          "extension" : [{
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-            "valueUrl" : "annexe-securite.html"
-          }],
-          "nameUrl" : "annexe-securite.html",
-          "title" : "Sécurité",
-          "generation" : "markdown"
-        },
-        {
-          "extension" : [{
-            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-            "valueUrl" : "annexe-downloads.html"
-          }],
-          "nameUrl" : "annexe-downloads.html",
-          "title" : "Téléchargements et usages",
-          "generation" : "markdown"
-        }]
       },
       {
         "extension" : [{

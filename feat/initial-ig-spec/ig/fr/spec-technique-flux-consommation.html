@@ -134,25 +134,6 @@
       </li>
     </ul>
   </li>
-  <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Vol. 3 - Annexes
-      <b class="caret"></b>
-    </a>
-    <ul class="dropdown-menu">
-      <li><a name="l238">​</a>
-        <a href="securite.html">Sécurité</a>
-      </li>
-      <li><a name="l244">​</a>
-        <a href="downloads.html">Téléchargements et usage</a>
-      </li>
-      <li>
-        <a href="http://hl7.org/fhir/R4/index.html" target="_blank">Spécifications FHIR </a>
-      </li>
-      <li>
-        <a href="https://esante.gouv.fr/" target="_blank">Site de l'ANS </a>
-      </li>
-    </ul>
-  </li>
   <li>
     <a href="artifacts.html">Ressources de conformité</a>
   </li>
@@ -245,6 +226,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="#bal-applicatives-app" id="markdown-toc-bal-applicatives-app">BAL applicatives (APP)</a></li>
   <li><a href="#bal-de-cabinet-cab" id="markdown-toc-bal-de-cabinet-cab">BAL de cabinet (CAB)</a></li>
   <li><a href="#paramètres-de-recherche-disponibles" id="markdown-toc-paramètres-de-recherche-disponibles">Paramètres de recherche disponibles</a></li>
+  <li><a href="#bilan-des-tests-sur-lapi-annuaire-santé-v2" id="markdown-toc-bilan-des-tests-sur-lapi-annuaire-santé-v2">Bilan des tests sur l'API Annuaire Santé v2</a></li>
 </ul>
 
 </div>
@@ -337,17 +319,85 @@ GET [base]/PractitionerRole?mailbox-mss-type=https://mos.esante.gouv.fr/NOS/TRE_
   </thead>
   <tbody>
     <tr>
-      <td><a name="l736">​</a><a href="SearchParameter-as-sp-mailbox-mss-type.html"><code class="language-plaintext highlighter-rouge">mailbox-mss-type</code></a></td>
+      <td><a name="l705">​</a><a href="SearchParameter-as-sp-mailbox-mss-type.html"><code class="language-plaintext highlighter-rouge">mailbox-mss-type</code></a></td>
       <td>token</td>
       <td>Filtre par type de BAL (<code class="language-plaintext highlighter-rouge">PER</code>, <code class="language-plaintext highlighter-rouge">ORG</code>, <code class="language-plaintext highlighter-rouge">APP</code>, <code class="language-plaintext highlighter-rouge">CAB</code>)</td>
     </tr>
     <tr>
-      <td><a name="l762">​</a><a href="SearchParameter-as-sp-mailbox-mss.html"><code class="language-plaintext highlighter-rouge">mailbox-mss</code></a></td>
+      <td><a name="l731">​</a><a href="SearchParameter-as-sp-mailbox-mss.html"><code class="language-plaintext highlighter-rouge">mailbox-mss</code></a></td>
       <td>string</td>
       <td>Filtre par adresse MSSanté (<code class="language-plaintext highlighter-rouge">:contains</code>, <code class="language-plaintext highlighter-rouge">:exact</code>)</td>
     </tr>
   </tbody>
 </table>
+
+<hr/>
+
+<h3 id="bilan-des-tests-sur-lapi-annuaire-santé-v2">Bilan des tests sur l'API Annuaire Santé v2</h3>
+
+<p>Tests effectués sur <code class="language-plaintext highlighter-rouge">https://gateway.api.esante.gouv.fr/fhir/v2</code> (2026-06-12).</p>
+
+<h4 id="paramètres-de-recherche">Paramètres de recherche</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Requête</th>
+      <th>Résultat</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Practitioner?mailbox-mss:contains=mssante.fr</code></td>
+      <td>✅ Résultats retournés</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">PractitionerRole?mailbox-mss:contains=mssante.fr</code></td>
+      <td>✅ Résultats retournés</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Organization?mailbox-mss:contains=mssante.fr</code></td>
+      <td>✅ Résultats retournés</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Practitioner?mailbox-mss:exact=&lt;adresse&gt;</code></td>
+      <td>✅ Syntaxe reconnue (0 résultats avec l'adresse de test)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Practitioner?mailbox-mss:contains=...&amp;_elements=identifier,telecom</code></td>
+      <td>✅ Restriction aux champs demandés</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Practitioner?mailbox-mss-type=...\|PER</code></td>
+      <td>❌ Paramètre non reconnu (<code class="language-plaintext highlighter-rouge">Parameter mailbox-mss-type not found</code>)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Le paramètre <code class="language-plaintext highlighter-rouge">mailbox-mss-type</code> (token) est défini dans l'IG Annuaire Santé mais n'est pas encore exposé par le serveur (absent du CapabilityStatement). Le filtrage par type de BAL doit actuellement s'effectuer côté client en inspectant <code class="language-plaintext highlighter-rouge">as-ext-mailbox-mss-metadata.extension[type]</code> dans les résultats.</p>
+
+<h4 id="requêtes-multi-ressources">Requêtes multi-ressources</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Requête</th>
+      <th>Résultat</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">GET [base]?_type=Practitioner,PractitionerRole&amp;mailbox-mss:contains=...</code></td>
+      <td>❌ Non supporté (route root non gérée par la gateway)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">POST [base]</code> (batch FHIR)</td>
+      <td>❌ Non supporté (route root non gérée par la gateway)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Le regroupement de requêtes sur plusieurs types de ressources via <code class="language-plaintext highlighter-rouge">_type</code> ou batch n'est pas disponible sur l'API v2. Il faut effectuer des requêtes séparées sur chaque ressource.</p>
 
 
 
@@ -398,7 +448,7 @@ GET [base]/PractitionerRole?mailbox-mss-type=https://mos.esante.gouv.fr/NOS/TRE_
           IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris</a>.  
           Le package ans.fhir.fr.mss#0.1.0 est basé sur <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Date de génération : 
-  <span title="2026-06-12 12:57:00 +0000">
+  <span title="2026-06-12 13:09:00 +0000">
     2026-06-12
   </span>
 
