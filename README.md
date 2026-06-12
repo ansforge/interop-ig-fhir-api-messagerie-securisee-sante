@@ -1,43 +1,40 @@
-[A MODIFIER : remplacer avec votre logo s'il ne s'agit pas d'un projet CI-SIS]
+![Logo_ANS](https://user-images.githubusercontent.com/48218773/227532484-eff82649-4e42-49c6-966a-dc3ea78cf59c.png)
 
-![Logo_LEF_CI-SIS](https://user-images.githubusercontent.com/48218773/227532484-eff82649-4e42-49c6-966a-dc3ea78cf59c.png)
+[![Workflow CI-build](https://github.com/ansforge/interop-ig-fhir-api-messagerie-securisee-sante/actions/workflows/fhir-workflows.yml/badge.svg)](https://github.com/ansforge/interop-ig-fhir-api-messagerie-securisee-sante/actions/workflows/fhir-workflows.yml)
 
-[A MODIFIER : adapter au lien du projet]
+# API Messagerie Sécurisée de Santé (MSSanté)
 
-[![Workflow Init](https://github.com/ansforge/IG-fhir-partage-de-documents-de-sante/actions/workflows/fhir-workflows.yml/badge.svg)](https://github.com/ansforge/IG-fhir-partage-de-documents-de-sante/actions/workflows/fhir-workflows.yml)
+Implementation Guide FHIR décrivant l'API pour la messagerie sécurisée de santé (MSSanté).
 
-Cet exemple d'Implementation Guide (IG) très simplifié sert de base pour le développement de nouveaux guides d'implémentation. La démarche d'élaboration d'un nouvel IG est expliquée dans le [wiki de ce repo](https://github.com/ansforge/IG-modele/wiki).
-Le README ci-dessous constitue un template à adapter et compléter pour chaque projet.
+- **CI-build** : https://ansforge.github.io/interop-ig-fhir-api-messagerie-securisee-sante/main/ig
+- **URL canonique** : https://interop.esante.gouv.fr/ig/fhir/mss
 
 # Contexte
 
 ## Contexte métier du projet
 
-[A COMPLETER : doit contenir la description fonctionnelle du projet destinée à un profil non technique]
+_À compléter : description fonctionnelle du projet destinée à un profil non technique._
 
 ## Contexte technique du projet
 
-[A COMPLETER : doit expliquer brièvement quelles ressources / profils sont utilisés, exemple implémentation où IG est utilisé]
+_À compléter : ressources / profils FHIR utilisés, exemples d'implémentation._
 
 # CI/CD
 
-Les workflows associés à ce repository (.github/workflows) permettent :
+Les workflows associés à ce repository (`.github/workflows`) permettent :
 
-* D'executer Sushi pour vérifier la grammaire
-* De faire les tests avec le validator_cli
-* De publier les pages : https://ansforge.github.io/{nom du repo}/{nom de la branche}/ig
+* D'exécuter SUSHI pour vérifier la grammaire FSH
+* De publier les pages sur GitHub Pages : `https://ansforge.github.io/interop-ig-fhir-api-messagerie-securisee-sante/{branche}/ig`
+* De publier les releases vers `ansforge/IG-website-release`
 
 # Notes
 
-Ce repo "IG-modele" a été créé à partir du repo [sample-ig](https://github.com/FHIR/sample-ig) de l'organisation GitHub FHIR.
-
-[A COMPLETER: notes supplémentaires pour le lecteur de la spec]
-Un commentaire ? Une remarque ? Utilisez les GitHub [issues](https://docs.github.com/fr/issues) pour indiquer vos propositions d'amélioration et de correction.
+Un commentaire ? Une remarque ? Utilisez les [issues GitHub](https://github.com/ansforge/interop-ig-fhir-api-messagerie-securisee-sante/issues).
 
 ## Acronymes
 
 * IG : Implementation Guide
 * FHIR : Fast Healthcare Interoperability Resources
 * HL7 : Health Level Seven
-
-[A COMPLETER : acronymes utilisés dans le cadre de ce projet]
+* MSSanté : Messagerie Sécurisée de Santé
+* ANS : Agence du Numérique en Santé
