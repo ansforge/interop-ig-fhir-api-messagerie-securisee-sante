@@ -127,7 +127,7 @@ Content-Type: application/fhir+json
 
 #### Exemple — ajout d'une BAL ORG (conditional PATCH par idnatstruct)
 
-```http
+```text
 PATCH [base]/Organization?identifier=https://finess.esante.gouv.fr|123456789
 Content-Type: application/fhir+json
 
@@ -196,7 +196,7 @@ Le corps de la requête est identique au PATCH par ID logique.
 
 #### Exemple — conditional PATCH sur Practitioner (RPPS)
 
-```http
+```text
 PATCH [base]/Practitioner?identifier=urn:oid:1.2.250.1.71.4.2.1|800012345678
 Content-Type: application/fhir+json
 

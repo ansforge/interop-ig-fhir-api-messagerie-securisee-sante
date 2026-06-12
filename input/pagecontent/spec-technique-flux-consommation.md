@@ -8,20 +8,20 @@ Dans les exemples ci-dessous, `[base]` désigne l'URL de base de l'[API FHIR Ann
 
 Une BAL PER peut être portée par un `Practitioner` (identifiant RPPS seul) ou un `PractitionerRole` (RPPS + structure) :
 
-```http
+```text
 GET [base]/Practitioner?mailbox-mss-type=https://mos.esante.gouv.fr/NOS/TRE_R256-TypeMessagerie/FHIR/TRE-R256-TypeMessagerie|PER
 GET [base]/PractitionerRole?mailbox-mss-type=https://mos.esante.gouv.fr/NOS/TRE_R256-TypeMessagerie/FHIR/TRE-R256-TypeMessagerie|PER
 ```
 
 Ces deux requêtes peuvent être regroupées via `_type` :
 
-```http
+```text
 GET [base]?_type=Practitioner,PractitionerRole&mailbox-mss-type=https://mos.esante.gouv.fr/NOS/TRE_R256-TypeMessagerie/FHIR/TRE-R256-TypeMessagerie|PER
 ```
 
 Le paramètre `_elements` permet de limiter la réponse aux champs utiles :
 
-```http
+```text
 GET [base]?_type=Practitioner,PractitionerRole&mailbox-mss-type=https://mos.esante.gouv.fr/NOS/TRE_R256-TypeMessagerie/FHIR/TRE-R256-TypeMessagerie|PER&_elements=identifier,telecom
 ```
 
@@ -60,13 +60,13 @@ Le serveur répond avec un Bundle de type `batch-response`, chaque entry portant
 
 ### BAL organisationnelles (ORG)
 
-```http
+```text
 GET [base]/Organization?mailbox-mss-type=https://mos.esante.gouv.fr/NOS/TRE_R256-TypeMessagerie/FHIR/TRE-R256-TypeMessagerie|ORG
 ```
 
 ### BAL applicatives (APP)
 
-```http
+```text
 GET [base]/Organization?mailbox-mss-type=https://mos.esante.gouv.fr/NOS/TRE_R256-TypeMessagerie/FHIR/TRE-R256-TypeMessagerie|APP
 ```
 
@@ -76,7 +76,7 @@ GET [base]/Organization?mailbox-mss-type=https://mos.esante.gouv.fr/NOS/TRE_R256
 <p>La prise en charge des BAL CAB est en cours de travaux. Les spécifications ci-dessous sont susceptibles d'évoluer.</p>
 </blockquote>
 
-```http
+```text
 GET [base]/Practitioner?mailbox-mss-type=https://mos.esante.gouv.fr/NOS/TRE_R256-TypeMessagerie/FHIR/TRE-R256-TypeMessagerie|CAB
 ```
 
