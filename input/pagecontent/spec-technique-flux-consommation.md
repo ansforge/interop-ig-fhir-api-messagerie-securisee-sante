@@ -2,6 +2,8 @@
 Cette page s'adresse aux développeurs et intégrateurs. Elle décrit les opérations de récupération des BAL MSSanté.
 </div>
 
+Dans les exemples ci-dessous, `[base]` désigne l'URL de base de l'[API FHIR Annuaire Santé v2](https://ansforge.github.io/annuaire-sante-fhir-documentation/) : `https://gateway.api.esante.gouv.fr/fhir/v2`.
+
 ### BAL personnelles (PER)
 
 Une BAL PER peut être portée par un `Practitioner` (identifiant RPPS seul) ou un `PractitionerRole` (RPPS + structure) :
