@@ -249,12 +249,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul id="markdown-toc">
   <li><a href="#mssanté" id="markdown-toc-mssanté">MSSanté</a></li>
   <li><a href="#types-de-bal" id="markdown-toc-types-de-bal">Types de BAL</a></li>
-  <li><a href="#architecture-de-lapi" id="markdown-toc-architecture-de-lapi">Architecture de l'API</a></li>
 </ul>
 
 </div>
 <div style="background-color: #fff9e6; border-left: 4px solid #ff9800; padding: 10px; width: 65%">
-Cette page s'adresse à tous les profils. Elle présente le contexte MSSanté, les types de BAL et l'architecture générale de l'API.
+Cette page s'adresse à tous les profils. Elle présente le contexte MSSanté et les types de BAL.
 </div>
 
 <h3 id="mssanté">MSSanté</h3>
@@ -310,21 +309,6 @@ Cette page s'adresse à tous les profils. Elle présente le contexte MSSanté, l
   </tbody>
 </table>
 
-<h3 id="architecture-de-lapi">Architecture de l'API</h3>
-
-<p>L'API repose sur deux endpoints distincts :</p>
-
-<ul>
-  <li><strong>Endpoint GET</strong> — l'API FHIR Annuaire Santé existante (lecture seule), utilisée pour récupérer les ressources porteuses et leurs BAL.</li>
-  <li><strong>Endpoint PATCH</strong> — un endpoint en écriture, permettant aux opérateurs MSSanté de modifier les métadonnées des BAL via PATCH FHIRPath sur la ressource porteuse.</li>
-</ul>
-
-<blockquote class="stu-note">
-<p>L'endpoint PATCH est en cours d'ouverture. Les opérations d'écriture décrites dans cet IG sont spécifiées à titre prospectif.</p>
-</blockquote>
-
-<p>Les opérateurs MSSanté accèdent, dans la même réponse, à l'ensemble des données du professionnel ou de la structure porteuse (identifiants, qualification, adresse, situation d'exercice), sans requête supplémentaire.</p>
-
 
 
 
@@ -374,7 +358,7 @@ Cette page s'adresse à tous les profils. Elle présente le contexte MSSanté, l
           IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris</a>.  
           Package ans.fhir.fr.mss#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Generated 
-  <span title="2026-06-12 12:50:00 +0000">
+  <span title="2026-06-12 12:51:00 +0000">
     2026-06-12
   </span>
 
