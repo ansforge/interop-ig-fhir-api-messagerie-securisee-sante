@@ -17,10 +17,9 @@ releaseLabel: ci-build # le release label doit être conforme au cycle de vie de
 jurisdiction: urn:iso:std:iso:3166#FR "France (la)"
 
 dependencies:
-  hl7.fhir.fr.core: 2.1.0
   hl7.fhir.uv.xver-r5.r4: latest
   ans.fr.terminologies: latest
-  ans.fhir.fr.annuaire: current
+  ans.fhir.fr.annuaire: 1.1.0
 
 parameters: #Parameters list - https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html
     shownav: 'true'
