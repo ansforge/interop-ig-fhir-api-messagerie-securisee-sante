@@ -16,6 +16,13 @@ releaseLabel: ci-build # le release label doit être conforme au cycle de vie de
 
 jurisdiction: urn:iso:std:iso:3166#FR "France (la)"
 
+dependencies:
+  hl7.fhir.fr.core: 2.1.0
+  hl7.fhir.uv.xver-r5.r4: latest
+  ans.fr.nos: latest
+  hl7.terminology.r4: 5.5.0
+  ans.fhir.fr.annuaire: current
+
 parameters: #Parameters list - https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html
     shownav: 'true'
     path-expansion-params: '../../expansion-params.json' # for using French SNOMED CT Extension
@@ -41,15 +48,15 @@ pages:
     spec-fonctionnelle-intro.md:
         title: Vue d'ensemble
         spec-fonctionnelle-alimentation.md:
-            title: Alimentation
+            title: Modèle de données
     spec-technique-intro.md:
-        title: Introduction
+        title: Introduction technique
         spec-technique-vue-ensemble.md:
-            title: Vue d'ensemble
-        spec-technique-flux-alimentation.md:
-            title: Flux d'alimentation
+            title: Architecture de l'API
         spec-technique-flux-consommation.md:
-            title: Flux de consommation
+            title: Récupération (GET)
+        spec-technique-flux-alimentation.md:
+            title: Écriture (PATCH)
     change-log.md:
         title: Historique des versions
     autres_ressources.md:
@@ -63,14 +70,14 @@ pages:
 
 menu:
     Accueil: index.html
-    Vol. 1 - Etude fonctionnelle: 
-        Introduction: spec-fonctionnelle-intro.html
-        Alimentation: spec-fonctionnelle-alimentation.html
-    Vol. 2 - Détail des transactions: 
+    Vol. 1 - Etude fonctionnelle:
+        Vue d'ensemble: spec-fonctionnelle-intro.html
+        Modèle de données: spec-fonctionnelle-alimentation.html
+    Vol. 2 - Détail des transactions:
         Introduction: spec-technique-intro.html
-        Vue d'ensemble: spec-technique-vue-ensemble.html
-        Flux d'alimentation: spec-technique-flux-alimentation.html
-        Flux de consommation: spec-technique-flux-consommation.html
+        Architecture de l'API: spec-technique-vue-ensemble.html
+        Récupération (GET): spec-technique-flux-consommation.html
+        Écriture (PATCH): spec-technique-flux-alimentation.html
     Vol. 3 - Annexes:
         Sécurité: securite.html
         Téléchargements et usage: downloads.html

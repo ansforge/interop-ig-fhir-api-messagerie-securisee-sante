@@ -1,57 +1,40 @@
 <p style="padding: 5px; border-radius: 5px; border: 2px solid maroon; background: #ffffe6; width: 65%">
-<b>Brief description of this Implementation Guide</b><br>
-[Add a brief description of this IG in English]
+<b>Implementation Guide for the MSSanté Secure Messaging API (BAL MSSanté)</b><br>
+This guide describes the FHIR API for retrieving and managing MSSanté mailboxes (BAL) attached to healthcare professionals and organisations in the French national directory (Annuaire Santé).
 </p>
 
 {% if site.data.info.releaselabel == 'ci-build' %}
 <div style="width: 65%">
     <blockquote class="stu-note">
-    <p>Cet Implementation Guide n'est pas la version courante, il s'agit de la version en intégration continue soumise à des changements fréquents uniquement destinée à suivre les travaux en cours. La version courante sera accessible via l'URL canonique suite à la première release : http://interop.esante.gouv.fr/ig/fhir/mss</p>
+    <p>Cet Implementation Guide n'est pas la version courante, il s'agit de la version en intégration continue soumise à des changements fréquents uniquement destinée à suivre les travaux en cours. La version courante sera accessible via l'URL canonique suite à la première release : https://interop.esante.gouv.fr/ig/fhir/mss</p>
     </blockquote>
 </div>
 {% endif %}
 
-
-{% if site.data.info.releaselabel == 'public-comment' %}
-<div style="width: 65%">
-<blockquote class="stu-note">
-<p>
-  <b>Attention !</b>
-  <br>
- Cet Implementation Guide est actuellement en concertation. La version courante est accessible à l'adresse : http://interop.esante.gouv.fr/ig/fhir/mss
-</p>
-</blockquote>
-</div>
-{% endif %}
-
-
-<!--  A décommenter si CI-SIS
-<div class="figure">
-    <img src="ci-sis-logo.png" alt="CI-SIS" title="Logo du CI-SIS" style="width:100%;">
-</div>
--->
-
 ### Introduction
 
-Définir ici de quoi parle l'IG (En termes non expert, compréhensible par un patient). Rajouter également les détails techniques sur le contexte et le besoin de cet IG
+Cet Implementation Guide décrit l'**API FHIR** pour la gestion des **BAL MSSanté** (Boîtes Aux Lettres de la Messagerie Sécurisée de Santé), rattachées aux professionnels de santé et aux structures dans l'Annuaire Santé.
 
-Les principales sections de l'IG  sont :
+**MSSanté** est le service national de messagerie chiffrée pour les professionnels de santé. Une BAL MSSanté est une adresse mail sécurisée attachée à un professionnel, une situation d'exercice ou une structure de santé.
 
-* Le contexte de l'IG, quelle problématique il résout
-* Ce que les Implémenteurs doivent mettre en place
-* Un onglet "Ressources de conformité" pour s'assurer d'un schéma global entre tous les IGs
+Les principales sections de l'IG sont :
+
+* **Vol. 1 - Étude fonctionnelle** : contexte MSSanté, types de BAL, modèle de données
+* **Vol. 2 - Détail des transactions** : architecture de l'API, opérations GET et PATCH
+* **Ressources de conformité** : CapabilityStatement, modèles logiques
 
 ### Périmètre du projet
 
-Définir en quelques lignes quel est le périmètre du projet
+Cet IG couvre :
 
-Toujours laisser l'onglet "Ressources de conformité" pour s'assurer d'une cohérence globales entre tous les IGs
+* La **récupération** des BAL MSSanté via l'API FHIR Annuaire Santé (endpoint GET, lecture seule)
+* La **mise à jour** des BAL MSSanté via un endpoint PATCH dédié (création, modification, suppression — en cours d'ouverture)
 
-### Auteurs et contributeurs (optionnel)
+### Auteurs et contributeurs
 
 | Role  | Nom | Organisation | Contact |
 | --- | --- | --- | --- |
-| **Primary Editor** | Prenom Nom | Agence du Numérique en Santé | prenom.nom@address.email |
+| **Primary Editor** | Nicolas Riss | Agence du Numérique en Santé | nicolas.riss@esante.gouv.fr |
 
 ### Dépendances
 
