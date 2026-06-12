@@ -6,7 +6,7 @@
 {% if site.data.info.releaselabel == 'ci-build' %}
 <div style="width: 65%">
     <blockquote class="stu-note">
-    <p>Cet Implementation Guide n'est pas la version courante, il s'agit de la version en intégration continue soumise à des changements fréquents uniquement destinée à suivre les travaux en cours. La version courante sera accessible via l'URL canonique suite à la première release : http://interop.esante.gouv.fr/ig/fhir/[code - ig]</p>
+    <p>Cet Implementation Guide n'est pas la version courante, il s'agit de la version en intégration continue soumise à des changements fréquents uniquement destinée à suivre les travaux en cours. La version courante sera accessible via l'URL canonique suite à la première release : http://interop.esante.gouv.fr/ig/fhir/mss</p>
     </blockquote>
 </div>
 {% endif %}
@@ -18,7 +18,7 @@
 <p>
   <b>Attention !</b>
   <br>
- Cet Implementation Guide est actuellement en concertation. La version courante est accessible à l'adresse : http://interop.esante.gouv.fr/ig/fhir/[code - ig]
+ Cet Implementation Guide est actuellement en concertation. La version courante est accessible à l'adresse : http://interop.esante.gouv.fr/ig/fhir/mss
 </p>
 </blockquote>
 </div>

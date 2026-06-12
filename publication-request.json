@@ -1,16 +1,16 @@
 {
-    "package-id" : "ans.fhir.fr.[todo]",
-    "version" : "[todo]",
-    "path" : "https://interop.esante.gouv.fr/ig/fhir/[todo]",
-    "mode" : "milestone",
-    "status" : "release",
+    "package-id" : "ans.fhir.fr.mss",
+    "version" : "0.1.0",
+    "path" : "https://interop.esante.gouv.fr/ig/fhir/mss/0.1.0",
+    "mode" : "working",
+    "status" : "draft",
     "sequence" : "STU1",
-    "title" : "[todo]",
+    "title" : "API Messagerie Sécurisée de Santé (MSSanté)",
     "first" : true,
-    "desc" : "[todo]",
-    "ci-build" : "https://ansforge.github.io/[todo]",
-    "category" : "[todo]",
-    "introduction" : "[todo]",
+    "desc" : "Implementation Guide décrivant l'API FHIR pour la messagerie sécurisée de santé (MSSanté)",
+    "ci-build" : "https://ansforge.github.io/interop-ig-fhir-api-messagerie-securisee-sante/main/ig",
+    "category" : "Communication",
+    "introduction" : "Cet Implementation Guide décrit l'API FHIR pour la messagerie sécurisée de santé (MSSanté).",
     "changes": "change-log.html"
 
   }
