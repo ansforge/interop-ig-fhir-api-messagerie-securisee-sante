@@ -4,7 +4,7 @@ MSS : Validation Results
 err = 0, warn = 60, info = 10
 $--
 Generated $--. FHIR version $-- for ans.fhir.fr.mss#$-- (canonical = https://interop.esante.gouv.fr/ig/fhir/mss)
- Build Errors : 374 / 3 / 0
+ Build Errors : 370 / 3 / 0
  /home/runner/work/interop-ig-fhir-api-messagerie-securisee-sante/interop-ig-fhir-api-messagerie-securisee-sante/igSource/fsh-generated/resources/Bundle-mss-bundle-bal-per-elements : 0 / 3 / 3
  /home/runner/work/interop-ig-fhir-api-messagerie-securisee-sante/interop-ig-fhir-api-messagerie-securisee-sante/igSource/fsh-generated/resources/Bundle-mss-bundle-bal-per-full : 0 / 3 / 3
  /home/runner/work/interop-ig-fhir-api-messagerie-securisee-sante/interop-ig-fhir-api-messagerie-securisee-sante/igSource/fsh-generated/resources/CapabilityStatement-AsMssServerCapabilityStatement : 0 / 3 / 7
@@ -194,14 +194,12 @@ ERROR: en/spec-technique-flux-alimentation.html#/html/body/div/div/nav/div/div/u
 ERROR: en/spec-technique-flux-alimentation.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 148, column 10: The link 'downloads.html' for "Téléchargements et usage" cannot be resolved
 ERROR: en/spec-technique-flux-consommation.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 145, column 10: The link 'securite.html' for "Sécurité" cannot be resolved
 ERROR: en/spec-technique-flux-consommation.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 148, column 10: The link 'downloads.html' for "Téléchargements et usage" cannot be resolved
-ERROR: en/spec-technique-flux-consommation.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 347, column 12: The link 'SearchParameter-as-sp-mailbox-mss-type.html' for "mailbox-mss-type" cannot be resolved
-ERROR: en/spec-technique-flux-consommation.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 352, column 12: The link 'SearchParameter-as-sp-mailbox-mss.html' for "mailbox-mss" cannot be resolved
+ERROR: en/spec-technique-flux-consommation.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 349, column 12: The link 'SearchParameter-as-sp-mailbox-mss-type.html' for "mailbox-mss-type" cannot be resolved
+ERROR: en/spec-technique-flux-consommation.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 354, column 12: The link 'SearchParameter-as-sp-mailbox-mss.html' for "mailbox-mss" cannot be resolved
 ERROR: en/spec-technique-intro.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 145, column 10: The link 'securite.html' for "Sécurité" cannot be resolved
 ERROR: en/spec-technique-intro.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 148, column 10: The link 'downloads.html' for "Téléchargements et usage" cannot be resolved
 ERROR: en/spec-technique-vue-ensemble.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 145, column 10: The link 'securite.html' for "Sécurité" cannot be resolved
 ERROR: en/spec-technique-vue-ensemble.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 148, column 10: The link 'downloads.html' for "Téléchargements et usage" cannot be resolved
-ERROR: en/spec-technique-vue-ensemble.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 305, column 12: The link 'SearchParameter-as-sp-mailbox-mss-type.html' for "mailbox-mss-type" cannot be resolved
-ERROR: en/spec-technique-vue-ensemble.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 311, column 12: The link 'SearchParameter-as-sp-mailbox-mss.html' for "mailbox-mss" cannot be resolved
 ERROR: en/toc.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 145, column 10: The link 'securite.html' for "Sécurité" cannot be resolved
 ERROR: en/toc.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 148, column 10: The link 'downloads.html' for "Téléchargements et usage" cannot be resolved
 ERROR: en/translationinfo.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 145, column 10: The link 'securite.html' for "Sécurité" cannot be resolved
@@ -381,14 +379,12 @@ ERROR: fr/spec-technique-flux-alimentation.html#/html/body/div/div/nav/div/div/u
 ERROR: fr/spec-technique-flux-alimentation.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 148, column 10: The link 'downloads.html' for "Téléchargements et usage" cannot be resolved
 ERROR: fr/spec-technique-flux-consommation.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 145, column 10: The link 'securite.html' for "Sécurité" cannot be resolved
 ERROR: fr/spec-technique-flux-consommation.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 148, column 10: The link 'downloads.html' for "Téléchargements et usage" cannot be resolved
-ERROR: fr/spec-technique-flux-consommation.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 340, column 12: The link 'SearchParameter-as-sp-mailbox-mss-type.html' for "mailbox-mss-type" cannot be resolved
-ERROR: fr/spec-technique-flux-consommation.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 345, column 12: The link 'SearchParameter-as-sp-mailbox-mss.html' for "mailbox-mss" cannot be resolved
+ERROR: fr/spec-technique-flux-consommation.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 342, column 12: The link 'SearchParameter-as-sp-mailbox-mss-type.html' for "mailbox-mss-type" cannot be resolved
+ERROR: fr/spec-technique-flux-consommation.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 347, column 12: The link 'SearchParameter-as-sp-mailbox-mss.html' for "mailbox-mss" cannot be resolved
 ERROR: fr/spec-technique-intro.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 145, column 10: The link 'securite.html' for "Sécurité" cannot be resolved
 ERROR: fr/spec-technique-intro.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 148, column 10: The link 'downloads.html' for "Téléchargements et usage" cannot be resolved
 ERROR: fr/spec-technique-vue-ensemble.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 145, column 10: The link 'securite.html' for "Sécurité" cannot be resolved
 ERROR: fr/spec-technique-vue-ensemble.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 148, column 10: The link 'downloads.html' for "Téléchargements et usage" cannot be resolved
-ERROR: fr/spec-technique-vue-ensemble.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 298, column 12: The link 'SearchParameter-as-sp-mailbox-mss-type.html' for "mailbox-mss-type" cannot be resolved
-ERROR: fr/spec-technique-vue-ensemble.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 304, column 12: The link 'SearchParameter-as-sp-mailbox-mss.html' for "mailbox-mss" cannot be resolved
 ERROR: fr/toc.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 145, column 10: The link 'securite.html' for "Sécurité" cannot be resolved
 ERROR: fr/toc.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 148, column 10: The link 'downloads.html' for "Téléchargements et usage" cannot be resolved
 ERROR: fr/translationinfo.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 145, column 10: The link 'securite.html' for "Sécurité" cannot be resolved

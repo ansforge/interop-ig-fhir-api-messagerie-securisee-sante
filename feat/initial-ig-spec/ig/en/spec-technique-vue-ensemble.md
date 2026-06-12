@@ -13,19 +13,21 @@ L'API MSSanté repose sur deux endpoints avec des rôles distincts :
 
 | | | |
 | :--- | :--- | :--- |
-| **GET**(API Annuaire Santé) | `GET`,`POST`(batch) | Lecture des ressources porteuses et de leurs BAL |
+| **GET**(API Annuaire Santé v2) | `GET`,`POST`(batch) | Lecture des ressources porteuses et de leurs BAL |
 | **PATCH**(endpoint dédié MSS) | `PATCH` | Écriture : ajout, modification, suppression de BAL |
 
 ### Endpoint GET
 
-L'endpoint GET est l'API FHIR Annuaire Santé standard : `https://gateway.api.esante.gouv.fr/fhir/v1`
+L'endpoint GET est l'**[API FHIR Annuaire Santé v2](https://ansforge.github.io/annuaire-sante-fhir-documentation/)** : `https://gateway.api.esante.gouv.fr/fhir/v2`
 
-Deux paramètres de recherche sont disponibles :
+La documentation complète de l'API (authentification, pagination, paramètres généraux) est disponible sur [ansforge.github.io/annuaire-sante-fhir-documentation](https://ansforge.github.io/annuaire-sante-fhir-documentation/).
+
+Deux paramètres de recherche sont disponibles pour les BAL :
 
 | | | | |
 | :--- | :--- | :--- | :--- |
-| [`mailbox-mss-type`](SearchParameter-as-sp-mailbox-mss-type.md) | token | `Organization`,`Practitioner`,`PractitionerRole` | Filtre par type de BAL (`PER`,`ORG`,`APP`,`CAB`) |
-| [`mailbox-mss`](SearchParameter-as-sp-mailbox-mss.md) | string | `Organization`,`Practitioner`,`PractitionerRole` | Filtre par adresse MSSanté (`:contains`,`:exact`) |
+| `mailbox-mss-type` | token | `Organization`,`Practitioner`,`PractitionerRole` | Filtre par type de BAL (`PER`,`ORG`,`APP`,`CAB`) |
+| `mailbox-mss` | string | `Organization`,`Practitioner`,`PractitionerRole` | Filtre par adresse MSSanté (`:contains`,`:exact`) |
 
 ### Endpoint PATCH
 

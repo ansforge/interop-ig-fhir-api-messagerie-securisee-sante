@@ -264,7 +264,7 @@ Cette page s'adresse aux développeurs et intégrateurs. Elle décrit l'architec
   </thead>
   <tbody>
     <tr>
-      <td><strong>GET</strong> (API Annuaire Santé)</td>
+      <td><strong>GET</strong> (API Annuaire Santé v2)</td>
       <td><code class="language-plaintext highlighter-rouge">GET</code>, <code class="language-plaintext highlighter-rouge">POST</code> (batch)</td>
       <td>Lecture des ressources porteuses et de leurs BAL</td>
     </tr>
@@ -278,9 +278,11 @@ Cette page s'adresse aux développeurs et intégrateurs. Elle décrit l'architec
 
 <h3 id="endpoint-get">Endpoint GET</h3>
 
-<p>L'endpoint GET est l'API FHIR Annuaire Santé standard : <code class="language-plaintext highlighter-rouge">https://gateway.api.esante.gouv.fr/fhir/v1</code></p>
+<p>L'endpoint GET est l'<strong><a href="https://ansforge.github.io/annuaire-sante-fhir-documentation/">API FHIR Annuaire Santé v2</a></strong> : <code class="language-plaintext highlighter-rouge">https://gateway.api.esante.gouv.fr/fhir/v2</code></p>
 
-<p>Deux paramètres de recherche sont disponibles :</p>
+<p>La documentation complète de l'API (authentification, pagination, paramètres généraux) est disponible sur <a href="https://ansforge.github.io/annuaire-sante-fhir-documentation/">ansforge.github.io/annuaire-sante-fhir-documentation</a>.</p>
+
+<p>Deux paramètres de recherche sont disponibles pour les BAL :</p>
 
 <table>
   <thead>
@@ -293,13 +295,13 @@ Cette page s'adresse aux développeurs et intégrateurs. Elle décrit l'architec
   </thead>
   <tbody>
     <tr>
-      <td><a name="l518">​</a><a href="SearchParameter-as-sp-mailbox-mss-type.html"><code class="language-plaintext highlighter-rouge">mailbox-mss-type</code></a></td>
+      <td><code class="language-plaintext highlighter-rouge">mailbox-mss-type</code></td>
       <td>token</td>
       <td><code class="language-plaintext highlighter-rouge">Organization</code>, <code class="language-plaintext highlighter-rouge">Practitioner</code>, <code class="language-plaintext highlighter-rouge">PractitionerRole</code></td>
       <td>Filtre par type de BAL (<code class="language-plaintext highlighter-rouge">PER</code>, <code class="language-plaintext highlighter-rouge">ORG</code>, <code class="language-plaintext highlighter-rouge">APP</code>, <code class="language-plaintext highlighter-rouge">CAB</code>)</td>
     </tr>
     <tr>
-      <td><a name="l554">​</a><a href="SearchParameter-as-sp-mailbox-mss.html"><code class="language-plaintext highlighter-rouge">mailbox-mss</code></a></td>
+      <td><code class="language-plaintext highlighter-rouge">mailbox-mss</code></td>
       <td>string</td>
       <td><code class="language-plaintext highlighter-rouge">Organization</code>, <code class="language-plaintext highlighter-rouge">Practitioner</code>, <code class="language-plaintext highlighter-rouge">PractitionerRole</code></td>
       <td>Filtre par adresse MSSanté (<code class="language-plaintext highlighter-rouge">:contains</code>, <code class="language-plaintext highlighter-rouge">:exact</code>)</td>
@@ -396,7 +398,7 @@ Cette page s'adresse aux développeurs et intégrateurs. Elle décrit l'architec
           IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris</a>.  
           Le package ans.fhir.fr.mss#0.1.0 est basé sur <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Date de génération : 
-  <span title="2026-06-12 12:56:00 +0000">
+  <span title="2026-06-12 12:57:00 +0000">
     2026-06-12
   </span>
 
