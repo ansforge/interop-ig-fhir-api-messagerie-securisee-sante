@@ -17,15 +17,3 @@ Trois types d'opérations sont supportés :
 | `replace` | Remplacer un attribut ou un ContactPoint entier |
 | `insert` | Ajouter une nouvelle BAL |
 | `delete` | Supprimer une BAL existante |
-
-### Dépendances
-
-Cet IG dépend de :
-
-* **[hl7.fhir.fr.core 2.1.0](https://hl7.fr/ig/fhir/core/)** — profils FrCore, dont `fr-core-contact-point`
-* **[ans.fhir.fr.annuaire current](https://interop.esante.gouv.fr/ig/fhir/annuaire)** — profils Annuaire Santé (`as-practitioner`, `as-organization`, `as-practitionerrole`, extension `as-ext-mailbox-mss-metadata`)
-* **[ans.fr.nos latest](https://interop.esante.gouv.fr/ig/fhir/annuaire)** — terminologies nationales (JDV, TRE)
-
-### Authentification
-
-L'API Annuaire Santé requiert une clé d'API transmise via le header HTTP `ESANTE-API-KEY`.
