@@ -273,6 +273,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <div class="markdown-toc">
 <ul id="markdown-toc">
   <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
+  <li><a href="#en-un-coup-dœil" id="markdown-toc-en-un-coup-dœil">En un coup d'œil</a></li>
   <li><a href="#périmètre-du-projet" id="markdown-toc-périmètre-du-projet">Périmètre du projet</a></li>
   <li><a href="#dépendances" id="markdown-toc-dépendances">Dépendances</a></li>
   <li><a href="#propriété-intellectuelle" id="markdown-toc-propriété-intellectuelle">Propriété intellectuelle</a></li>
@@ -296,13 +297,73 @@ This guide describes the FHIR API for retrieving and managing MSSanté mailboxes
 
 <p><strong>MSSanté</strong> est le service national de messagerie chiffrée pour les professionnels de santé. Une BAL MSSanté est une adresse mail sécurisée attachée à un professionnel, une situation d'exercice ou une structure de santé.</p>
 
-<p>Les principales sections de l'IG sont :</p>
+<h3 id="en-un-coup-dœil">En un coup d'œil</h3>
 
-<ul>
-  <li><strong>Vol. 1 - Étude fonctionnelle</strong> : contexte MSSanté, types de BAL, modèle de données</li>
-  <li><strong>Vol. 2 - Détail des transactions</strong> : architecture de l'API, opérations GET et PATCH</li>
-  <li><strong>Ressources de conformité</strong> : CapabilityStatement, modèles logiques</li>
-</ul>
+<p>Deux endpoints complémentaires :</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Opération</th>
+      <th>Méthode</th>
+      <th>URL de base</th>
+      <th>Statut</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Lecture des BAL</td>
+      <td><code class="language-plaintext highlighter-rouge">GET</code></td>
+      <td><a href="https://ansforge.github.io/annuaire-sante-fhir-documentation/"><code class="language-plaintext highlighter-rouge">https://gateway.api.esante.gouv.fr/fhir/v2</code></a></td>
+      <td>Disponible</td>
+    </tr>
+    <tr>
+      <td>Écriture des BAL</td>
+      <td><code class="language-plaintext highlighter-rouge">PATCH</code></td>
+      <td>Endpoint dédié MSSanté</td>
+      <td>En cours de développement</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Quatre types de BAL, portés par trois ressources FHIR :</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Code</th>
+      <th>Ressource FHIR porteuse</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Personnelle</td>
+      <td><code class="language-plaintext highlighter-rouge">PER</code></td>
+      <td><code class="language-plaintext highlighter-rouge">Practitioner</code>, <code class="language-plaintext highlighter-rouge">PractitionerRole</code></td>
+      <td>Rattachée à l'identité d'un professionnel (RPPS)</td>
+    </tr>
+    <tr>
+      <td>Organisationnelle</td>
+      <td><code class="language-plaintext highlighter-rouge">ORG</code></td>
+      <td><code class="language-plaintext highlighter-rouge">Organization</code></td>
+      <td>Rattachée à une structure (EJ ou EG)</td>
+    </tr>
+    <tr>
+      <td>Applicative</td>
+      <td><code class="language-plaintext highlighter-rouge">APP</code></td>
+      <td><code class="language-plaintext highlighter-rouge">Organization</code></td>
+      <td>Usage applicatif, rattachée à une structure</td>
+    </tr>
+    <tr>
+      <td>Cabinet</td>
+      <td><code class="language-plaintext highlighter-rouge">CAB</code></td>
+      <td><code class="language-plaintext highlighter-rouge">Practitioner</code></td>
+      <td>BAL partagée au niveau du cabinet</td>
+    </tr>
+  </tbody>
+</table>
 
 <h3 id="périmètre-du-projet">Périmètre du projet</h3>
 
@@ -427,7 +488,7 @@ This guide describes the FHIR API for retrieving and managing MSSanté mailboxes
           IG © 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  
           Le package ans.fhir.fr.mss#0.1.0 est basé sur <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Date de génération : 
-  <span title="2026-06-12 13:12:00 +0000">
+  <span title="2026-06-12 13:14:00 +0000">
     2026-06-12
   </span>
 

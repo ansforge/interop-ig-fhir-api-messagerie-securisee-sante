@@ -13,11 +13,23 @@ Cet Implementation Guide décrit l'**API FHIR** pour la gestion des **BAL MSSant
 
 **MSSanté** est le service national de messagerie chiffrée pour les professionnels de santé. Une BAL MSSanté est une adresse mail sécurisée attachée à un professionnel, une situation d'exercice ou une structure de santé.
 
-Les principales sections de l'IG sont :
+### En un coup d'œil
 
-* **Vol. 1 - Étude fonctionnelle** : contexte MSSanté, types de BAL, modèle de données
-* **Vol. 2 - Détail des transactions** : architecture de l'API, opérations GET et PATCH
-* **Ressources de conformité** : CapabilityStatement, modèles logiques
+Deux endpoints complémentaires :
+
+| | | | |
+| :--- | :--- | :--- | :--- |
+| Lecture des BAL | `GET` | [`https://gateway.api.esante.gouv.fr/fhir/v2`](https://ansforge.github.io/annuaire-sante-fhir-documentation/) | Disponible |
+| Écriture des BAL | `PATCH` | Endpoint dédié MSSanté | En cours de développement |
+
+Quatre types de BAL, portés par trois ressources FHIR :
+
+| | | | |
+| :--- | :--- | :--- | :--- |
+| Personnelle | `PER` | `Practitioner`,`PractitionerRole` | Rattachée à l'identité d'un professionnel (RPPS) |
+| Organisationnelle | `ORG` | `Organization` | Rattachée à une structure (EJ ou EG) |
+| Applicative | `APP` | `Organization` | Usage applicatif, rattachée à une structure |
+| Cabinet | `CAB` | `Practitioner` | BAL partagée au niveau du cabinet |
 
 ### Périmètre du projet
 
