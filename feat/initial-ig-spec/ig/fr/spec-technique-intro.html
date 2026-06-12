@@ -240,18 +240,129 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p>  <!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#contexte-technique" id="markdown-toc-contexte-technique">Contexte technique</a></li>
+  <li><a href="#modélisation-fhir-des-bal" id="markdown-toc-modélisation-fhir-des-bal">Modélisation FHIR des BAL</a></li>
   <li><a href="#format-des-opérations-décriture" id="markdown-toc-format-des-opérations-décriture">Format des opérations d'écriture</a></li>
 </ul>
 
 </div>
 <div style="background-color: #f0f0f0; border-left: 4px solid #666; padding: 10px; width: 65%">
-Cette page s'adresse aux développeurs et intégrateurs. Elle présente le contexte technique de l'API.
+Cette page s'adresse aux développeurs et intégrateurs. Elle présente le contexte technique de l'API et la structure FHIR des BAL MSSanté.
 </div>
 
-<h3 id="contexte-technique">Contexte technique</h3>
+<h3 id="modélisation-fhir-des-bal">Modélisation FHIR des BAL</h3>
 
-<p>Cet IG s'appuie sur <strong>FHIR R4</strong> (version 4.0.1). Les BAL MSSanté sont modélisées comme éléments <code class="language-plaintext highlighter-rouge">telecom</code> au sein de leurs ressources porteuses (<code class="language-plaintext highlighter-rouge">Practitioner</code>, <code class="language-plaintext highlighter-rouge">PractitionerRole</code>, <code class="language-plaintext highlighter-rouge">Organization</code>), enrichis de l'extension <a href="https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-ext-mailbox-mss-metadata"><code class="language-plaintext highlighter-rouge">as-ext-mailbox-mss-metadata</code></a>.</p>
+<p>Les BAL MSSanté ne sont pas des ressources FHIR autonomes. Elles sont modélisées comme des éléments <code class="language-plaintext highlighter-rouge">telecom</code> au sein de leurs ressources porteuses (<code class="language-plaintext highlighter-rouge">Practitioner</code>, <code class="language-plaintext highlighter-rouge">PractitionerRole</code>, <code class="language-plaintext highlighter-rouge">Organization</code>), enrichis de l'extension <code class="language-plaintext highlighter-rouge">as-ext-mailbox-mss-metadata</code>.</p>
+
+<p>Chaque <code class="language-plaintext highlighter-rouge">telecom</code> portant une BAL a obligatoirement :</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">system</code> = <code class="language-plaintext highlighter-rouge">email</code></li>
+  <li><code class="language-plaintext highlighter-rouge">extension[emailType]</code> = <code class="language-plaintext highlighter-rouge">MSSANTE</code> (code issu de <code class="language-plaintext highlighter-rouge">TRE_R256-TypeMessagerie</code>) — discriminant permettant de distinguer les BAL MSSanté des autres adresses email</li>
+  <li><code class="language-plaintext highlighter-rouge">extension[as-ext-mailbox-mss-metadata]</code> — métadonnées de la BAL (type, liste rouge, description, etc.)</li>
+</ul>
+
+<h4 id="structure-dun-élément-telecom-bal">Structure d'un élément telecom BAL</h4>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"email"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"prenom.nom@domain.mssante.fr"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"rank"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"extension"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-contact-point-email-type"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"valueCoding"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R256-TypeMessagerie/FHIR/TRE-R256-TypeMessagerie"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MSSANTE"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-ext-mailbox-mss-metadata"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"extension"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w"> </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"type"</span><span class="p">,</span><span class="w"> </span><span class="nl">"valueCodeableConcept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R257-TypeBAL/FHIR/TRE-R257-TypeBAL"</span><span class="p">,</span><span class="w"> </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PER"</span><span class="w"> </span><span class="p">}]</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w"> </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"listeRouge"</span><span class="p">,</span><span class="w"> </span><span class="nl">"valueBoolean"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="p">}</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h4 id="emplacement-dans-chaque-ressource-porteuse">Emplacement dans chaque ressource porteuse</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type de BAL</th>
+      <th>Ressource</th>
+      <th>Chemin</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>PER (RPPS seul)</td>
+      <td><code class="language-plaintext highlighter-rouge">Practitioner</code></td>
+      <td><code class="language-plaintext highlighter-rouge">Practitioner.telecom[*]</code> où <code class="language-plaintext highlighter-rouge">emailType = MSSANTE</code></td>
+    </tr>
+    <tr>
+      <td>PER (RPPS + structure)</td>
+      <td><code class="language-plaintext highlighter-rouge">PractitionerRole</code></td>
+      <td><code class="language-plaintext highlighter-rouge">PractitionerRole.telecom[*]</code> où <code class="language-plaintext highlighter-rouge">emailType = MSSANTE</code></td>
+    </tr>
+    <tr>
+      <td>ORG</td>
+      <td><code class="language-plaintext highlighter-rouge">Organization</code></td>
+      <td><code class="language-plaintext highlighter-rouge">Organization.telecom[*]</code> où <code class="language-plaintext highlighter-rouge">emailType = MSSANTE</code></td>
+    </tr>
+    <tr>
+      <td>APP</td>
+      <td><code class="language-plaintext highlighter-rouge">Organization</code></td>
+      <td><code class="language-plaintext highlighter-rouge">Organization.telecom[*]</code> où <code class="language-plaintext highlighter-rouge">emailType = MSSANTE</code></td>
+    </tr>
+    <tr>
+      <td>CAB</td>
+      <td><code class="language-plaintext highlighter-rouge">Practitioner</code></td>
+      <td><code class="language-plaintext highlighter-rouge">Practitioner.telecom[*]</code> où <code class="language-plaintext highlighter-rouge">emailType = MSSANTE</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Le type de BAL (PER / ORG / APP / CAB) est porté par <code class="language-plaintext highlighter-rouge">as-ext-mailbox-mss-metadata.extension[type]</code>, pas par la ressource elle-même. Un <code class="language-plaintext highlighter-rouge">Practitioner</code> peut donc porter à la fois des BAL PER et CAB dans son tableau <code class="language-plaintext highlighter-rouge">telecom</code>.</p>
+
+<h4 id="exemple--practitioner-avec-une-bal-per">Exemple — Practitioner avec une BAL PER</h4>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Practitioner"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pract-800012345678"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w"> </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"urn:oid:1.2.250.1.71.4.2.1"</span><span class="p">,</span><span class="w"> </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"800012345678"</span><span class="w"> </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="nl">"family"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DUPONT"</span><span class="p">,</span><span class="w"> </span><span class="nl">"given"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"Jean"</span><span class="p">]</span><span class="w"> </span><span class="p">}],</span><span class="w">
+  </span><span class="nl">"telecom"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"email"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jean.dupont@medecin.mssante.fr"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"rank"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"extension"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-contact-point-email-type"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"valueCoding"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R256-TypeMessagerie/FHIR/TRE-R256-TypeMessagerie"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MSSANTE"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-ext-mailbox-mss-metadata"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"extension"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w"> </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"type"</span><span class="p">,</span><span class="w"> </span><span class="nl">"valueCodeableConcept"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://mos.esante.gouv.fr/NOS/TRE_R257-TypeBAL/FHIR/TRE-R257-TypeBAL"</span><span class="p">,</span><span class="w"> </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PER"</span><span class="w"> </span><span class="p">}]</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w"> </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"listeRouge"</span><span class="p">,</span><span class="w"> </span><span class="nl">"valueBoolean"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="p">}</span><span class="w">
+          </span><span class="p">]</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<hr/>
 
 <h3 id="format-des-opérations-décriture">Format des opérations d'écriture</h3>
 
@@ -331,7 +442,7 @@ Cette page s'adresse aux développeurs et intégrateurs. Elle présente le conte
           IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris</a>.  
           Le package ans.fhir.fr.mss#0.1.0 est basé sur <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Date de génération : 
-  <span title="2026-06-12 12:54:00 +0000">
+  <span title="2026-06-12 12:56:00 +0000">
     2026-06-12
   </span>
 
