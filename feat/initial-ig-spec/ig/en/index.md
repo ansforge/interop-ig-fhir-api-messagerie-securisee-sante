@@ -29,12 +29,6 @@ Cet IG couvre :
 * La **récupération** des BAL MSSanté via l'API FHIR Annuaire Santé (endpoint GET, lecture seule)
 * La **mise à jour** des BAL MSSanté via un endpoint PATCH dédié (création, modification, suppression — en cours d'ouverture)
 
-### Auteurs et contributeurs
-
-| | | | |
-| :--- | :--- | :--- | :--- |
-| **Primary Editor** | Nicolas Riss | Agence du Numérique en Santé | nicolas.riss@esante.gouv.fr |
-
 ### Dépendances
 
 
