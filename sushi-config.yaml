@@ -20,7 +20,6 @@ dependencies:
   hl7.fhir.fr.core: 2.1.0
   hl7.fhir.uv.xver-r5.r4: latest
   ans.fr.terminologies: latest
-  hl7.terminology.r4: 5.5.0
   ans.fhir.fr.annuaire: current
 
 parameters: #Parameters list - https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html
