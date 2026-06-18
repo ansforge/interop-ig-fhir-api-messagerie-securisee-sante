@@ -18,10 +18,7 @@
   ] ; # 
   fhir:identifier ( [
      fhir:use [ fhir:v "official" ] ;
-     fhir:system [
-       fhir:v "urn:oid:1.2.250.1.71.4.2.1"^^xsd:anyURI ;
-       fhir:l <urn:oid:1.2.250.1.71.4.2.1>
-     ] ;
+     fhir:system [ fhir:v "urn:oid:1.2.250.1.71.4.2.1"^^xsd:anyURI ] ;
      fhir:value [ fhir:v "810007654321" ]
   ] ) ; # 
   fhir:active [ fhir:v true] ; # 
@@ -33,34 +30,22 @@
   fhir:telecom ( [
      fhir:extension ( [
        fhir:extension ( [
-         fhir:url [
-           fhir:v "type"^^xsd:anyURI ;
-           fhir:l fhir:type
-         ] ;
+         fhir:url [ fhir:v "type"^^xsd:anyURI ] ;
          fhir:value [
            a fhir:CodeableConcept ;
            fhir:coding ( [
-             fhir:system [
-               fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R257-TypeBAL/FHIR/TRE-R257-TypeBAL"^^xsd:anyURI ;
-               fhir:l <https://mos.esante.gouv.fr/NOS/TRE_R257-TypeBAL/FHIR/TRE-R257-TypeBAL>
-             ] ;
+             fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R257-TypeBAL/FHIR/TRE-R257-TypeBAL"^^xsd:anyURI ] ;
              fhir:code [ fhir:v "PER" ]
            ] )
          ]
        ] [
-         fhir:url [
-           fhir:v "listeRouge"^^xsd:anyURI ;
-           fhir:l fhir:listeRouge
-         ] ;
+         fhir:url [ fhir:v "listeRouge"^^xsd:anyURI ] ;
          fhir:value [
-           a fhir:Boolean ;
+           a fhir:boolean ;
            fhir:v false
          ]
        ] ) ;
-       fhir:url [
-         fhir:v "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-ext-mailbox-mss-metadata"^^xsd:anyURI ;
-         fhir:l <https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-ext-mailbox-mss-metadata>
-       ]
+       fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-ext-mailbox-mss-metadata"^^xsd:anyURI ]
      ] ) ;
      fhir:system [ fhir:v "email" ] ;
      fhir:value [ fhir:v "sophie.martin@medecin.mssante.fr" ]

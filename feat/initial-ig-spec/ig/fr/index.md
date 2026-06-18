@@ -59,3 +59,8 @@ This publication includes IP covered under the following statements.
 * [ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code](http://terminology.hl7.org/6.2.0/CodeSystem-ISO3166Part1.html): [AsBalMssAppLogicalModel](StructureDefinition-as-bal-mss-app.md), [AsBalMssCabLogicalModel](StructureDefinition-as-bal-mss-cab.md)... Show 4 more, [AsBalMssOrgLogicalModel](StructureDefinition-as-bal-mss-org.md), [AsBalMssPerLogicalModel](StructureDefinition-as-bal-mss-per.md), [AsMssServerCapabilityStatement](CapabilityStatement-AsMssServerCapabilityStatement.md) and [MSS](index.md)
 
 
+* This material derives from the HL7 Terminology (THO). THO is copyright ©1989+ Health Level Seven International and is made available under the CC0 designation. For more licensing information see: [https://terminology.hl7.org/license.html](https://terminology.hl7.org/license.html)
+
+* [ObservationValue](http://terminology.hl7.org/7.2.0/CodeSystem-v3-ObservationValue.html): [Bundle/mss-bundle-bal-per-elements](Bundle-mss-bundle-bal-per-elements.md), [Practitioner/mss-practitioner-bal-per-dupont-elements](Practitioner-mss-practitioner-bal-per-dupont-elements.md) and [Practitioner/mss-practitioner-bal-per-martin-elements](Practitioner-mss-practitioner-bal-per-martin-elements.md)
+
+

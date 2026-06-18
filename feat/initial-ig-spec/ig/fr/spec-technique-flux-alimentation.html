@@ -247,7 +247,7 @@ Cette page s'adresse aux développeurs et intégrateurs. Elle décrit les opéra
 
 <p>La ressource porteuse et son identifiant sont à récupérer au préalable via une recherche sur <code class="language-plaintext highlighter-rouge">mailbox-mss</code>. L'utilisation du <a href="#conditional-patch">conditional PATCH</a> permet d'éviter cette étape.</p>
 
-<h4 id="exemple--mise-à-jour-de-la-liste-rouge-dune-bal-per">Exemple — mise à jour de la liste rouge d'une BAL PER</h4>
+<h4 id="exemple--mise-à-jour-ciblée-dun-attribut--liste-rouge-dune-bal-per">Exemple — mise à jour ciblée d'un attribut : liste rouge d'une BAL PER</h4>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">PATCH</span><span class="w"> </span><span class="p">[</span><span class="err">base</span><span class="p">]</span><span class="err">/Practitioner/</span><span class="p">[</span><span class="err">id</span><span class="p">]</span><span class="w">
 </span><span class="err">Content-Type:</span><span class="w"> </span><span class="err">application/fhir+json</span><span class="w">
@@ -267,7 +267,7 @@ Cette page s'adresse aux développeurs et intégrateurs. Elle décrit les opéra
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<h4 id="exemple--mise-à-jour-simultanée-de-plusieurs-attributs">Exemple — mise à jour simultanée de plusieurs attributs</h4>
+<h4 id="exemple--mise-à-jour-de-lattribut-telecom-en-entier">Exemple — mise à jour de l'attribut telecom en entier</h4>
 
 <p>Pour modifier plusieurs attributs en une seule requête, remplacer le ContactPoint entier :</p>
 
@@ -298,6 +298,8 @@ Cette page s'adresse aux développeurs et intégrateurs. Elle décrit les opéra
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
+
+<p>Pour information, il n'est pas possible de modifier le type ni la value d'une BAL, l'API renvoie une erreur si le client fait cette demande.</p>
 
 <h4 id="exemple--mise-à-jour-de-la-description-dune-bal-org">Exemple — mise à jour de la description d'une BAL ORG</h4>
 
@@ -544,8 +546,8 @@ Content-Type: application/fhir+json
           IG © 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  
           Le package ans.fhir.fr.mss#0.1.0 est basé sur <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Date de génération : 
-  <span title="2026-06-12 13:14:00 +0000">
-    2026-06-12
+  <span title="2026-06-18 12:46:00 +0000">
+    2026-06-18
   </span>
 
           <br/>

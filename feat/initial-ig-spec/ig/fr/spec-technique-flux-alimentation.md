@@ -14,7 +14,7 @@ L'approche retenue est le **FHIR Patch** (format `application/fhir+json`), utili
 
 La ressource porteuse et son identifiant sont à récupérer au préalable via une recherche sur `mailbox-mss`. L'utilisation du [conditional PATCH](#conditional-patch) permet d'éviter cette étape.
 
-#### Exemple — mise à jour de la liste rouge d'une BAL PER
+#### Exemple — mise à jour ciblée d'un attribut : liste rouge d'une BAL PER
 
 ```
 PATCH [base]/Practitioner/[id]
@@ -36,7 +36,7 @@ Content-Type: application/fhir+json
 
 ```
 
-#### Exemple — mise à jour simultanée de plusieurs attributs
+#### Exemple — mise à jour de l'attribut telecom en entier
 
 Pour modifier plusieurs attributs en une seule requête, remplacer le ContactPoint entier :
 
@@ -69,6 +69,8 @@ Content-Type: application/fhir+json
 }
 
 ```
+
+Pour information, il n'est pas possible de modifier le type ni la value d'une BAL, l'API renvoie une erreur si le client fait cette demande.
 
 #### Exemple — mise à jour de la description d'une BAL ORG
 

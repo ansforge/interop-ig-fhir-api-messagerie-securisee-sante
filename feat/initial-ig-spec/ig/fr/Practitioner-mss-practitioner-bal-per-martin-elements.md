@@ -10,7 +10,7 @@
 
 Dernière mise à jour : 2025-10-17 14:30:00+0200
 
-Balise: [subsetted (Détails : code v3 Code System ObservationValue SUBSETTED = 'subsetted')](http://hl7.org/fhir/R4/v3/ObservationValue/cs.html)
+Balise: [subsetted (Détails : code ObservationValue SUBSETTED = 'subsetted')](http://terminology.hl7.org/7.2.0/CodeSystem-v3-ObservationValue.html)
 
 **identifier**: `urn:oid:1.2.250.1.71.4.2.1`/810007654321 (utilisation : official, )
 
