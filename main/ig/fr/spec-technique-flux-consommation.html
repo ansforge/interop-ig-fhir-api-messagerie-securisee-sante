@@ -3,7 +3,7 @@
 <html xml:lang="fr" xmlns="http://www.w3.org/1999/xhtml" lang="fr" dir="ltr">
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-    <title>Flux de consommation - API Messagerie Sécurisée de Santé (MSSanté) v0.1.0</title>
+    <title>Récupération (GET) - API Messagerie Sécurisée de Santé (MSSanté) v0.1.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -44,8 +44,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script src="assets/js/mermaid.js" type="text/javascript"></script>
     <script src="assets/js/mermaid-init.js" type="text/javascript"></script>
-    <style type="text/css">h2{--heading-prefix:"3.3"}
-    h3,h4,h5,h6{--heading-prefix:"3.3"}</style>
+    <style type="text/css">h2{--heading-prefix:"3.2"}
+    h3,h4,h5,h6{--heading-prefix:"3.2"}</style>
     <div id="segment-header" class="segment">    <!-- segment-header -->
       <div class="container">    <!-- container -->
 
@@ -108,10 +108,10 @@
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="spec-fonctionnelle-intro.html">Introduction</a>
+        <a href="spec-fonctionnelle-intro.html">Vue d'ensemble</a>
       </li>
       <li>
-        <a href="spec-fonctionnelle-alimentation.html">Alimentation</a>
+        <a href="spec-fonctionnelle-alimentation.html">Modèle de données</a>
       </li>
     </ul>
   </li>
@@ -124,32 +124,13 @@
         <a href="spec-technique-intro.html">Introduction</a>
       </li>
       <li>
-        <a href="spec-technique-vue-ensemble.html">Vue d'ensemble</a>
+        <a href="spec-technique-vue-ensemble.html">Architecture de l'API</a>
       </li>
       <li>
-        <a href="spec-technique-flux-alimentation.html">Flux d'alimentation</a>
+        <a href="spec-technique-flux-consommation.html">Récupération (GET)</a>
       </li>
       <li>
-        <a href="spec-technique-flux-consommation.html">Flux de consommation</a>
-      </li>
-    </ul>
-  </li>
-  <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Vol. 3 - Annexes
-      <b class="caret"></b>
-    </a>
-    <ul class="dropdown-menu">
-      <li><a name="l238">​</a>
-        <a href="securite.html">Sécurité</a>
-      </li>
-      <li><a name="l244">​</a>
-        <a href="downloads.html">Téléchargements et usage</a>
-      </li>
-      <li>
-        <a href="http://hl7.org/fhir/R4/index.html" target="_blank">Spécifications FHIR </a>
-      </li>
-      <li>
-        <a href="https://esante.gouv.fr/" target="_blank">Site de l'ANS </a>
+        <a href="spec-technique-flux-alimentation.html">Écriture (PATCH)</a>
       </li>
     </ul>
   </li>
@@ -192,15 +173,15 @@
     <div id="segment-breadcrumb" class="segment" data-fhir="generated">    <!-- segment-breadcrumb -->
       <div class="container">    <!-- container -->
         <ul class="breadcrumb">
-          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><a href="spec-technique-intro.html"><b>Introduction</b></a></li><li><b>Flux de consommation</b></li>
+          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><a href="spec-technique-intro.html"><b>Introduction technique</b></a></li><li><b>Récupération (GET)</b></li>
 
           <span style="float: var(--ig-right);">
 
-            <a href="spec-technique-flux-alimentation.html">&lt; précédent</a> | 
+            <a href="spec-technique-vue-ensemble.html">&lt; précédent</a> | 
 
             <a href="#bottom">bas de page</a>
 
-          | <a href="change-log.html">suivant &gt;</a>
+          | <a href="spec-technique-flux-alimentation.html">suivant &gt;</a>
 
           </span>
 
@@ -222,7 +203,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </style>
 <div class="col-12">
     <!-- ReleaseHeader --><p id="publish-box">API Messagerie Sécurisée de Santé (MSSanté) - version de développement local (intégration continue v0.1.0) construite par les outils de publication FHIR (HL7&reg; FHIR&reg; Standard). Voir le <a href="https://interop.esante.gouv.fr/ig/fhir/mss/history.html">répertoire des versions publiées</a></p>  <!-- EndReleaseHeader -->
-  <h2>Flux de consommation</h2>
+  <h2>Récupération (GET)</h2>
   
 
 
@@ -238,12 +219,186 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
     <p>  <!-- white space is critical inside of capture --></p>
-<div>
-  <!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown. -->
-</div>
-<h3 id="spécifications-techniques-du-flux-de-consommation">Spécifications techniques du flux de consommation</h3>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#bal-personnelles-per" id="markdown-toc-bal-personnelles-per">BAL personnelles (PER)</a></li>
+  <li><a href="#bal-organisationnelles-org" id="markdown-toc-bal-organisationnelles-org">BAL organisationnelles (ORG)</a></li>
+  <li><a href="#bal-applicatives-app" id="markdown-toc-bal-applicatives-app">BAL applicatives (APP)</a></li>
+  <li><a href="#bal-de-cabinet-cab" id="markdown-toc-bal-de-cabinet-cab">BAL de cabinet (CAB)</a></li>
+  <li><a href="#paramètres-de-recherche-disponibles" id="markdown-toc-paramètres-de-recherche-disponibles">Paramètres de recherche disponibles</a></li>
+  <li><a href="#bilan-des-tests-sur-lapi-annuaire-santé-v2" id="markdown-toc-bilan-des-tests-sur-lapi-annuaire-santé-v2">Bilan des tests sur l'API Annuaire Santé v2</a></li>
+</ul>
 
-<p>Description technique du flux de consommation</p>
+</div>
+<div style="background-color: #f0f0f0; border-left: 4px solid #666; padding: 10px; width: 65%">
+Cette page s'adresse aux développeurs et intégrateurs. Elle décrit les opérations de récupération des BAL MSSanté.
+</div>
+
+<p>Dans les exemples ci-dessous, <code class="language-plaintext highlighter-rouge">[base]</code> désigne l'URL de base de l'<a href="https://ansforge.github.io/annuaire-sante-fhir-documentation/">API FHIR Annuaire Santé v2</a> : <code class="language-plaintext highlighter-rouge">https://gateway.api.esante.gouv.fr/fhir/v2</code>.</p>
+
+<h3 id="bal-personnelles-per">BAL personnelles (PER)</h3>
+
+<p>Une BAL PER peut être portée par un <code class="language-plaintext highlighter-rouge">Practitioner</code> (identifiant RPPS seul) ou un <code class="language-plaintext highlighter-rouge">PractitionerRole</code> (RPPS + structure) :</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [base]/Practitioner?mailbox-mss-type=https://mos.esante.gouv.fr/NOS/TRE_R256-TypeMessagerie/FHIR/TRE-R256-TypeMessagerie|PER
+GET [base]/PractitionerRole?mailbox-mss-type=https://mos.esante.gouv.fr/NOS/TRE_R256-TypeMessagerie/FHIR/TRE-R256-TypeMessagerie|PER
+</code></pre></div></div>
+
+<p>Ces deux requêtes peuvent être regroupées via <code class="language-plaintext highlighter-rouge">_type</code> :</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [base]?_type=Practitioner,PractitionerRole&amp;mailbox-mss-type=https://mos.esante.gouv.fr/NOS/TRE_R256-TypeMessagerie/FHIR/TRE-R256-TypeMessagerie|PER
+</code></pre></div></div>
+
+<p>Le paramètre <code class="language-plaintext highlighter-rouge">_elements</code> permet de limiter la réponse aux champs utiles :</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [base]?_type=Practitioner,PractitionerRole&amp;mailbox-mss-type=https://mos.esante.gouv.fr/NOS/TRE_R256-TypeMessagerie/FHIR/TRE-R256-TypeMessagerie|PER&amp;_elements=identifier,telecom
+</code></pre></div></div>
+
+<p>Il est également possible de regrouper les deux requêtes via un batch FHIR :</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">POST</span><span class="w"> </span><span class="p">[</span><span class="err">base</span><span class="p">]</span><span class="w">
+</span><span class="err">Content-Type:</span><span class="w"> </span><span class="err">application/fhir+json</span><span class="w">
+
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bundle"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"batch"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"entry"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"request"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Practitioner?mailbox-mss-type=https://mos.esante.gouv.fr/NOS/TRE_R256-TypeMessagerie/FHIR/TRE-R256-TypeMessagerie|PER"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"request"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PractitionerRole?mailbox-mss-type=https://mos.esante.gouv.fr/NOS/TRE_R256-TypeMessagerie/FHIR/TRE-R256-TypeMessagerie|PER"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Le serveur répond avec un Bundle de type <code class="language-plaintext highlighter-rouge">batch-response</code>, chaque entry portant un Bundle <code class="language-plaintext highlighter-rouge">searchset</code>.</p>
+
+<p><strong>Exemples de réponse :</strong></p>
+
+<ul>
+  <li><a href="Bundle-mss-bundle-bal-per-full.html">Bundle searchset BAL PER — réponse complète</a></li>
+  <li><a href="Bundle-mss-bundle-bal-per-elements.html">Bundle searchset BAL PER — réponse restreinte (<code class="language-plaintext highlighter-rouge">_elements=identifier,telecom</code>)</a></li>
+</ul>
+
+<h3 id="bal-organisationnelles-org">BAL organisationnelles (ORG)</h3>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [base]/Organization?mailbox-mss-type=https://mos.esante.gouv.fr/NOS/TRE_R256-TypeMessagerie/FHIR/TRE-R256-TypeMessagerie|ORG
+</code></pre></div></div>
+
+<h3 id="bal-applicatives-app">BAL applicatives (APP)</h3>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [base]/Organization?mailbox-mss-type=https://mos.esante.gouv.fr/NOS/TRE_R256-TypeMessagerie/FHIR/TRE-R256-TypeMessagerie|APP
+</code></pre></div></div>
+
+<h3 id="bal-de-cabinet-cab">BAL de cabinet (CAB)</h3>
+
+<blockquote class="stu-note">
+<p>La prise en charge des BAL CAB est en cours de travaux. Les spécifications ci-dessous sont susceptibles d'évoluer.</p>
+</blockquote>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET [base]/Practitioner?mailbox-mss-type=https://mos.esante.gouv.fr/NOS/TRE_R256-TypeMessagerie/FHIR/TRE-R256-TypeMessagerie|CAB
+</code></pre></div></div>
+
+<h3 id="paramètres-de-recherche-disponibles">Paramètres de recherche disponibles</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Paramètre</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a name="l699">​</a><a href="SearchParameter-as-sp-mailbox-mss-type.html"><code class="language-plaintext highlighter-rouge">mailbox-mss-type</code></a></td>
+      <td>token</td>
+      <td>Filtre par type de BAL (<code class="language-plaintext highlighter-rouge">PER</code>, <code class="language-plaintext highlighter-rouge">ORG</code>, <code class="language-plaintext highlighter-rouge">APP</code>, <code class="language-plaintext highlighter-rouge">CAB</code>)</td>
+    </tr>
+    <tr>
+      <td><a name="l725">​</a><a href="SearchParameter-as-sp-mailbox-mss.html"><code class="language-plaintext highlighter-rouge">mailbox-mss</code></a></td>
+      <td>string</td>
+      <td>Filtre par adresse MSSanté (<code class="language-plaintext highlighter-rouge">:contains</code>, <code class="language-plaintext highlighter-rouge">:exact</code>)</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr/>
+
+<h3 id="bilan-des-tests-sur-lapi-annuaire-santé-v2">Bilan des tests sur l'API Annuaire Santé v2</h3>
+
+<p>Tests effectués sur <code class="language-plaintext highlighter-rouge">https://gateway.api.esante.gouv.fr/fhir/v2</code> (2026-06-12).</p>
+
+<h4 id="paramètres-de-recherche">Paramètres de recherche</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Requête</th>
+      <th>Résultat</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Practitioner?mailbox-mss:contains=mssante.fr</code></td>
+      <td>✅ Résultats retournés</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">PractitionerRole?mailbox-mss:contains=mssante.fr</code></td>
+      <td>✅ Résultats retournés</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Organization?mailbox-mss:contains=mssante.fr</code></td>
+      <td>✅ Résultats retournés</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Practitioner?mailbox-mss:exact=&lt;adresse&gt;</code></td>
+      <td>✅ Syntaxe reconnue (0 résultats avec l'adresse de test)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Practitioner?mailbox-mss:contains=...&amp;_elements=identifier,telecom</code></td>
+      <td>✅ Restriction aux champs demandés</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Practitioner?mailbox-mss-type=...\|PER</code></td>
+      <td>❌ Paramètre non reconnu (<code class="language-plaintext highlighter-rouge">Parameter mailbox-mss-type not found</code>)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Le paramètre <code class="language-plaintext highlighter-rouge">mailbox-mss-type</code> (token) est défini dans l'IG Annuaire Santé mais n'est pas encore exposé par le serveur (absent du CapabilityStatement). Le filtrage par type de BAL doit actuellement s'effectuer côté client en inspectant <code class="language-plaintext highlighter-rouge">as-ext-mailbox-mss-metadata.extension[type]</code> dans les résultats.</p>
+
+<h4 id="requêtes-multi-ressources">Requêtes multi-ressources</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Requête</th>
+      <th>Résultat</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">GET [base]?_type=Practitioner,PractitionerRole&amp;mailbox-mss:contains=...</code></td>
+      <td>❌ Non supporté (route root non gérée par la gateway)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">POST [base]</code> (batch FHIR)</td>
+      <td>❌ Non supporté (route root non gérée par la gateway)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Le regroupement de requêtes sur plusieurs types de ressources via <code class="language-plaintext highlighter-rouge">_type</code> ou batch n'est pas disponible sur l'API v2. Il faut effectuer des requêtes séparées sur chaque ressource.</p>
+
 
 
 
@@ -269,7 +424,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             <tr>
               <td style="text-align:var(--ig-left);">&nbsp;
 
-                <a href="spec-technique-flux-alimentation.html">&lt; précédent</a>
+                <a href="spec-technique-vue-ensemble.html">&lt; précédent</a>
 
               </td>
               <td style="text-align:center">
@@ -277,7 +432,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
               </td>
               <td style="text-align:var(--ig-right);">&nbsp;
 
-                <a href="change-log.html">suivant &gt;</a>
+                <a href="spec-technique-flux-alimentation.html">suivant &gt;</a>
 
               </td>
             </tr>
@@ -293,8 +448,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris</a>.  
           Le package ans.fhir.fr.mss#0.1.0 est basé sur <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Date de génération : 
-  <span title="2026-06-12 12:02:00 +0000">
-    2026-06-12
+  <span title="2026-06-18 15:35:00 +0000">
+    2026-06-18
   </span>
 
           <br/>
