@@ -11,6 +11,11 @@ This guide describes the FHIR API for retrieving and managing MSSanté mailboxes
 </div>
 {% endif %}
 
+<div style="background-color: #f0f0f0; border-left: 4px solid #666; padding: 10px; width: 65%; margin-bottom: 1em;">
+⚙️ <strong>Version snapshot — réservée aux développeurs</strong><br>
+Cet IG est en cours de construction. Son contenu est instable et sujet à des modifications importantes. Il ne doit pas être utilisé en dehors d'un contexte de développement ou d'expérimentation. Un swagger sera prochainement ajouté.
+</div>
+
 ### Introduction
 
 Cet Implementation Guide décrit l'**API FHIR** pour la gestion des **BAL MSSanté** (Boîtes Aux Lettres de la Messagerie Sécurisée de Santé), rattachées aux professionnels de santé et aux structures dans l'Annuaire Santé.
