@@ -19,10 +19,10 @@ Generated $--. FHIR version $-- for ans.fhir.fr.mss#$-- (canonical = https://int
  /home/runner/work/interop-ig-fhir-api-messagerie-securisee-sante/interop-ig-fhir-api-messagerie-securisee-sante/igSource/fsh-generated/resources/StructureDefinition-as-bal-mss-per : 0 / 8 / 2
 </table>
 == n/a ==
-ERROR: en/change-log.html#/html/body/div/div/div/div/div/p/a at Line 238, column 11: The link 'https://interop.esante.gouv.fr/ig/fhir/mss/0.1.0' for "https://interop.esante.gouv.fr/ig/fhir/mss/0.1.0" cannot be resolved
+ERROR: en/change-log.html#/html/body/div/div/div/div/div/p/a at Line 238, column 11: The link 'https://interop.esante.gouv.fr/ig/fhir/mss/0.1.0-snapshot' for "https://interop.esante.gouv.fr/ig/fhir/mss/0.1.0-snapshot" cannot be resolved
 ERROR: en/spec-technique-flux-consommation.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 331, column 12: The link 'SearchParameter-as-sp-mailbox-mss-type.html' for "mailbox-mss-type" cannot be resolved
 ERROR: en/spec-technique-flux-consommation.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 336, column 12: The link 'SearchParameter-as-sp-mailbox-mss.html' for "mailbox-mss" cannot be resolved
-ERROR: fr/change-log.html#/html/body/div/div/div/div/div/p/a at Line 231, column 11: The link 'https://interop.esante.gouv.fr/ig/fhir/mss/0.1.0' for "https://interop.esante.gouv.fr/ig/fhir/mss/0.1.0" cannot be resolved
+ERROR: fr/change-log.html#/html/body/div/div/div/div/div/p/a at Line 231, column 11: The link 'https://interop.esante.gouv.fr/ig/fhir/mss/0.1.0-snapshot' for "https://interop.esante.gouv.fr/ig/fhir/mss/0.1.0-snapshot" cannot be resolved
 ERROR: fr/spec-technique-flux-consommation.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 324, column 12: The link 'SearchParameter-as-sp-mailbox-mss-type.html' for "mailbox-mss-type" cannot be resolved
 ERROR: fr/spec-technique-flux-consommation.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 329, column 12: The link 'SearchParameter-as-sp-mailbox-mss.html' for "mailbox-mss" cannot be resolved
 WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml, cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide

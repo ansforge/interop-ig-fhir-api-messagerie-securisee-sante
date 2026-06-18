@@ -1,4 +1,4 @@
-# Practitioner — BAL PER (éléments restreints, _elements=identifier,telecom) - API Messagerie Sécurisée de Santé (MSSanté) v0.1.0
+# Practitioner — BAL PER (éléments restreints, _elements=identifier,telecom) - API Messagerie Sécurisée de Santé (MSSanté) v0.1.0-snapshot
 
 ## Exemple Practitioner: Practitioner — BAL PER (éléments restreints, _elements=identifier,telecom)
 

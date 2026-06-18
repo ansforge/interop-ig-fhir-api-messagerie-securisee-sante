@@ -9,11 +9,11 @@
 </div></div></div>
   </text>
   <url value="https://interop.esante.gouv.fr/ig/fhir/mss/ImplementationGuide/ans.fhir.fr.mss"/>
-  <version value="0.1.0"/>
+  <version value="0.1.0-snapshot"/>
   <name value="MSS"/>
   <title value="API Messagerie Sécurisée de Santé (MSSanté)"/>
   <status value="draft"/>
-  <date value="2026-06-18T15:43:12+00:00"/>
+  <date value="2026-06-18T15:49:17+00:00"/>
   <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
   <contact>
     <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
@@ -78,7 +78,7 @@
         <valueString value="releaselabel"/>
       </extension>
       <extension url="value">
-        <valueString value="ci-build"/>
+        <valueString value="snapshot"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -374,7 +374,7 @@
         <valueCode value="releaselabel"/>
       </extension>
       <extension url="value">
-        <valueString value="ci-build"/>
+        <valueString value="snapshot"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">

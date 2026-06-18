@@ -1,4 +1,4 @@
-# Récupération (GET) - API Messagerie Sécurisée de Santé (MSSanté) v0.1.0
+# Récupération (GET) - API Messagerie Sécurisée de Santé (MSSanté) v0.1.0-snapshot
 
 ## Récupération (GET)
 

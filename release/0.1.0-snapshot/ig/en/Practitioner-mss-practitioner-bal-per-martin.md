@@ -1,4 +1,4 @@
-# Practitioner — BAL PER (2e praticien) - API Messagerie Sécurisée de Santé (MSSanté) v0.1.0
+# Practitioner — BAL PER (2e praticien) - API Messagerie Sécurisée de Santé (MSSanté) v0.1.0-snapshot
 
 ## Example Practitioner: Practitioner — BAL PER (2e praticien)
 

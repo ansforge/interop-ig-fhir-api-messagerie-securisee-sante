@@ -1,4 +1,4 @@
-# Bundle searchset BAL PER — réponse restreinte (_elements) - API Messagerie Sécurisée de Santé (MSSanté) v0.1.0
+# Bundle searchset BAL PER — réponse restreinte (_elements) - API Messagerie Sécurisée de Santé (MSSanté) v0.1.0-snapshot
 
 ## Example Bundle: Bundle searchset BAL PER — réponse restreinte (_elements)
 

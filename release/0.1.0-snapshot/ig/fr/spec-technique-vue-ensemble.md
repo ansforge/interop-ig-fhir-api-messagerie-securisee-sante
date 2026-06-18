@@ -1,4 +1,4 @@
-# Architecture de l'API - API Messagerie Sécurisée de Santé (MSSanté) v0.1.0
+# Architecture de l'API - API Messagerie Sécurisée de Santé (MSSanté) v0.1.0-snapshot
 
 ## Architecture de l'API
 

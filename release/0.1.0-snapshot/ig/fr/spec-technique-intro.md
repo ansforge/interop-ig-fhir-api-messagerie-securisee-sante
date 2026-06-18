@@ -1,4 +1,4 @@
-# Introduction technique - API Messagerie Sécurisée de Santé (MSSanté) v0.1.0
+# Introduction technique - API Messagerie Sécurisée de Santé (MSSanté) v0.1.0-snapshot
 
 ## Introduction technique
 

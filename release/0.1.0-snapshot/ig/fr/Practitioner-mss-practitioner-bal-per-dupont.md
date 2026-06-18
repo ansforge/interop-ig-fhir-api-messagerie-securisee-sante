@@ -1,4 +1,4 @@
-# Practitioner — BAL PER (exemple complet) - API Messagerie Sécurisée de Santé (MSSanté) v0.1.0
+# Practitioner — BAL PER (exemple complet) - API Messagerie Sécurisée de Santé (MSSanté) v0.1.0-snapshot
 
 ## Exemple Practitioner: Practitioner — BAL PER (exemple complet)
 
