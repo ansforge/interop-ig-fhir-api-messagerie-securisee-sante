@@ -57,7 +57,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-as-bal-mss-per.
   "name" : "AsBalMssPerLogicalModel",
   "title" : "AS BAL MSS PER - Modèle logique",
   "status" : "draft",
-  "date" : "2026-06-18T15:49:17+00:00",
+  "date" : "2026-06-18T15:53:54+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
