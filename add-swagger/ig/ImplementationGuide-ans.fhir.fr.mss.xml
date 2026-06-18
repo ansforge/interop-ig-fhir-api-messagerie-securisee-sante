@@ -13,7 +13,7 @@
   <name value="MSS"/>
   <title value="API Messagerie Sécurisée de Santé (MSSanté)"/>
   <status value="draft"/>
-  <date value="2026-06-18T15:30:07+00:00"/>
+  <date value="2026-06-18T22:30:58+00:00"/>
   <publisher value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
   <contact>
     <name value="Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"/>
@@ -48,6 +48,21 @@
     <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
     <packageId value="hl7.fhir.uv.extensions.r4"/>
     <version value="5.3.0"/>
+  </dependsOn>
+  <dependsOn id="hl7_fhir_uv_xver_r5_r4">
+    <uri value="http://hl7.org/fhir/uv/xver/ImplementationGuide/hl7.fhir.uv.xver-r5.r4"/>
+    <packageId value="hl7.fhir.uv.xver-r5.r4"/>
+    <version value="0.1.0"/>
+  </dependsOn>
+  <dependsOn id="ans_fr_terminologies">
+    <uri value="https://interop.esante.gouv.fr/terminologies/ImplementationGuide/ans.fr.terminologies"/>
+    <packageId value="ans.fr.terminologies"/>
+    <version value="1.10.0"/>
+  </dependsOn>
+  <dependsOn id="ans_fhir_fr_annuaire">
+    <uri value="https://interop.esante.gouv.fr/ig/fhir/annuaire/ImplementationGuide/ans.fhir.fr.annuaire"/>
+    <packageId value="ans.fhir.fr.annuaire"/>
+    <version value="1.1.0"/>
   </dependsOn>
   <definition>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -634,6 +649,127 @@
         <valueString value="true"/>
       </extension>
     </extension>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/as-bal-mss-app"/>
+      </reference>
+      <name value="AS BAL MSS APP - Modèle logique"/>
+      <description value="Modèle logique de la boîte aux lettres MSSanté applicative (APP), rattachée à une structure (EJ ou EG)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/as-bal-mss-cab"/>
+      </reference>
+      <name value="AS BAL MSS CAB - Modèle logique"/>
+      <description value="Modèle logique de la boîte aux lettres MSSanté de cabinet (CAB)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/as-bal-mss-org"/>
+      </reference>
+      <name value="AS BAL MSS ORG - Modèle logique"/>
+      <description value="Modèle logique de la boîte aux lettres MSSanté organisationnelle (ORG), rattachée à une structure (EJ ou EG)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/as-bal-mss-per"/>
+      </reference>
+      <name value="AS BAL MSS PER - Modèle logique"/>
+      <description value="Modèle logique de la boîte aux lettres MSSanté personnelle (PER), rattachée à un professionnel via son identifiant RPPS."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CapabilityStatement"/>
+      </extension>
+      <reference>
+        <reference value="CapabilityStatement/AsMssServerCapabilityStatement"/>
+      </reference>
+      <name value="AS MSS Server CapabilityStatement"/>
+      <description value="CapabilityStatement décrivant les capacités de l'endpoint dédié à l'écriture des BAL MSSanté.&#xA;&#xA;Cet endpoint expose uniquement des opérations d'écriture :&#xA;- **PATCH FHIRPath** : ajout, modification ou suppression d'un élément `telecom[mailbox-mss]` sur la ressource porteuse, identifiée soit par son ID logique, soit par son identifiant métier (conditional PATCH via `identifier`).&#xA;&#xA;La sémantique du PATCH suit la spécification [FHIR Patch](https://hl7.org/fhir/R4/http.html#patch) au format `application/fhir+json`."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/mss-bundle-bal-per-full"/>
+      </reference>
+      <name value="Bundle searchset BAL PER — réponse complète"/>
+      <description value="Exemple de Bundle de type searchset retourné en réponse à : GET [base]?_type=Practitioner,PractitionerRole&amp;mailbox-mss-type=...PER. Contient l'intégralité des données des ressources."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/mss-bundle-bal-per-elements"/>
+      </reference>
+      <name value="Bundle searchset BAL PER — réponse restreinte (_elements)"/>
+      <description value="Exemple de Bundle de type searchset retourné en réponse à : GET [base]?_type=Practitioner,PractitionerRole&amp;mailbox-mss-type=...PER&amp;_elements=identifier,telecom. Seuls identifier et telecom sont présents (meta.tag SUBSETTED ajouté par le serveur)."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Practitioner"/>
+      </extension>
+      <reference>
+        <reference value="Practitioner/mss-practitioner-bal-per-martin"/>
+      </reference>
+      <name value="Practitioner — BAL PER (2e praticien)"/>
+      <description value="Exemple fictif de Practitioner portant une BAL MSSanté personnelle (PER)."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Practitioner"/>
+      </extension>
+      <reference>
+        <reference value="Practitioner/mss-practitioner-bal-per-dupont"/>
+      </reference>
+      <name value="Practitioner — BAL PER (exemple complet)"/>
+      <description value="Exemple fictif de Practitioner portant une BAL MSSanté personnelle (PER)."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Practitioner"/>
+      </extension>
+      <reference>
+        <reference value="Practitioner/mss-practitioner-bal-per-martin-elements"/>
+      </reference>
+      <name value="Practitioner — BAL PER (éléments restreints, 2e praticien)"/>
+      <description value="Exemple fictif illustrant la réponse avec _elements=identifier,telecom pour un 2e praticien."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Practitioner"/>
+      </extension>
+      <reference>
+        <reference value="Practitioner/mss-practitioner-bal-per-dupont-elements"/>
+      </reference>
+      <name value="Practitioner — BAL PER (éléments restreints, _elements=identifier,telecom)"/>
+      <description value="Exemple fictif illustrant la réponse avec _elements=identifier,telecom. Le tag SUBSETTED signale que la ressource est incomplète."/>
+      <exampleBoolean value="true"/>
+    </resource>
     <page>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
         <valueUrl value="toc.html"/>
@@ -661,7 +797,7 @@
             <valueUrl value="spec-fonctionnelle-alimentation.html"/>
           </extension>
           <nameUrl value="spec-fonctionnelle-alimentation.html"/>
-          <title value="Alimentation"/>
+          <title value="Modèle de données"/>
           <generation value="markdown"/>
         </page>
       </page>
@@ -670,22 +806,14 @@
           <valueUrl value="spec-technique-intro.html"/>
         </extension>
         <nameUrl value="spec-technique-intro.html"/>
-        <title value="Introduction"/>
+        <title value="Introduction technique"/>
         <generation value="markdown"/>
         <page>
           <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
             <valueUrl value="spec-technique-vue-ensemble.html"/>
           </extension>
           <nameUrl value="spec-technique-vue-ensemble.html"/>
-          <title value="Vue d'ensemble"/>
-          <generation value="markdown"/>
-        </page>
-        <page>
-          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-            <valueUrl value="spec-technique-flux-alimentation.html"/>
-          </extension>
-          <nameUrl value="spec-technique-flux-alimentation.html"/>
-          <title value="Flux d'alimentation"/>
+          <title value="Architecture de l'API"/>
           <generation value="markdown"/>
         </page>
         <page>
@@ -693,7 +821,15 @@
             <valueUrl value="spec-technique-flux-consommation.html"/>
           </extension>
           <nameUrl value="spec-technique-flux-consommation.html"/>
-          <title value="Flux de consommation"/>
+          <title value="Récupération (GET)"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+            <valueUrl value="spec-technique-flux-alimentation.html"/>
+          </extension>
+          <nameUrl value="spec-technique-flux-alimentation.html"/>
+          <title value="Écriture (PATCH)"/>
           <generation value="markdown"/>
         </page>
       </page>
@@ -704,30 +840,6 @@
         <nameUrl value="change-log.html"/>
         <title value="Historique des versions"/>
         <generation value="markdown"/>
-      </page>
-      <page>
-        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="autres_ressources.html"/>
-        </extension>
-        <nameUrl value="autres_ressources.html"/>
-        <title value="Autres Ressources"/>
-        <generation value="markdown"/>
-        <page>
-          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-            <valueUrl value="annexe-securite.html"/>
-          </extension>
-          <nameUrl value="annexe-securite.html"/>
-          <title value="Sécurité"/>
-          <generation value="markdown"/>
-        </page>
-        <page>
-          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-            <valueUrl value="annexe-downloads.html"/>
-          </extension>
-          <nameUrl value="annexe-downloads.html"/>
-          <title value="Téléchargements et usages"/>
-          <generation value="markdown"/>
-        </page>
       </page>
       <page>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">

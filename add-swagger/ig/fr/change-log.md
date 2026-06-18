@@ -2,13 +2,11 @@
 
 ## Historique des versions
 
-### version xxx
+### Version 0.1.0
 
-**Release xxx de l'Implementation Guide FHIR xxx.**
+**Première version de l'Implementation Guide FHIR — API Messagerie Sécurisée de Santé (MSSanté).**
 
-URL : [https://interop.esante.gouv.fr/ig/fhir/xxx](https://interop.esante.gouv.fr/ig/fhir/xxx)
+URL : [https://interop.esante.gouv.fr/ig/fhir/mss/0.1.0](https://interop.esante.gouv.fr/ig/fhir/mss/0.1.0)
 
-[Modifications apportées dans cette release](https://github.com/ansforge/xxx/milestone/10?closed=1) :
-
-* [narratif] modification xxx [numéro d'issue](https://github.com/ansforge/xxx/issues/numéro d'issue)
+* Version initiale — spécification des opérations FHIR GET et PATCH pour la gestion des BAL MSSanté
 

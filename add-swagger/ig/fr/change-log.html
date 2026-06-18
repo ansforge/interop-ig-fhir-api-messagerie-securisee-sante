@@ -108,10 +108,10 @@
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="spec-fonctionnelle-intro.html">Introduction</a>
+        <a href="spec-fonctionnelle-intro.html">Vue d'ensemble</a>
       </li>
       <li>
-        <a href="spec-fonctionnelle-alimentation.html">Alimentation</a>
+        <a href="spec-fonctionnelle-alimentation.html">Modèle de données</a>
       </li>
     </ul>
   </li>
@@ -124,32 +124,13 @@
         <a href="spec-technique-intro.html">Introduction</a>
       </li>
       <li>
-        <a href="spec-technique-vue-ensemble.html">Vue d'ensemble</a>
+        <a href="spec-technique-vue-ensemble.html">Architecture de l'API</a>
       </li>
       <li>
-        <a href="spec-technique-flux-alimentation.html">Flux d'alimentation</a>
+        <a href="spec-technique-flux-consommation.html">Récupération (GET)</a>
       </li>
       <li>
-        <a href="spec-technique-flux-consommation.html">Flux de consommation</a>
-      </li>
-    </ul>
-  </li>
-  <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Vol. 3 - Annexes
-      <b class="caret"></b>
-    </a>
-    <ul class="dropdown-menu">
-      <li><a name="l238">​</a>
-        <a href="securite.html">Sécurité</a>
-      </li>
-      <li><a name="l244">​</a>
-        <a href="downloads.html">Téléchargements et usage</a>
-      </li>
-      <li>
-        <a href="http://hl7.org/fhir/R4/index.html" target="_blank">Spécifications FHIR </a>
-      </li>
-      <li>
-        <a href="https://esante.gouv.fr/" target="_blank">Site de l'ANS </a>
+        <a href="spec-technique-flux-alimentation.html">Écriture (PATCH)</a>
       </li>
     </ul>
   </li>
@@ -196,11 +177,11 @@
 
           <span style="float: var(--ig-right);">
 
-            <a href="spec-technique-flux-consommation.html">&lt; précédent</a> | 
+            <a href="spec-technique-flux-alimentation.html">&lt; précédent</a> | 
 
             <a href="#bottom">bas de page</a>
 
-          | <a href="autres_ressources.html">suivant &gt;</a>
+          | <a href="translationinfo.html">suivant &gt;</a>
 
           </span>
 
@@ -241,16 +222,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <div>
   <!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown. -->
 </div>
-<h3 id="version-xxx">version xxx</h3>
+<h3 id="version-010">Version 0.1.0</h3>
 
-<p><strong>Release xxx de l'Implementation Guide FHIR xxx.</strong></p>
+<p><strong>Première version de l'Implementation Guide FHIR — API Messagerie Sécurisée de Santé (MSSanté).</strong></p>
 
-<p>URL : <a href="https://interop.esante.gouv.fr/ig/fhir/xxx">https://interop.esante.gouv.fr/ig/fhir/xxx</a></p>
-
-<p><a href="https://github.com/ansforge/xxx/milestone/10?closed=1">Modifications apportées dans cette release</a> :</p>
+<p><a name="l374">​</a>URL : <a href="https://interop.esante.gouv.fr/ig/fhir/mss/0.1.0">https://interop.esante.gouv.fr/ig/fhir/mss/0.1.0</a></p>
 
 <ul>
-  <li>[narratif] modification xxx <a href="https://github.com/ansforge/xxx/issues/numéro d'issue">numéro d'issue</a></li>
+  <li>Version initiale — spécification des opérations FHIR GET et PATCH pour la gestion des BAL MSSanté</li>
 </ul>
 
 
@@ -278,7 +257,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             <tr>
               <td style="text-align:var(--ig-left);">&nbsp;
 
-                <a href="spec-technique-flux-consommation.html">&lt; précédent</a>
+                <a href="spec-technique-flux-alimentation.html">&lt; précédent</a>
 
               </td>
               <td style="text-align:center">
@@ -286,7 +265,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
               </td>
               <td style="text-align:var(--ig-right);">&nbsp;
 
-                <a href="autres_ressources.html">suivant &gt;</a>
+                <a href="translationinfo.html">suivant &gt;</a>
 
               </td>
             </tr>
@@ -302,7 +281,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris</a>.  
           Le package ans.fhir.fr.mss#0.1.0 est basé sur <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Date de génération : 
-  <span title="2026-06-18 15:30:00 +0000">
+  <span title="2026-06-18 22:30:00 +0000">
     2026-06-18
   </span>
 

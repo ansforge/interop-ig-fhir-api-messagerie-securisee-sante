@@ -19,7 +19,7 @@
   fhir:name [ fhir:v "MSS"] ; # 
   fhir:title [ fhir:v "API Messagerie Sécurisée de Santé (MSSanté)"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-06-18T15:30:07+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-06-18T22:30:58+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
@@ -69,6 +69,30 @@
      ] ;
      fhir:packageId [ fhir:v "hl7.fhir.uv.extensions.r4" ] ;
      fhir:version [ fhir:v "5.3.0" ]
+  ] [
+     fhir:id [ fhir:v "hl7_fhir_uv_xver_r5_r4" ] ;
+     fhir:uri [
+       fhir:v "http://hl7.org/fhir/uv/xver/ImplementationGuide/hl7.fhir.uv.xver-r5.r4"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/uv/xver/ImplementationGuide/hl7.fhir.uv.xver-r5.r4>
+     ] ;
+     fhir:packageId [ fhir:v "hl7.fhir.uv.xver-r5.r4" ] ;
+     fhir:version [ fhir:v "0.1.0" ]
+  ] [
+     fhir:id [ fhir:v "ans_fr_terminologies" ] ;
+     fhir:uri [
+       fhir:v "https://interop.esante.gouv.fr/terminologies/ImplementationGuide/ans.fr.terminologies"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/terminologies/ImplementationGuide/ans.fr.terminologies>
+     ] ;
+     fhir:packageId [ fhir:v "ans.fr.terminologies" ] ;
+     fhir:version [ fhir:v "1.10.0" ]
+  ] [
+     fhir:id [ fhir:v "ans_fhir_fr_annuaire" ] ;
+     fhir:uri [
+       fhir:v "https://interop.esante.gouv.fr/ig/fhir/annuaire/ImplementationGuide/ans.fhir.fr.annuaire"^^xsd:anyURI ;
+       fhir:link <https://interop.esante.gouv.fr/ig/fhir/annuaire/ImplementationGuide/ans.fhir.fr.annuaire>
+     ] ;
+     fhir:packageId [ fhir:v "ans.fhir.fr.annuaire" ] ;
+     fhir:version [ fhir:v "1.1.0" ]
   ] ) ; # 
   fhir:definition [
      fhir:extension ( [
@@ -1165,6 +1189,205 @@
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] ) ;
+     fhir:resource ( [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/mss/StructureDefinition/as-bal-mss-app> ;
+         fhir:reference [ fhir:v "StructureDefinition/as-bal-mss-app" ]
+       ] ;
+       fhir:name [ fhir:v "AS BAL MSS APP - Modèle logique" ] ;
+       fhir:description [ fhir:v "Modèle logique de la boîte aux lettres MSSanté applicative (APP), rattachée à une structure (EJ ou EG)." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/mss/StructureDefinition/as-bal-mss-cab> ;
+         fhir:reference [ fhir:v "StructureDefinition/as-bal-mss-cab" ]
+       ] ;
+       fhir:name [ fhir:v "AS BAL MSS CAB - Modèle logique" ] ;
+       fhir:description [ fhir:v "Modèle logique de la boîte aux lettres MSSanté de cabinet (CAB)." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/mss/StructureDefinition/as-bal-mss-org> ;
+         fhir:reference [ fhir:v "StructureDefinition/as-bal-mss-org" ]
+       ] ;
+       fhir:name [ fhir:v "AS BAL MSS ORG - Modèle logique" ] ;
+       fhir:description [ fhir:v "Modèle logique de la boîte aux lettres MSSanté organisationnelle (ORG), rattachée à une structure (EJ ou EG)." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:logical"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/mss/StructureDefinition/as-bal-mss-per> ;
+         fhir:reference [ fhir:v "StructureDefinition/as-bal-mss-per" ]
+       ] ;
+       fhir:name [ fhir:v "AS BAL MSS PER - Modèle logique" ] ;
+       fhir:description [ fhir:v "Modèle logique de la boîte aux lettres MSSanté personnelle (PER), rattachée à un professionnel via son identifiant RPPS." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CapabilityStatement"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/mss/CapabilityStatement/AsMssServerCapabilityStatement> ;
+         fhir:reference [ fhir:v "CapabilityStatement/AsMssServerCapabilityStatement" ]
+       ] ;
+       fhir:name [ fhir:v "AS MSS Server CapabilityStatement" ] ;
+       fhir:description [ fhir:v "CapabilityStatement décrivant les capacités de l'endpoint dédié à l'écriture des BAL MSSanté.\n\nCet endpoint expose uniquement des opérations d'écriture :\n- **PATCH FHIRPath** : ajout, modification ou suppression d'un élément `telecom[mailbox-mss]` sur la ressource porteuse, identifiée soit par son ID logique, soit par son identifiant métier (conditional PATCH via `identifier`).\n\nLa sémantique du PATCH suit la spécification [FHIR Patch](https://hl7.org/fhir/R4/http.html#patch) au format `application/fhir+json`." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/mss/Bundle/mss-bundle-bal-per-full> ;
+         fhir:reference [ fhir:v "Bundle/mss-bundle-bal-per-full" ]
+       ] ;
+       fhir:name [ fhir:v "Bundle searchset BAL PER — réponse complète" ] ;
+       fhir:description [ fhir:v "Exemple de Bundle de type searchset retourné en réponse à : GET [base]?_type=Practitioner,PractitionerRole&mailbox-mss-type=...PER. Contient l'intégralité des données des ressources." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Bundle"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/mss/Bundle/mss-bundle-bal-per-elements> ;
+         fhir:reference [ fhir:v "Bundle/mss-bundle-bal-per-elements" ]
+       ] ;
+       fhir:name [ fhir:v "Bundle searchset BAL PER — réponse restreinte (_elements)" ] ;
+       fhir:description [ fhir:v "Exemple de Bundle de type searchset retourné en réponse à : GET [base]?_type=Practitioner,PractitionerRole&mailbox-mss-type=...PER&_elements=identifier,telecom. Seuls identifier et telecom sont présents (meta.tag SUBSETTED ajouté par le serveur)." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Practitioner"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/mss/Practitioner/mss-practitioner-bal-per-martin> ;
+         fhir:reference [ fhir:v "Practitioner/mss-practitioner-bal-per-martin" ]
+       ] ;
+       fhir:name [ fhir:v "Practitioner — BAL PER (2e praticien)" ] ;
+       fhir:description [ fhir:v "Exemple fictif de Practitioner portant une BAL MSSanté personnelle (PER)." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Practitioner"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/mss/Practitioner/mss-practitioner-bal-per-dupont> ;
+         fhir:reference [ fhir:v "Practitioner/mss-practitioner-bal-per-dupont" ]
+       ] ;
+       fhir:name [ fhir:v "Practitioner — BAL PER (exemple complet)" ] ;
+       fhir:description [ fhir:v "Exemple fictif de Practitioner portant une BAL MSSanté personnelle (PER)." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Practitioner"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/mss/Practitioner/mss-practitioner-bal-per-martin-elements> ;
+         fhir:reference [ fhir:v "Practitioner/mss-practitioner-bal-per-martin-elements" ]
+       ] ;
+       fhir:name [ fhir:v "Practitioner — BAL PER (éléments restreints, 2e praticien)" ] ;
+       fhir:description [ fhir:v "Exemple fictif illustrant la réponse avec _elements=identifier,telecom pour un 2e praticien." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Practitioner"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://interop.esante.gouv.fr/ig/fhir/mss/Practitioner/mss-practitioner-bal-per-dupont-elements> ;
+         fhir:reference [ fhir:v "Practitioner/mss-practitioner-bal-per-dupont-elements" ]
+       ] ;
+       fhir:name [ fhir:v "Practitioner — BAL PER (éléments restreints, _elements=identifier,telecom)" ] ;
+       fhir:description [ fhir:v "Exemple fictif illustrant la réponse avec _elements=identifier,telecom. Le tag SUBSETTED signale que la ressource est incomplète." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] ) ;
      fhir:page [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
@@ -1219,7 +1442,7 @@
              a fhir:url ;
              fhir:v "spec-fonctionnelle-alimentation.html"^^xsd:anyURI
            ] ;
-           fhir:title [ fhir:v "Alimentation" ] ;
+           fhir:title [ fhir:v "Modèle de données" ] ;
            fhir:generation [ fhir:v "markdown" ]
          ] )
        ] [
@@ -1234,7 +1457,7 @@
            a fhir:url ;
            fhir:v "spec-technique-intro.html"^^xsd:anyURI
          ] ;
-         fhir:title [ fhir:v "Introduction" ] ;
+         fhir:title [ fhir:v "Introduction technique" ] ;
          fhir:generation [ fhir:v "markdown" ] ;
          fhir:page ( [
            fhir:extension ( [
@@ -1248,21 +1471,7 @@
              a fhir:url ;
              fhir:v "spec-technique-vue-ensemble.html"^^xsd:anyURI
            ] ;
-           fhir:title [ fhir:v "Vue d'ensemble" ] ;
-           fhir:generation [ fhir:v "markdown" ]
-         ] [
-           fhir:extension ( [
-             fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-             fhir:value [
-               a fhir:url ;
-               fhir:v "spec-technique-flux-alimentation.html"^^xsd:anyURI
-             ]
-           ] ) ;
-           fhir:name [
-             a fhir:url ;
-             fhir:v "spec-technique-flux-alimentation.html"^^xsd:anyURI
-           ] ;
-           fhir:title [ fhir:v "Flux d'alimentation" ] ;
+           fhir:title [ fhir:v "Architecture de l'API" ] ;
            fhir:generation [ fhir:v "markdown" ]
          ] [
            fhir:extension ( [
@@ -1276,7 +1485,21 @@
              a fhir:url ;
              fhir:v "spec-technique-flux-consommation.html"^^xsd:anyURI
            ] ;
-           fhir:title [ fhir:v "Flux de consommation" ] ;
+           fhir:title [ fhir:v "Récupération (GET)" ] ;
+           fhir:generation [ fhir:v "markdown" ]
+         ] [
+           fhir:extension ( [
+             fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+             fhir:value [
+               a fhir:url ;
+               fhir:v "spec-technique-flux-alimentation.html"^^xsd:anyURI
+             ]
+           ] ) ;
+           fhir:name [
+             a fhir:url ;
+             fhir:v "spec-technique-flux-alimentation.html"^^xsd:anyURI
+           ] ;
+           fhir:title [ fhir:v "Écriture (PATCH)" ] ;
            fhir:generation [ fhir:v "markdown" ]
          ] )
        ] [
@@ -1293,49 +1516,6 @@
          ] ;
          fhir:title [ fhir:v "Historique des versions" ] ;
          fhir:generation [ fhir:v "markdown" ]
-       ] [
-         fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [
-             a fhir:url ;
-             fhir:v "autres_ressources.html"^^xsd:anyURI
-           ]
-         ] ) ;
-         fhir:name [
-           a fhir:url ;
-           fhir:v "autres_ressources.html"^^xsd:anyURI
-         ] ;
-         fhir:title [ fhir:v "Autres Ressources" ] ;
-         fhir:generation [ fhir:v "markdown" ] ;
-         fhir:page ( [
-           fhir:extension ( [
-             fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-             fhir:value [
-               a fhir:url ;
-               fhir:v "annexe-securite.html"^^xsd:anyURI
-             ]
-           ] ) ;
-           fhir:name [
-             a fhir:url ;
-             fhir:v "annexe-securite.html"^^xsd:anyURI
-           ] ;
-           fhir:title [ fhir:v "Sécurité" ] ;
-           fhir:generation [ fhir:v "markdown" ]
-         ] [
-           fhir:extension ( [
-             fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-             fhir:value [
-               a fhir:url ;
-               fhir:v "annexe-downloads.html"^^xsd:anyURI
-             ]
-           ] ) ;
-           fhir:name [
-             a fhir:url ;
-             fhir:v "annexe-downloads.html"^^xsd:anyURI
-           ] ;
-           fhir:title [ fhir:v "Téléchargements et usages" ] ;
-           fhir:generation [ fhir:v "markdown" ]
-         ] )
        ] [
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;

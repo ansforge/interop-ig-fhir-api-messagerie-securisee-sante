@@ -1,0 +1,53 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/mss/Practitioner/mss-practitioner-bal-per-dupont-elements> a fhir:Practitioner ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "mss-practitioner-bal-per-dupont-elements"] ; # 
+  fhir:meta [
+     fhir:lastUpdated [ fhir:v "2025-11-04T09:12:00.000+01:00"^^xsd:dateTime ] ;
+     fhir:tag ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ObservationValue"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "SUBSETTED" ]
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"fr\" lang=\"fr\"><hr/><p><b>French</b></p><hr/><p class=\"res-header-id\"><b>Narratif généré : Praticien mss-practitioner-bal-per-dupont-elements</b></p><a name=\"mss-practitioner-bal-per-dupont-elements\"> </a><a name=\"hcmss-practitioner-bal-per-dupont-elements\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Dernière mise à jour : 2025-11-04 09:12:00+0100</p><p style=\"margin-bottom: 0px\">Balise: <a href=\"http://terminology.hl7.org/7.2.0/CodeSystem-v3-ObservationValue.html\">subsetted (Détails : code ObservationValue SUBSETTED = 'subsetted')</a></p></div><p><b>identifier</b>: <code>urn:oid:1.2.250.1.71.4.2.1</code>/810003456789 (utilisation : official, )</p><p><b>telecom</b>: <a href=\"mailto:jean-marie.dupont@infirmier.mssante.fr\">jean-marie.dupont@infirmier.mssante.fr</a></p></div><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: Practitioner mss-practitioner-bal-per-dupont-elements</b></p><a name=\"en-mss-practitioner-bal-per-dupont-elements\"> </a><a name=\"en-hcmss-practitioner-bal-per-dupont-elements\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Last updated: 2025-11-04 09:12:00+0100</p><p style=\"margin-bottom: 0px\">Tag: <a href=\"http://terminology.hl7.org/7.2.0/CodeSystem-v3-ObservationValue.html\">subsetted (Details: ObservationValue code SUBSETTED = 'subsetted')</a></p></div><p><b>identifier</b>: <code>urn:oid:1.2.250.1.71.4.2.1</code>/810003456789 (use: official, )</p><p><b>telecom</b>: <a href=\"mailto:jean-marie.dupont@infirmier.mssante.fr\">jean-marie.dupont@infirmier.mssante.fr</a></p></div></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:identifier ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:system [ fhir:v "urn:oid:1.2.250.1.71.4.2.1"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "810003456789" ]
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:extension ( [
+       fhir:extension ( [
+         fhir:url [ fhir:v "type"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:CodeableConcept ;
+           fhir:coding ( [
+             fhir:system [ fhir:v "https://mos.esante.gouv.fr/NOS/TRE_R257-TypeBAL/FHIR/TRE-R257-TypeBAL"^^xsd:anyURI ] ;
+             fhir:code [ fhir:v "PER" ]
+           ] )
+         ]
+       ] [
+         fhir:url [ fhir:v "listeRouge"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:boolean ;
+           fhir:v false
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-ext-mailbox-mss-metadata"^^xsd:anyURI ]
+     ] ) ;
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "jean-marie.dupont@infirmier.mssante.fr" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
