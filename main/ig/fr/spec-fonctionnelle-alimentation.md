@@ -1,4 +1,4 @@
-# Modèle de données - API Messagerie Sécurisée de Santé (MSSanté) v0.1.0
+# Modèle de données - API Messagerie Sécurisée de Santé (MSSanté) v0.1.0-snapshot
 
 ## Modèle de données
 

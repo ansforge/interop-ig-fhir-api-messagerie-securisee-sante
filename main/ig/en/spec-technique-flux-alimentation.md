@@ -1,4 +1,4 @@
-# Écriture (PATCH) - API Messagerie Sécurisée de Santé (MSSanté) v0.1.0
+# Écriture (PATCH) - API Messagerie Sécurisée de Santé (MSSanté) v0.1.0-snapshot
 
 ## Écriture (PATCH)
 

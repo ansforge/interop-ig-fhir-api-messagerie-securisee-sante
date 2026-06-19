@@ -1,4 +1,4 @@
-# Bundle searchset BAL PER — réponse complète - API Messagerie Sécurisée de Santé (MSSanté) v0.1.0
+# Bundle searchset BAL PER — réponse complète - API Messagerie Sécurisée de Santé (MSSanté) v0.1.0-snapshot
 
 ## Exemple Bundle: Bundle searchset BAL PER — réponse complète
 

@@ -1,4 +1,4 @@
-# ans.fhir.fr.mss#0.1.0: API Messagerie Sécurisée de Santé (MSSanté)(fr)
+# ans.fhir.fr.mss#0.1.0-snapshot: API Messagerie Sécurisée de Santé (MSSanté)(fr)
 
 ## Pages
 

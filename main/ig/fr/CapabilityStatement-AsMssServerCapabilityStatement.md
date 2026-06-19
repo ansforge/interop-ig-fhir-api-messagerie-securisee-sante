@@ -1,4 +1,4 @@
-# AS MSS Server CapabilityStatement - API Messagerie Sécurisée de Santé (MSSanté) v0.1.0
+# AS MSS Server CapabilityStatement - API Messagerie Sécurisée de Santé (MSSanté) v0.1.0-snapshot
 
 ## CapabilityStatement: AS MSS Server CapabilityStatement 
 
@@ -20,7 +20,7 @@ La sémantique du PATCH suit la spécification [FHIR Patch](https://hl7.org/fhir
   "resourceType" : "CapabilityStatement",
   "id" : "AsMssServerCapabilityStatement",
   "url" : "https://interop.esante.gouv.fr/ig/fhir/mss/CapabilityStatement/AsMssServerCapabilityStatement",
-  "version" : "0.1.0",
+  "version" : "0.1.0-snapshot",
   "name" : "AsMssServerCapabilityStatement",
   "title" : "AS MSS Server CapabilityStatement",
   "status" : "active",

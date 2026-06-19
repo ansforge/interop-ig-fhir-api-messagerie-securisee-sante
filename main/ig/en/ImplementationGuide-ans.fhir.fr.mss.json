@@ -7,11 +7,11 @@
     "div" : "<div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide ans.fhir.fr.mss</b></p><a name=\"en-ans.fhir.fr.mss\"> </a><a name=\"en-hcans.fhir.fr.mss\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: fr</p></div><h2>MSS</h2><p>The official URL for this implementation guide is: </p><pre>https://interop.esante.gouv.fr/ig/fhir/mss/ImplementationGuide/ans.fhir.fr.mss</pre><div><p>Implementation Guide décrivant l'API FHIR pour la messagerie sécurisée de santé (MSSanté)</p>\n</div></div>"
   },
   "url" : "https://interop.esante.gouv.fr/ig/fhir/mss/ImplementationGuide/ans.fhir.fr.mss",
-  "version" : "0.1.0",
+  "version" : "0.1.0-snapshot",
   "name" : "MSS",
   "title" : "API Messagerie Sécurisée de Santé (MSSanté)",
   "status" : "draft",
-  "date" : "2026-06-18T15:51:50+00:00",
+  "date" : "2026-06-19T07:40:12+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -88,7 +88,7 @@
       },
       {
         "url" : "value",
-        "valueString" : "ci-build"
+        "valueString" : "snapshot"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -494,7 +494,7 @@
       },
       {
         "url" : "value",
-        "valueString" : "ci-build"
+        "valueString" : "snapshot"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },

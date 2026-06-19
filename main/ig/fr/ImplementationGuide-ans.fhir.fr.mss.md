@@ -10,11 +10,11 @@
   "id" : "ans.fhir.fr.mss",
   "language" : "fr",
   "url" : "https://interop.esante.gouv.fr/ig/fhir/mss/ImplementationGuide/ans.fhir.fr.mss",
-  "version" : "0.1.0",
+  "version" : "0.1.0-snapshot",
   "name" : "MSS",
   "title" : "API Messagerie Sécurisée de Santé (MSSanté)",
   "status" : "draft",
-  "date" : "2026-06-18T15:51:50+00:00",
+  "date" : "2026-06-19T07:40:12+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -91,7 +91,7 @@
       },
       {
         "url" : "value",
-        "valueString" : "ci-build"
+        "valueString" : "snapshot"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -497,7 +497,7 @@
       },
       {
         "url" : "value",
-        "valueString" : "ci-build"
+        "valueString" : "snapshot"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },

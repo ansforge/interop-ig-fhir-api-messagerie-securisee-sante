@@ -1,4 +1,4 @@
-# Artifacts Summary - API Messagerie Sécurisée de Santé (MSSanté) v0.1.0
+# Artifacts Summary - API Messagerie Sécurisée de Santé (MSSanté) v0.1.0-snapshot
 
 ## Artifacts Summary
 

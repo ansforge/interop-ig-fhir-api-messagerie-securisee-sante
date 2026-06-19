@@ -15,11 +15,11 @@
      fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xml:lang=\"fr\" lang=\"fr\"><hr/><p><b>French</b></p><hr/><p class=\"res-header-id\"><b>Narratif généré : ImplementationGuide ans.fhir.fr.mss</b></p><a name=\"ans.fhir.fr.mss\"> </a><a name=\"hcans.fhir.fr.mss\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Langue : fr</p></div><h2>MSS</h2><p>L'URL officielle pour ce guide d'implémentation est : </p><pre>https://interop.esante.gouv.fr/ig/fhir/mss/ImplementationGuide/ans.fhir.fr.mss</pre><div><p>Implementation Guide décrivant l'API FHIR pour la messagerie sécurisée de santé (MSSanté)</p>\n</div></div><div xml:lang=\"en\" lang=\"en\"><hr/><p><b>English</b></p><hr/><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide ans.fhir.fr.mss</b></p><a name=\"en-ans.fhir.fr.mss\"> </a><a name=\"en-hcans.fhir.fr.mss\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: fr</p></div><h2>MSS</h2><p>The official URL for this implementation guide is: </p><pre>https://interop.esante.gouv.fr/ig/fhir/mss/ImplementationGuide/ans.fhir.fr.mss</pre><div><p>Implementation Guide décrivant l'API FHIR pour la messagerie sécurisée de santé (MSSanté)</p>\n</div></div></div>"^^rdf:XMLLiteral ]
   ] ; # 
   fhir:url [ fhir:v "https://interop.esante.gouv.fr/ig/fhir/mss/ImplementationGuide/ans.fhir.fr.mss"^^xsd:anyURI] ; # 
-  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:version [ fhir:v "0.1.0-snapshot"] ; # 
   fhir:name [ fhir:v "MSS"] ; # 
   fhir:title [ fhir:v "API Messagerie Sécurisée de Santé (MSSanté)"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-06-18T15:51:50+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-06-19T07:40:12+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris" ] ;
@@ -121,7 +121,7 @@
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
          fhir:value [
            a fhir:string ;
-           fhir:v "ci-build"
+           fhir:v "snapshot"
          ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
@@ -674,7 +674,7 @@
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
          fhir:value [
            a fhir:string ;
-           fhir:v "ci-build"
+           fhir:v "snapshot"
          ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
