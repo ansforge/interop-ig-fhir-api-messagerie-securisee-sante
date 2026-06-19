@@ -18,4 +18,4 @@
 
 ## Preview
 
-[Lien vers la preview](https://ansforge.github.io/interop-ig-fhir-api-messagerie-securisee-sante/[nom-de-la-branche]/ig)
+https://ansforge.github.io/interop-ig-fhir-api-messagerie-securisee-sante/[ajouter_nom_de_la_branche]/ig
