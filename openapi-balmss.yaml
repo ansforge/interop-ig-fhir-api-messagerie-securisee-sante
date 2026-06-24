@@ -925,7 +925,7 @@ paths:
         | Identifiant de structure | ✓ | `PractitionerRole.organization` (référence) |
       operationId: patchPractitionerRoleBALByIdentifier
       parameters:
-        - name: practitioner.identifier
+        - name: practitionerRole.identifier
           in: query
           required: true
           schema:
