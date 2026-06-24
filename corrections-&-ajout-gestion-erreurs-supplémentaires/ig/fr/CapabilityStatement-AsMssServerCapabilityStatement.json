@@ -1,0 +1,91 @@
+{
+  "resourceType" : "CapabilityStatement",
+  "id" : "AsMssServerCapabilityStatement",
+  "language" : "fr",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xml:lang=\"fr\" lang=\"fr\"><hr/><p><b>French</b></p><hr/><p class=\"res-header-id\"><b>Narratif généré : CapabilityStatement AsMssServerCapabilityStatement</b></p><a name=\"AsMssServerCapabilityStatement\"> </a><a name=\"hcAsMssServerCapabilityStatement\"> </a><h2 id=\"title\">AS MSS Server CapabilityStatement</h2><ul><li>Version du guide d'implémentation : 0.1.0-snapshot </li><li>Version de FHIR : 4.0.1 </li><li>Formats supportés : <code>json</code></li><li>Publié sur : 2026-06-12 </li><li>Publié par : Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris </li></ul><blockquote class=\"impl-note\"><p><strong>Note aux implémenteurs : capacités FHIR</strong></p><p>Toute capacité FHIR peut être 'autorisée' par le système sauf si elle est explicitement marquée comme 'SHALL NOT'. Quelques éléments sont marqués comme MAY dans le guide d'implémentation pour souligner leur pertinence potentielle pour le cas d'usage.</p></blockquote><h2 id=\"rest\">Capacités RESTful FHIR</h2><div class=\"panel panel-default\"><div class=\"panel-heading\"><h3 id=\"mode1\" class=\"panel-title\">Mode: <code>server</code></h3></div><div class=\"panel-body\"/></div><h3 id=\"resourcesCap1\">Capacités par ressource/profil</h3><h4 id=\"resourcesSummary1\">Résumé</h4><p>Le tableau récapitulatif liste les ressources faisant partie de cette configuration, et pour chaque ressource, il liste :</p><ul><li>Les profils pertinents (le cas échéant)</li><li>Les interactions supportées par chaque ressource (<b><span class=\"bg-info\">R</span></b>ead, <b><span class=\"bg-info\">S</span></b>earch, <b><span class=\"bg-info\">U</span></b>pdate, and <b><span class=\"bg-info\">C</span></b>reate, are always shown, while <b><span class=\"bg-info\">VR</span></b>ead, <b><span class=\"bg-info\">P</span></b>atch, <b><span class=\"bg-info\">D</span></b>elete, <b><span class=\"bg-info\">H</span></b>istory on <b><span class=\"bg-info\">I</span></b>nstance, or <b><span class=\"bg-info\">H</span></b>istory on <b><span class=\"bg-info\">T</span></b>les types sont seulement présents si au moins une des ressources les prend en charge.</li><li><span>Les paramètres de recherche (SearchParameters) requis, recommandés, optionnels (le cas échéant). </span></li><li>Les ressources liées activées pour <code>_include</code></li><li>Les autres ressources activées pour <code>_revinclude</code></li><li>Les opérations sur la ressource (le cas échéant)</li></ul><div class=\"table-responsive\"><table class=\"table table-condensed table-hover\"><thead><tr><th><b>Type de Ressource</b></th><th><b>Profil</b></th><th class=\"text-center\"><b title=\"GET d'une ressource (interaction read)\">R</b></th><th class=\"text-center\"><b title=\"GET de l'ensemble des ressources du type (interaction search)\">S</b></th><th class=\"text-center\"><b title=\"PUT d'une nouvelle version de ressource (interaction update)\">U</b></th><th class=\"text-center\"><b title=\"PATCH d'une nouvelle version de ressource (interaction patch)\">P</b></th><th class=\"text-center\"><b title=\"POST d'une nouvelle ressource (interaction create)\">C</b></th><th><b title=\"Paramètres de recherche requis et recommandés\">Recherches</b></th><th><code><b>_include</b></code></th><th><code><b>_revinclude</b></code></th><th><b>Opérations</b></th></tr></thead><tbody><tr><td><a href=\"#Organization1-1\">Organization</a></td><td><a href=\"https://interop.esante.gouv.fr/ig/fhir/annuaire/1.1.0/StructureDefinition-as-organization.html\">https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-organization|1.1.0</a></td><td class=\"text-center\"/><td class=\"text-center\"/><td class=\"text-center\"/><td class=\"text-center\">y</td><td class=\"text-center\"/><td>identifier</td><td/><td/><td/></tr><tr><td><a href=\"#Practitioner1-2\">Practitioner</a></td><td><a href=\"https://interop.esante.gouv.fr/ig/fhir/annuaire/1.1.0/StructureDefinition-as-practitioner.html\">https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-practitioner|1.1.0</a></td><td class=\"text-center\"/><td class=\"text-center\"/><td class=\"text-center\"/><td class=\"text-center\">y</td><td class=\"text-center\"/><td>identifier</td><td/><td/><td/></tr><tr><td><a href=\"#PractitionerRole1-3\">PractitionerRole</a></td><td><a href=\"https://interop.esante.gouv.fr/ig/fhir/annuaire/1.1.0/StructureDefinition-as-practitionerrole.html\">https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-practitionerrole|1.1.0</a></td><td class=\"text-center\"/><td class=\"text-center\"/><td class=\"text-center\"/><td class=\"text-center\">y</td><td class=\"text-center\"/><td>identifier</td><td/><td/><td/></tr></tbody></table></div><hr/><div class=\"panel panel-default\"><div class=\"panel-heading\"><h4 id=\"Organization1-1\" class=\"panel-title\"><span style=\"float: right;\">Conformité de la ressource : unspecified </span>Organization</h4></div><div class=\"panel-body\"><div class=\"container\"><div class=\"row\"><div class=\"col-lg-6\"><span class=\"lead\">Profil système de base</span><br/><a href=\"https://interop.esante.gouv.fr/ig/fhir/annuaire/1.1.0/StructureDefinition-as-organization.html\">AS Organization Profileversion : 1.1.0)</a></div><div class=\"col-lg-3\"><span class=\"lead\">Conformité au Profil</span><br/><b>SHALL</b></div><div class=\"col-lg-3\"><span class=\"lead\">Politique de référence</span><br/></div></div><p/><div class=\"row\"><div class=\"col-lg-6\"><span class=\"lead\">Résumé des interactions</span><br/><ul><li>Supporte <br/><code>patch</code><div><p>Modification d'une BAL MSSanté (ORG ou APP) rattachée à une structure via PATCH FHIRPath sur l'élément telecom ciblé par son adresse. Supporte le conditional PATCH via le paramètre <code>identifier</code> (<code>idnatstruct</code>, ex. FINESS géographique) : <code>PATCH [base]/Organization?identifier=\\&lt;system&gt;|\\&lt;idnatstruct&gt;</code>.</p>\n</div></li></ul></div></div><p/><div class=\"row\"><div class=\"col-lg-7\"><span class=\"lead\">Paramètres de recherche</span><table class=\"table table-condensed table-hover\"><thead><tr><th>Conformité</th><th>Paramètre</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/organization.html#search\">identifier</a></td><td><code>token</code></td><td><div><p>Identifiant national de structure (<code>idnatstruct</code>). Utilisé comme critère de conditional PATCH.</p>\n</div></td></tr></tbody></table></div><div class=\"col-lg-5\">\u00a0</div></div></div></div></div><div class=\"panel panel-default\"><div class=\"panel-heading\"><h4 id=\"Practitioner1-2\" class=\"panel-title\"><span style=\"float: right;\">Conformité de la ressource : unspecified </span>Practitioner</h4></div><div class=\"panel-body\"><div class=\"container\"><div class=\"row\"><div class=\"col-lg-6\"><span class=\"lead\">Profil système de base</span><br/><a href=\"https://interop.esante.gouv.fr/ig/fhir/annuaire/1.1.0/StructureDefinition-as-practitioner.html\">AS Practitioner Profileversion : 1.1.0)</a></div><div class=\"col-lg-3\"><span class=\"lead\">Conformité au Profil</span><br/><b>SHALL</b></div><div class=\"col-lg-3\"><span class=\"lead\">Politique de référence</span><br/></div></div><p/><div class=\"row\"><div class=\"col-lg-6\"><span class=\"lead\">Résumé des interactions</span><br/><ul><li>Supporte <br/><code>patch</code><div><p>Modification d'une BAL MSSanté de type PER (rattachée à l'identifiant RPPS seul) ou CAB via PATCH FHIRPath sur l'élément telecom ciblé par son adresse. Supporte le conditional PATCH via le paramètre <code>identifier</code> (<code>idnatps</code>, ex. RPPS) : <code>PATCH [base]/Practitioner?identifier=\\&lt;system&gt;|\\&lt;idnatps&gt;</code>.</p>\n</div></li></ul></div></div><p/><div class=\"row\"><div class=\"col-lg-7\"><span class=\"lead\">Paramètres de recherche</span><table class=\"table table-condensed table-hover\"><thead><tr><th>Conformité</th><th>Paramètre</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/practitioner.html#search\">identifier</a></td><td><code>token</code></td><td><div><p>Identifiant national du professionnel de santé (<code>idnatps</code>). Utilisé comme critère de conditional PATCH.</p>\n</div></td></tr></tbody></table></div><div class=\"col-lg-5\">\u00a0</div></div></div></div></div><div class=\"panel panel-default\"><div class=\"panel-heading\"><h4 id=\"PractitionerRole1-3\" class=\"panel-title\"><span style=\"float: right;\">Conformité de la ressource : unspecified </span>PractitionerRole</h4></div><div class=\"panel-body\"><div class=\"container\"><div class=\"row\"><div class=\"col-lg-6\"><span class=\"lead\">Profil système de base</span><br/><a href=\"https://interop.esante.gouv.fr/ig/fhir/annuaire/1.1.0/StructureDefinition-as-practitionerrole.html\">AS PractitionerRole Profileversion : 1.1.0)</a></div><div class=\"col-lg-3\"><span class=\"lead\">Conformité au Profil</span><br/><b>SHALL</b></div><div class=\"col-lg-3\"><span class=\"lead\">Politique de référence</span><br/></div></div><p/><div class=\"row\"><div class=\"col-lg-6\"><span class=\"lead\">Résumé des interactions</span><br/><ul><li>Supporte <br/><code>patch</code><div><p>Modification d'une BAL MSSanté de type PER (rattachée à un RPPS + structure d'exercice) via PATCH FHIRPath sur l'élément telecom ciblé par son adresse. Supporte le conditional PATCH via le paramètre <code>identifier</code> (<code>idSituationExercice</code>) : <code>PATCH [base]/PractitionerRole?identifier=\\&lt;system&gt;|\\&lt;idSituationExercice&gt;</code>.</p>\n</div></li></ul></div></div><p/><div class=\"row\"><div class=\"col-lg-7\"><span class=\"lead\">Paramètres de recherche</span><table class=\"table table-condensed table-hover\"><thead><tr><th>Conformité</th><th>Paramètre</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href=\"http://hl7.org/fhir/R4/practitionerrole.html#search\">identifier</a></td><td><code>token</code></td><td><div><p>Identifiant de la situation d'exercice (<code>idSituationExercice</code>). Utilisé comme critère de conditional PATCH.</p>\n</div></td></tr></tbody></table></div><div class=\"col-lg-5\">\u00a0</div></div></div></div></div></div>"
+  },
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/mss/CapabilityStatement/AsMssServerCapabilityStatement",
+  "version" : "0.1.0-snapshot",
+  "name" : "AsMssServerCapabilityStatement",
+  "title" : "AS MSS Server CapabilityStatement",
+  "status" : "active",
+  "date" : "2026-06-12",
+  "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+  "contact" : [{
+    "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://esante.gouv.fr"
+    }]
+  }],
+  "description" : "CapabilityStatement décrivant les capacités de l'endpoint dédié à l'écriture des BAL MSSanté.\n\nCet endpoint expose uniquement des opérations d'écriture :\n- **PATCH FHIRPath** : ajout, modification ou suppression d'un élément `telecom[mailbox-mss]` sur la ressource porteuse, identifiée soit par son ID logique, soit par son identifiant métier (conditional PATCH via `identifier`).\n\nLa sémantique du PATCH suit la spécification [FHIR Patch](https://hl7.org/fhir/R4/http.html#patch) au format `application/fhir+json`.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "France (la)"
+    }]
+  }],
+  "kind" : "requirements",
+  "fhirVersion" : "4.0.1",
+  "format" : ["json"],
+  "rest" : [{
+    "mode" : "server",
+    "resource" : [{
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-CapabilityStatement.rest.resource.conditionalPatch",
+        "valueBoolean" : true
+      }],
+      "type" : "Organization",
+      "profile" : "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-organization|1.1.0",
+      "interaction" : [{
+        "code" : "patch",
+        "documentation" : "Modification d'une BAL MSSanté (ORG ou APP) rattachée à une structure via PATCH FHIRPath sur l'élément telecom ciblé par son adresse. Supporte le conditional PATCH via le paramètre `identifier` (`idnatstruct`, ex. FINESS géographique) : `PATCH [base]/Organization?identifier=<system>|<idnatstruct>`."
+      }],
+      "searchParam" : [{
+        "name" : "identifier",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Organization-identifier|4.0.1",
+        "type" : "token",
+        "documentation" : "Identifiant national de structure (`idnatstruct`). Utilisé comme critère de conditional PATCH."
+      }]
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-CapabilityStatement.rest.resource.conditionalPatch",
+        "valueBoolean" : true
+      }],
+      "type" : "Practitioner",
+      "profile" : "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-practitioner|1.1.0",
+      "interaction" : [{
+        "code" : "patch",
+        "documentation" : "Modification d'une BAL MSSanté de type PER (rattachée à l'identifiant RPPS seul) ou CAB via PATCH FHIRPath sur l'élément telecom ciblé par son adresse. Supporte le conditional PATCH via le paramètre `identifier` (`idnatps`, ex. RPPS) : `PATCH [base]/Practitioner?identifier=<system>|<idnatps>`."
+      }],
+      "searchParam" : [{
+        "name" : "identifier",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Practitioner-identifier|4.0.1",
+        "type" : "token",
+        "documentation" : "Identifiant national du professionnel de santé (`idnatps`). Utilisé comme critère de conditional PATCH."
+      }]
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-CapabilityStatement.rest.resource.conditionalPatch",
+        "valueBoolean" : true
+      }],
+      "type" : "PractitionerRole",
+      "profile" : "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-practitionerrole|1.1.0",
+      "interaction" : [{
+        "code" : "patch",
+        "documentation" : "Modification d'une BAL MSSanté de type PER (rattachée à un RPPS + structure d'exercice) via PATCH FHIRPath sur l'élément telecom ciblé par son adresse. Supporte le conditional PATCH via le paramètre `identifier` (`idSituationExercice`) : `PATCH [base]/PractitionerRole?identifier=<system>|<idSituationExercice>`."
+      }],
+      "searchParam" : [{
+        "name" : "identifier",
+        "definition" : "http://hl7.org/fhir/SearchParameter/PractitionerRole-identifier|4.0.1",
+        "type" : "token",
+        "documentation" : "Identifiant de la situation d'exercice (`idSituationExercice`). Utilisé comme critère de conditional PATCH."
+      }]
+    }]
+  }]
+}
