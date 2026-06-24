@@ -10,7 +10,7 @@ info:
 
     | Type | Ressource(s) porteuse(s) |
     |------|--------------------------|
-    | PER  | `Practitioner` (RPPS seul), `PractitionerRole` (RPPS + structure) |
+    | PER  | `Practitioner`, `PractitionerRole` |
     | ORG  | `Organization` |
     | APP  | `Organization` |
     | CAB  | `Practitioner` |
@@ -271,6 +271,10 @@ paths:
           $ref: '#/components/responses/Unauthorized'
         '404':
           $ref: '#/components/responses/NotFound'
+        '422':
+          $ref: '#/components/responses/UnprocessableEntity'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
 
   /PractitionerRole/{id}:
     patch:
@@ -417,6 +421,10 @@ paths:
           $ref: '#/components/responses/Unauthorized'
         '404':
           $ref: '#/components/responses/NotFound'
+        '422':
+          $ref: '#/components/responses/UnprocessableEntity'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
 
   /Organization/{id}:
     patch:
@@ -572,6 +580,10 @@ paths:
           $ref: '#/components/responses/Unauthorized'
         '404':
           $ref: '#/components/responses/NotFound'
+        '422':
+          $ref: '#/components/responses/UnprocessableEntity'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
 
   /Practitioner:
     patch:
@@ -820,6 +832,10 @@ paths:
           $ref: '#/components/responses/NotFound'
         '412':
           $ref: '#/components/responses/PreconditionFailed'
+        '422':
+          $ref: '#/components/responses/UnprocessableEntity'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
 
     get:
       tags: [ Récupération ]
@@ -873,6 +889,8 @@ paths:
           $ref: '#/components/responses/BadRequest'
         '401':
           $ref: '#/components/responses/Unauthorized'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
 
   /PractitionerRole:
     patch:
@@ -915,18 +933,7 @@ paths:
             example: "urn:oid:1.2.250.1.71.4.2.1|800012345678"
           description: |
             Identifiant du praticien. Systèmes supportés :
-            - `https://rpps.esante.gouv.fr|{NUM_RPPS}`
-            - `urn:oid:1.2.250.1.71.4.2.1|{IDNAT_PP}` (IdNatPP — identifiant national PP)
-        - name: organization.identifier
-          in: query
-          required: true
-          schema:
-            type: string
-            example: "http://finess.sante.gouv.fr|123456789"
-          description: |
-            Identifiant de la structure d'exercice. Systèmes supportés :
-            - `http://finess.sante.gouv.fr|{NUM_FINESS}`
-            - `http://sirene.fr|{NUM_SIREN}`
+            - `https://rpps.esante.gouv.fr|{{NUM_ACTIVITE}}`
       requestBody:
         required: true
         content:
@@ -1040,6 +1047,10 @@ paths:
           $ref: '#/components/responses/NotFound'
         '412':
           $ref: '#/components/responses/PreconditionFailed'
+        '422':
+          $ref: '#/components/responses/UnprocessableEntity'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
     get:
       tags: [ Récupération ]
       summary: Rechercher des BAL PER (RPPS + structure d'exercice)
@@ -1064,6 +1075,8 @@ paths:
           $ref: '#/components/responses/BadRequest'
         '401':
           $ref: '#/components/responses/Unauthorized'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
 
   /Organization:
     patch:
@@ -1111,6 +1124,7 @@ paths:
             - `http://finess.sante.gouv.fr|{NUM_FINESS}`
             - `http://sirene.fr|{NUM_SIREN}`
             - `http://sirene.fr|{NUM_SIRET}`
+            - `https://rppsrang.esante.gouv.fr|{{NUM_RPPSRANG}}`
             - `urn:oid:1.2.250.1.71.4.2.2|{IDNAT_PM}` (sNatPm — identifiant national PM)
       requestBody:
         required: true
@@ -1233,6 +1247,10 @@ paths:
           $ref: '#/components/responses/NotFound'
         '412':
           $ref: '#/components/responses/PreconditionFailed'
+        '422':
+          $ref: '#/components/responses/UnprocessableEntity'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
 
     get:
       tags: [ Récupération ]
@@ -1257,6 +1275,8 @@ paths:
           $ref: '#/components/responses/BadRequest'
         '401':
           $ref: '#/components/responses/Unauthorized'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
 
   /:
     get:
@@ -1291,6 +1311,8 @@ paths:
           $ref: '#/components/responses/BadRequest'
         '401':
           $ref: '#/components/responses/Unauthorized'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
 
 components:
 
@@ -1571,6 +1593,20 @@ components:
               details:
                 type: object
                 properties:
+                  coding:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        system:
+                          type: string
+                          enum: [ "http://hl7.org/fhir/operation-outcome" ]
+                        code:
+                          type: string
+                          description: Code d'erreur (ex. MSG_BAD_FORMAT, MSG_BAD_SYNTAX)
+                        display:
+                          type: string
+                          description: Message d'erreur lisible
                   text:
                     type: string
 
@@ -1581,18 +1617,47 @@ components:
         application/fhir+json:
           schema:
             $ref: '#/components/schemas/OperationOutcome'
+          example:
+            resourceType: OperationOutcome
+            issue:
+              - severity: error
+                code: structure
+                details:
+                  coding:
+                    - system: "http://hl7.org/fhir/operation-outcome"
+                      code: MSG_BAD_FORMAT
+                      display: "Bad Syntax: \"%s\" must be a %s"
+                  text: "Le format d'entrée du FHIR est invalide"
     Unauthorized:
       description: Authentification requise
       content:
         application/fhir+json:
           schema:
             $ref: '#/components/schemas/OperationOutcome'
+          example:
+            resourceType: OperationOutcome
+            issue:
+              - severity: error
+                code: security
+                details:
+                  text: "Authentification requise"
     NotFound:
       description: Ressource introuvable
       content:
         application/fhir+json:
           schema:
             $ref: '#/components/schemas/OperationOutcome'
+          example:
+            resourceType: OperationOutcome
+            issue:
+              - severity: error
+                code: not-found
+                details:
+                  coding:
+                    - system: "http://hl7.org/fhir/operation-outcome"
+                      code: MSG_NO_EXIST
+                      display: "La ressource avec l'Id %s n'existe pas"
+                  text: "Ressource introuvable"
     PreconditionFailed:
       description: |
         Précondition non satisfaite — le PATCH conditionnel a retourné plusieurs ressources
@@ -1609,9 +1674,45 @@ components:
               - severity: error
                 code: conflict
                 details:
+                  coding:
+                    - system: "http://hl7.org/fhir/operation-outcome"
+                      code: SEARCH_MULTIPLE
+                      display: "Erreur : Plusieurs correspondances existent pour ce paramètre de recherche %s"
                   text: >
                     Multiple matches found for conditional PATCH — 0 or 1 match required,
                     but the search returned more than one result.
+
+    UnprocessableEntity:
+      description: Entité non traitable — l'adresse mail existe déjà pour le professionnel (Ajout de BAL MSS uniquement)
+      content:
+        application/fhir+json:
+          schema:
+            $ref: '#/components/schemas/OperationOutcome'
+          example:
+            resourceType: OperationOutcome
+            issue:
+              - severity: error
+                code: conflict
+                details:
+                  coding:
+                    - system: "http://hl7.org/fhir/operation-outcome"
+                      code: MSG_PARAM_NO_REPEAT
+                      display: "Parameter \"%s\" is not allowed to repeat"
+                  text: "L'adresse mail {{adresse_mail}} existe déjà pour le professionnel"
+
+    InternalServerError:
+      description: Erreur serveur inattendue
+      content:
+        application/fhir+json:
+          schema:
+            $ref: '#/components/schemas/OperationOutcome'
+          example:
+            resourceType: OperationOutcome
+            issue:
+              - severity: fatal
+                code: exception
+                details:
+                  text: "Erreur serveur inattendue."
 
   securitySchemes:
     ApiKey:
