@@ -930,7 +930,7 @@ paths:
           required: true
           schema:
             type: string
-            example: "urn:oid:1.2.250.1.71.4.2.1|800012345678"
+            example: "https://rpps.esante.gouv.fr|800012345678"
           description: |
             Identifiant du praticien. Systèmes supportés :
             - `https://rpps.esante.gouv.fr|{{NUM_ACTIVITE}}`
@@ -1118,10 +1118,10 @@ paths:
           required: true
           schema:
             type: string
-            example: "http://finess.sante.gouv.fr|123456789"
+            example: "http://finess.esante.gouv.fr|123456789"
           description: |
             Identifiant de la structure. Systèmes supportés :
-            - `http://finess.sante.gouv.fr|{NUM_FINESS}`
+            - `http://finess.esante.gouv.fr|{NUM_FINESS}`
             - `http://sirene.fr|{NUM_SIREN}`
             - `http://sirene.fr|{NUM_SIRET}`
             - `https://rppsrang.esante.gouv.fr|{{NUM_RPPSRANG}}`
