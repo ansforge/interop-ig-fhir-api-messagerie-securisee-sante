@@ -932,7 +932,7 @@ paths:
             type: string
             example: "https://rpps.esante.gouv.fr|800012345678"
           description: |
-            Identifiant du praticien. Systèmes supportés :
+            Identifiant de l'activité. Systèmes supportés :
             - `https://rpps.esante.gouv.fr|{{NUM_ACTIVITE}}`
       requestBody:
         required: true
