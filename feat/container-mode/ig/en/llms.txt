@@ -1,0 +1,40 @@
+# ans.fhir.fr.mss#0.1.0-snapshot: API Messagerie Sécurisée de Santé (MSSanté)(en)
+
+## Pages
+
+* [Accueil](index.md)
+* [Introduction technique](spec-technique-intro.md)
+* [Informations sur la traduction](translationinfo.md)
+* [Récupération (GET)](spec-technique-flux-consommation.md)
+* [Architecture de l'API](spec-technique-vue-ensemble.md)
+* [Artifacts Summary](artifacts.md)
+* [Vue d'ensemble](spec-fonctionnelle-intro.md)
+* [Historique des versions](change-log.md)
+* [Modèle de données](spec-fonctionnelle-alimentation.md)
+* [Écriture (PATCH)](spec-technique-flux-alimentation.md)
+
+## Resources
+
+### Logicals
+
+* [AS BAL MSS APP - Modèle logique](StructureDefinition-as-bal-mss-app.md)
+* [AS BAL MSS CAB - Modèle logique](StructureDefinition-as-bal-mss-cab.md)
+* [AS BAL MSS ORG - Modèle logique](StructureDefinition-as-bal-mss-org.md)
+* [AS BAL MSS PER - Modèle logique](StructureDefinition-as-bal-mss-per.md)
+
+### CapabilityStatements
+
+* [AS MSS Server CapabilityStatement](CapabilityStatement-AsMssServerCapabilityStatement.md)
+
+### ImplementationGuides
+
+* [API Messagerie Sécurisée de Santé (MSSanté)](ImplementationGuide-ans.fhir.fr.mss.md)
+
+### Examples
+
+* [mss-bundle-bal-per-elements (Bundle)](Bundle-mss-bundle-bal-per-elements.md)
+* [mss-bundle-bal-per-full (Bundle)](Bundle-mss-bundle-bal-per-full.md)
+* [mss-practitioner-bal-per-dupont-elements (Practitioner)](Practitioner-mss-practitioner-bal-per-dupont-elements.md)
+* [mss-practitioner-bal-per-dupont (Practitioner)](Practitioner-mss-practitioner-bal-per-dupont.md)
+* [mss-practitioner-bal-per-martin-elements (Practitioner)](Practitioner-mss-practitioner-bal-per-martin-elements.md)
+* [mss-practitioner-bal-per-martin (Practitioner)](Practitioner-mss-practitioner-bal-per-martin.md)

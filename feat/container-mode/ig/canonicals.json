@@ -1,0 +1,42 @@
+[{
+  "id" : "AsMssServerCapabilityStatement",
+  "type" : "CapabilityStatement",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/mss/CapabilityStatement/AsMssServerCapabilityStatement",
+  "version" : "0.1.0-snapshot",
+  "name" : "AsMssServerCapabilityStatement"
+},
+{
+  "id" : "ans.fhir.fr.mss",
+  "type" : "ImplementationGuide",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/mss/ImplementationGuide/ans.fhir.fr.mss",
+  "version" : "0.1.0-snapshot",
+  "name" : "MSS"
+},
+{
+  "id" : "as-bal-mss-app",
+  "type" : "StructureDefinition",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/mss/StructureDefinition/as-bal-mss-app",
+  "version" : "0.1.0-snapshot",
+  "name" : "AsBalMssAppLogicalModel"
+},
+{
+  "id" : "as-bal-mss-cab",
+  "type" : "StructureDefinition",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/mss/StructureDefinition/as-bal-mss-cab",
+  "version" : "0.1.0-snapshot",
+  "name" : "AsBalMssCabLogicalModel"
+},
+{
+  "id" : "as-bal-mss-org",
+  "type" : "StructureDefinition",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/mss/StructureDefinition/as-bal-mss-org",
+  "version" : "0.1.0-snapshot",
+  "name" : "AsBalMssOrgLogicalModel"
+},
+{
+  "id" : "as-bal-mss-per",
+  "type" : "StructureDefinition",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/mss/StructureDefinition/as-bal-mss-per",
+  "version" : "0.1.0-snapshot",
+  "name" : "AsBalMssPerLogicalModel"
+}]

@@ -1,0 +1,9 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"as-bal-mss-per","as-bal-mss-per","","","",0,*,"","","","null {[]} {[]}
+","AS BAL MSS PER - Modèle logique","Modèle logique de la boîte aux lettres MSSanté personnelle (PER), rattachée à un professionnel via son identifiant RPPS.","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"as-bal-mss-per.adresse","as-bal-mss-per.adresse","","","",1,1,"","","","string {[]} {[]}
+","Adresse BAL","Adresse de messagerie MSSanté","","","","","","","","","",,,,,"",,,,"as-bal-mss-per.adresse",1,1,"",""
+"as-bal-mss-per.identifiantPP","as-bal-mss-per.identifiantPP","","","",1,1,"","","","string {[]} {[]}
+","Identifiant PP","Identifiant national du professionnel de santé (RPPS)","","","","","","","","","",,,,,"",,,,"as-bal-mss-per.identifiantPP",1,1,"",""
+"as-bal-mss-per.listeRouge","as-bal-mss-per.listeRouge","","","",0,1,"","","","boolean {[]} {[]}
+","Liste rouge","Indicateur liste rouge. true : la BAL ne doit pas être publiée ; false : la BAL peut être publiée.","","","","","","","","","",,,,,"",,,,"as-bal-mss-per.listeRouge",0,1,"",""
