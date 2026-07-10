@@ -1,30 +1,72 @@
 MSS : Validation Results
 =========================================
 
-err = 0, warn = 60, info = 10
+err = 42, warn = 60, info = 16
 $--
 Generated $--. FHIR version $-- for ans.fhir.fr.mss#$-- (canonical = https://interop.esante.gouv.fr/ig/fhir/mss)
- Build Errors : 6 / 3 / 0
- /home/runner/work/interop-ig-fhir-api-messagerie-securisee-sante/interop-ig-fhir-api-messagerie-securisee-sante/igSource/fsh-generated/resources/Bundle-mss-bundle-bal-per-elements : 0 / 3 / 3
- /home/runner/work/interop-ig-fhir-api-messagerie-securisee-sante/interop-ig-fhir-api-messagerie-securisee-sante/igSource/fsh-generated/resources/Bundle-mss-bundle-bal-per-full : 0 / 3 / 3
- /home/runner/work/interop-ig-fhir-api-messagerie-securisee-sante/interop-ig-fhir-api-messagerie-securisee-sante/igSource/fsh-generated/resources/CapabilityStatement-AsMssServerCapabilityStatement : 0 / 3 / 7
- /home/runner/work/interop-ig-fhir-api-messagerie-securisee-sante/interop-ig-fhir-api-messagerie-securisee-sante/igSource/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.mss : 0 / 0 / 1
- /home/runner/work/interop-ig-fhir-api-messagerie-securisee-sante/interop-ig-fhir-api-messagerie-securisee-sante/igSource/fsh-generated/resources/Practitioner-mss-practitioner-bal-per-dupont : 0 / 1 / 1
- /home/runner/work/interop-ig-fhir-api-messagerie-securisee-sante/interop-ig-fhir-api-messagerie-securisee-sante/igSource/fsh-generated/resources/Practitioner-mss-practitioner-bal-per-dupont-elements : 0 / 1 / 1
- /home/runner/work/interop-ig-fhir-api-messagerie-securisee-sante/interop-ig-fhir-api-messagerie-securisee-sante/igSource/fsh-generated/resources/Practitioner-mss-practitioner-bal-per-martin : 0 / 1 / 1
- /home/runner/work/interop-ig-fhir-api-messagerie-securisee-sante/interop-ig-fhir-api-messagerie-securisee-sante/igSource/fsh-generated/resources/Practitioner-mss-practitioner-bal-per-martin-elements : 0 / 1 / 1
- /home/runner/work/interop-ig-fhir-api-messagerie-securisee-sante/interop-ig-fhir-api-messagerie-securisee-sante/igSource/fsh-generated/resources/StructureDefinition-as-bal-mss-app : 0 / 14 / 2
- /home/runner/work/interop-ig-fhir-api-messagerie-securisee-sante/interop-ig-fhir-api-messagerie-securisee-sante/igSource/fsh-generated/resources/StructureDefinition-as-bal-mss-cab : 0 / 8 / 2
- /home/runner/work/interop-ig-fhir-api-messagerie-securisee-sante/interop-ig-fhir-api-messagerie-securisee-sante/igSource/fsh-generated/resources/StructureDefinition-as-bal-mss-org : 0 / 14 / 2
- /home/runner/work/interop-ig-fhir-api-messagerie-securisee-sante/interop-ig-fhir-api-messagerie-securisee-sante/igSource/fsh-generated/resources/StructureDefinition-as-bal-mss-per : 0 / 8 / 2
+ Build Errors : 48 / 3 / 0
+ /__w/interop-ig-fhir-api-messagerie-securisee-sante/interop-ig-fhir-api-messagerie-securisee-sante/igSource/fsh-generated/resources/Bundle-mss-bundle-bal-per-elements : 0 / 3 / 3
+ /__w/interop-ig-fhir-api-messagerie-securisee-sante/interop-ig-fhir-api-messagerie-securisee-sante/igSource/fsh-generated/resources/Bundle-mss-bundle-bal-per-full : 0 / 3 / 3
+ /__w/interop-ig-fhir-api-messagerie-securisee-sante/interop-ig-fhir-api-messagerie-securisee-sante/igSource/fsh-generated/resources/CapabilityStatement-AsMssServerCapabilityStatement : 0 / 3 / 8
+ /__w/interop-ig-fhir-api-messagerie-securisee-sante/interop-ig-fhir-api-messagerie-securisee-sante/igSource/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.mss : 0 / 0 / 2
+ /__w/interop-ig-fhir-api-messagerie-securisee-sante/interop-ig-fhir-api-messagerie-securisee-sante/igSource/fsh-generated/resources/Practitioner-mss-practitioner-bal-per-dupont : 0 / 1 / 1
+ /__w/interop-ig-fhir-api-messagerie-securisee-sante/interop-ig-fhir-api-messagerie-securisee-sante/igSource/fsh-generated/resources/Practitioner-mss-practitioner-bal-per-dupont-elements : 0 / 1 / 1
+ /__w/interop-ig-fhir-api-messagerie-securisee-sante/interop-ig-fhir-api-messagerie-securisee-sante/igSource/fsh-generated/resources/Practitioner-mss-practitioner-bal-per-martin : 0 / 1 / 1
+ /__w/interop-ig-fhir-api-messagerie-securisee-sante/interop-ig-fhir-api-messagerie-securisee-sante/igSource/fsh-generated/resources/Practitioner-mss-practitioner-bal-per-martin-elements : 0 / 1 / 1
+ /__w/interop-ig-fhir-api-messagerie-securisee-sante/interop-ig-fhir-api-messagerie-securisee-sante/igSource/fsh-generated/resources/StructureDefinition-as-bal-mss-app : 0 / 14 / 3
+ /__w/interop-ig-fhir-api-messagerie-securisee-sante/interop-ig-fhir-api-messagerie-securisee-sante/igSource/fsh-generated/resources/StructureDefinition-as-bal-mss-cab : 0 / 8 / 3
+ /__w/interop-ig-fhir-api-messagerie-securisee-sante/interop-ig-fhir-api-messagerie-securisee-sante/igSource/fsh-generated/resources/StructureDefinition-as-bal-mss-org : 0 / 14 / 3
+ /__w/interop-ig-fhir-api-messagerie-securisee-sante/interop-ig-fhir-api-messagerie-securisee-sante/igSource/fsh-generated/resources/StructureDefinition-as-bal-mss-per : 0 / 8 / 3
 </table>
 == n/a ==
-ERROR: en/change-log.html#/html/body/div/div/div/div/div/p/a at Line 238, column 11: The link 'https://interop.esante.gouv.fr/ig/fhir/mss/0.1.0-snapshot' for "https://interop.esante.gouv.fr/ig/fhir/mss/0.1.0-snapshot" cannot be resolved
-ERROR: en/spec-technique-flux-consommation.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 331, column 12: The link 'SearchParameter-as-sp-mailbox-mss-type.html' for "mailbox-mss-type" cannot be resolved
-ERROR: en/spec-technique-flux-consommation.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 336, column 12: The link 'SearchParameter-as-sp-mailbox-mss.html' for "mailbox-mss" cannot be resolved
-ERROR: fr/change-log.html#/html/body/div/div/div/div/div/p/a at Line 231, column 11: The link 'https://interop.esante.gouv.fr/ig/fhir/mss/0.1.0-snapshot' for "https://interop.esante.gouv.fr/ig/fhir/mss/0.1.0-snapshot" cannot be resolved
-ERROR: fr/spec-technique-flux-consommation.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 324, column 12: The link 'SearchParameter-as-sp-mailbox-mss-type.html' for "mailbox-mss-type" cannot be resolved
-ERROR: fr/spec-technique-flux-consommation.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 329, column 12: The link 'SearchParameter-as-sp-mailbox-mss.html' for "mailbox-mss" cannot be resolved
+ERROR: ToC: The ToC contains the page CapabilityStatement-AsMssServerCapabilityStatement.xml.html more than once
+ERROR: ToC: The ToC contains the page CapabilityStatement-AsMssServerCapabilityStatement.json.html more than once
+ERROR: ToC: The ToC contains the page CapabilityStatement-AsMssServerCapabilityStatement.ttl.html more than once
+ERROR: ToC: The ToC contains the page CapabilityStatement-AsMssServerCapabilityStatement-testing.html more than once
+ERROR: ToC: The ToC contains the page StructureDefinition-as-bal-mss-app.profile.xml.html more than once
+ERROR: ToC: The ToC contains the page StructureDefinition-as-bal-mss-app.profile.json.html more than once
+ERROR: ToC: The ToC contains the page StructureDefinition-as-bal-mss-app.profile.ttl.html more than once
+ERROR: ToC: The ToC contains the page StructureDefinition-as-bal-mss-app-mappings.html more than once
+ERROR: ToC: The ToC contains the page StructureDefinition-as-bal-mss-app-testing.html more than once
+ERROR: ToC: The ToC contains the page StructureDefinition-as-bal-mss-cab.profile.xml.html more than once
+ERROR: ToC: The ToC contains the page StructureDefinition-as-bal-mss-cab.profile.json.html more than once
+ERROR: ToC: The ToC contains the page StructureDefinition-as-bal-mss-cab.profile.ttl.html more than once
+ERROR: ToC: The ToC contains the page StructureDefinition-as-bal-mss-cab-mappings.html more than once
+ERROR: ToC: The ToC contains the page StructureDefinition-as-bal-mss-cab-testing.html more than once
+ERROR: ToC: The ToC contains the page StructureDefinition-as-bal-mss-org.profile.xml.html more than once
+ERROR: ToC: The ToC contains the page StructureDefinition-as-bal-mss-org.profile.json.html more than once
+ERROR: ToC: The ToC contains the page StructureDefinition-as-bal-mss-org.profile.ttl.html more than once
+ERROR: ToC: The ToC contains the page StructureDefinition-as-bal-mss-org-mappings.html more than once
+ERROR: ToC: The ToC contains the page StructureDefinition-as-bal-mss-org-testing.html more than once
+ERROR: ToC: The ToC contains the page StructureDefinition-as-bal-mss-per.profile.xml.html more than once
+ERROR: ToC: The ToC contains the page StructureDefinition-as-bal-mss-per.profile.json.html more than once
+ERROR: ToC: The ToC contains the page StructureDefinition-as-bal-mss-per.profile.ttl.html more than once
+ERROR: ToC: The ToC contains the page StructureDefinition-as-bal-mss-per-mappings.html more than once
+ERROR: ToC: The ToC contains the page StructureDefinition-as-bal-mss-per-testing.html more than once
+ERROR: ToC: The ToC contains the page Bundle-mss-bundle-bal-per-full.xml.html more than once
+ERROR: ToC: The ToC contains the page Bundle-mss-bundle-bal-per-full.json.html more than once
+ERROR: ToC: The ToC contains the page Bundle-mss-bundle-bal-per-full.ttl.html more than once
+ERROR: ToC: The ToC contains the page Bundle-mss-bundle-bal-per-elements.xml.html more than once
+ERROR: ToC: The ToC contains the page Bundle-mss-bundle-bal-per-elements.json.html more than once
+ERROR: ToC: The ToC contains the page Bundle-mss-bundle-bal-per-elements.ttl.html more than once
+ERROR: ToC: The ToC contains the page Practitioner-mss-practitioner-bal-per-martin.xml.html more than once
+ERROR: ToC: The ToC contains the page Practitioner-mss-practitioner-bal-per-martin.json.html more than once
+ERROR: ToC: The ToC contains the page Practitioner-mss-practitioner-bal-per-martin.ttl.html more than once
+ERROR: ToC: The ToC contains the page Practitioner-mss-practitioner-bal-per-dupont.xml.html more than once
+ERROR: ToC: The ToC contains the page Practitioner-mss-practitioner-bal-per-dupont.json.html more than once
+ERROR: ToC: The ToC contains the page Practitioner-mss-practitioner-bal-per-dupont.ttl.html more than once
+ERROR: ToC: The ToC contains the page Practitioner-mss-practitioner-bal-per-martin-elements.xml.html more than once
+ERROR: ToC: The ToC contains the page Practitioner-mss-practitioner-bal-per-martin-elements.json.html more than once
+ERROR: ToC: The ToC contains the page Practitioner-mss-practitioner-bal-per-martin-elements.ttl.html more than once
+ERROR: ToC: The ToC contains the page Practitioner-mss-practitioner-bal-per-dupont-elements.xml.html more than once
+ERROR: ToC: The ToC contains the page Practitioner-mss-practitioner-bal-per-dupont-elements.json.html more than once
+ERROR: ToC: The ToC contains the page Practitioner-mss-practitioner-bal-per-dupont-elements.ttl.html more than once
+ERROR: en/change-log.html#/html/body/div/div/div/div/div/p/a at Line 241, column 11: The link 'https://interop.esante.gouv.fr/ig/fhir/mss/0.1.0-snapshot' for "https://interop.esante.gouv.fr/ig/fhir/mss/0.1.0-snapshot" cannot be resolved
+ERROR: en/spec-technique-flux-consommation.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 334, column 12: The link 'SearchParameter-as-sp-mailbox-mss-type.html' for "mailbox-mss-type" cannot be resolved
+ERROR: en/spec-technique-flux-consommation.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 339, column 12: The link 'SearchParameter-as-sp-mailbox-mss.html' for "mailbox-mss" cannot be resolved
+ERROR: fr/change-log.html#/html/body/div/div/div/div/div/p/a at Line 234, column 11: The link 'https://interop.esante.gouv.fr/ig/fhir/mss/0.1.0-snapshot' for "https://interop.esante.gouv.fr/ig/fhir/mss/0.1.0-snapshot" cannot be resolved
+ERROR: fr/spec-technique-flux-consommation.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 327, column 12: The link 'SearchParameter-as-sp-mailbox-mss-type.html' for "mailbox-mss-type" cannot be resolved
+ERROR: fr/spec-technique-flux-consommation.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 332, column 12: The link 'SearchParameter-as-sp-mailbox-mss.html' for "mailbox-mss" cannot be resolved
 WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml, cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 4: An HTML fragment from the set [globals-table.xhtml, globals-table.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 5: An HTML fragment from the set [expansion-params.xhtml, expansion-params.xhtml] is not included anywhere in the produced implementation guide
@@ -46,7 +88,9 @@ INFORMATION: CapabilityStatement.rest[0].resource[2].searchParam[0].definition: 
 WARNING: CapabilityStatement/AsMssServerCapabilityStatement: CapabilityStatement.rest[0].resource[0].interaction[0].documentation: The markdown contains content that appears to be an embedded HTML tag starting at '<s'. This will (or SHOULD) be escaped by the presentation layer. The content should be checked to confirm that this is the desired behaviour
 WARNING: CapabilityStatement/AsMssServerCapabilityStatement: CapabilityStatement.rest[0].resource[1].interaction[0].documentation: The markdown contains content that appears to be an embedded HTML tag starting at '<s'. This will (or SHOULD) be escaped by the presentation layer. The content should be checked to confirm that this is the desired behaviour
 WARNING: CapabilityStatement/AsMssServerCapabilityStatement: CapabilityStatement.rest[0].resource[2].interaction[0].documentation: The markdown contains content that appears to be an embedded HTML tag starting at '<s'. This will (or SHOULD) be escaped by the presentation layer. The content should be checked to confirm that this is the desired behaviour
+INFORMATION: Resource: The resource CapabilityStatement/AsMssServerCapabilityStatement could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/ImplementationGuide-ans.fhir.fr.mss.json ==
+INFORMATION: Resource: The resource ImplementationGuide/ans.fhir.fr.mss could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/Practitioner-mss-practitioner-bal-per-dupont.json ==
 WARNING: Practitioner/mss-practitioner-bal-per-dupont: Practitioner.identifier[0].system: No definition could be found for URL value 'urn:oid:1.2.250.1.71.4.2.1'
 == fsh-generated/resources/Practitioner-mss-practitioner-bal-per-dupont-elements.json ==
@@ -71,6 +115,7 @@ WARNING: StructureDefinition/as-bal-mss-app: StructureDefinition.differential.el
 WARNING: StructureDefinition/as-bal-mss-app: StructureDefinition.differential.element[4]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken (path.matches('[A-Za-z][A-Za-z0-9]*(\\.[a-z][A-Za-z0-9]*(\\[x])?)*'))'
 WARNING: StructureDefinition/as-bal-mss-app: StructureDefinition.differential.element[5]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken (path.matches('[A-Za-z][A-Za-z0-9]*(\\.[a-z][A-Za-z0-9]*(\\[x])?)*'))'
 WARNING: StructureDefinition/as-bal-mss-app: StructureDefinition.differential.element[6]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken (path.matches('[A-Za-z][A-Za-z0-9]*(\\.[a-z][A-Za-z0-9]*(\\[x])?)*'))'
+INFORMATION: Resource: The resource StructureDefinition/as-bal-mss-app could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/StructureDefinition-as-bal-mss-cab.json ==
 INFORMATION: StructureDefinition.baseDefinition: Pinned the version of http://hl7.org/fhir/StructureDefinition/Base to 4.0.1
 WARNING: StructureDefinition/as-bal-mss-cab: StructureDefinition.snapshot.element[0]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken (path.matches('[A-Za-z][A-Za-z0-9]*(\\.[a-z][A-Za-z0-9]*(\\[x])?)*'))'
@@ -81,6 +126,7 @@ WARNING: StructureDefinition/as-bal-mss-cab: StructureDefinition.differential.el
 WARNING: StructureDefinition/as-bal-mss-cab: StructureDefinition.differential.element[1]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken (path.matches('[A-Za-z][A-Za-z0-9]*(\\.[a-z][A-Za-z0-9]*(\\[x])?)*'))'
 WARNING: StructureDefinition/as-bal-mss-cab: StructureDefinition.differential.element[2]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken (path.matches('[A-Za-z][A-Za-z0-9]*(\\.[a-z][A-Za-z0-9]*(\\[x])?)*'))'
 WARNING: StructureDefinition/as-bal-mss-cab: StructureDefinition.differential.element[3]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken (path.matches('[A-Za-z][A-Za-z0-9]*(\\.[a-z][A-Za-z0-9]*(\\[x])?)*'))'
+INFORMATION: Resource: The resource StructureDefinition/as-bal-mss-cab could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/StructureDefinition-as-bal-mss-org.json ==
 INFORMATION: StructureDefinition.baseDefinition: Pinned the version of http://hl7.org/fhir/StructureDefinition/Base to 4.0.1
 WARNING: StructureDefinition/as-bal-mss-org: StructureDefinition.snapshot.element[0]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken (path.matches('[A-Za-z][A-Za-z0-9]*(\\.[a-z][A-Za-z0-9]*(\\[x])?)*'))'
@@ -97,6 +143,7 @@ WARNING: StructureDefinition/as-bal-mss-org: StructureDefinition.differential.el
 WARNING: StructureDefinition/as-bal-mss-org: StructureDefinition.differential.element[4]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken (path.matches('[A-Za-z][A-Za-z0-9]*(\\.[a-z][A-Za-z0-9]*(\\[x])?)*'))'
 WARNING: StructureDefinition/as-bal-mss-org: StructureDefinition.differential.element[5]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken (path.matches('[A-Za-z][A-Za-z0-9]*(\\.[a-z][A-Za-z0-9]*(\\[x])?)*'))'
 WARNING: StructureDefinition/as-bal-mss-org: StructureDefinition.differential.element[6]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken (path.matches('[A-Za-z][A-Za-z0-9]*(\\.[a-z][A-Za-z0-9]*(\\[x])?)*'))'
+INFORMATION: Resource: The resource StructureDefinition/as-bal-mss-org could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/StructureDefinition-as-bal-mss-per.json ==
 INFORMATION: StructureDefinition.baseDefinition: Pinned the version of http://hl7.org/fhir/StructureDefinition/Base to 4.0.1
 WARNING: StructureDefinition/as-bal-mss-per: StructureDefinition.snapshot.element[0]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken (path.matches('[A-Za-z][A-Za-z0-9]*(\\.[a-z][A-Za-z0-9]*(\\[x])?)*'))'
@@ -107,3 +154,4 @@ WARNING: StructureDefinition/as-bal-mss-per: StructureDefinition.differential.el
 WARNING: StructureDefinition/as-bal-mss-per: StructureDefinition.differential.element[1]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken (path.matches('[A-Za-z][A-Za-z0-9]*(\\.[a-z][A-Za-z0-9]*(\\[x])?)*'))'
 WARNING: StructureDefinition/as-bal-mss-per: StructureDefinition.differential.element[2]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken (path.matches('[A-Za-z][A-Za-z0-9]*(\\.[a-z][A-Za-z0-9]*(\\[x])?)*'))'
 WARNING: StructureDefinition/as-bal-mss-per: StructureDefinition.differential.element[3]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken (path.matches('[A-Za-z][A-Za-z0-9]*(\\.[a-z][A-Za-z0-9]*(\\[x])?)*'))'
+INFORMATION: Resource: The resource StructureDefinition/as-bal-mss-per could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
