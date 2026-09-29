@@ -1,0 +1,833 @@
+{
+  "date" : "Tue, 29 Sep, 2026 07:37:52 +0000",
+  "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
+  "files" : [{
+    "name" : "/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.mss.json",
+    "size" : 8930,
+    "processes" : [{
+      "activity" : "load",
+      "start" : 41,
+      "length" : 464
+    },
+    {
+      "activity" : "scan",
+      "start" : 42,
+      "length" : 1
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 42,
+      "length" : 24
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 42,
+      "length" : 82
+    },
+    {
+      "activity" : "validate",
+      "start" : 44,
+      "length" : 2960
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 47,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 47,
+      "length" : 1
+    },
+    {
+      "activity" : "translate",
+      "start" : 47,
+      "length" : 20
+    },
+    {
+      "activity" : "generate1",
+      "start" : 47,
+      "length" : 185
+    },
+    {
+      "activity" : "generate2",
+      "start" : 51,
+      "length" : 489
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 72,
+      "length" : 4
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 83,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Bundle-mss-bundle-bal-per-elements.json",
+    "size" : 3703,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 41,
+      "length" : 6
+    },
+    {
+      "activity" : "load",
+      "start" : 41,
+      "length" : 11
+    },
+    {
+      "activity" : "load-configure",
+      "start" : 42,
+      "length" : 3
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 42,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 42,
+      "length" : 991
+    },
+    {
+      "activity" : "validate",
+      "start" : 47,
+      "length" : 77
+    },
+    {
+      "activity" : "translate",
+      "start" : 47,
+      "length" : 18
+    },
+    {
+      "activity" : "generate1",
+      "start" : 48,
+      "length" : 19
+    },
+    {
+      "activity" : "generate2",
+      "start" : 51,
+      "length" : 54
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 83,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Bundle-mss-bundle-bal-per-full.json",
+    "size" : 3680,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 41,
+      "length" : 4
+    },
+    {
+      "activity" : "load",
+      "start" : 41,
+      "length" : 4
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 42,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 43,
+      "length" : 4
+    },
+    {
+      "activity" : "validate",
+      "start" : 47,
+      "length" : 55
+    },
+    {
+      "activity" : "translate",
+      "start" : 47,
+      "length" : 10
+    },
+    {
+      "activity" : "generate1",
+      "start" : 48,
+      "length" : 17
+    },
+    {
+      "activity" : "generate2",
+      "start" : 51,
+      "length" : 44
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/CapabilityStatement-AsMssServerCapabilityStatement.json",
+    "size" : 4653,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 41,
+      "length" : 5
+    },
+    {
+      "activity" : "load",
+      "start" : 41,
+      "length" : 24
+    },
+    {
+      "activity" : "load-configure",
+      "start" : 42,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 43,
+      "length" : 30
+    },
+    {
+      "activity" : "validate",
+      "start" : 44,
+      "length" : 64
+    },
+    {
+      "activity" : "validate",
+      "start" : 47,
+      "length" : 2
+    },
+    {
+      "activity" : "translate",
+      "start" : 47,
+      "length" : 9
+    },
+    {
+      "activity" : "generate1",
+      "start" : 48,
+      "length" : 66
+    },
+    {
+      "activity" : "generate2",
+      "start" : 51,
+      "length" : 122
+    },
+    {
+      "activity" : "makeDependencies",
+      "start" : 56,
+      "length" : 1
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 72,
+      "length" : 2
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Practitioner-mss-practitioner-bal-per-dupont-elements.json",
+    "size" : 1188,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 41,
+      "length" : 3
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 42,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 43,
+      "length" : 7
+    },
+    {
+      "activity" : "validate",
+      "start" : 47,
+      "length" : 24
+    },
+    {
+      "activity" : "translate",
+      "start" : 47,
+      "length" : 9
+    },
+    {
+      "activity" : "generate1",
+      "start" : 48,
+      "length" : 12
+    },
+    {
+      "activity" : "generate2",
+      "start" : 51,
+      "length" : 32
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Practitioner-mss-practitioner-bal-per-dupont.json",
+    "size" : 1180,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 41,
+      "length" : 3
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 43,
+      "length" : 2
+    },
+    {
+      "activity" : "validate",
+      "start" : 47,
+      "length" : 23
+    },
+    {
+      "activity" : "translate",
+      "start" : 47,
+      "length" : 7
+    },
+    {
+      "activity" : "generate1",
+      "start" : 48,
+      "length" : 12
+    },
+    {
+      "activity" : "generate2",
+      "start" : 52,
+      "length" : 26
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Practitioner-mss-practitioner-bal-per-martin-elements.json",
+    "size" : 1182,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 41,
+      "length" : 3
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 43,
+      "length" : 3
+    },
+    {
+      "activity" : "validate",
+      "start" : 47,
+      "length" : 26
+    },
+    {
+      "activity" : "translate",
+      "start" : 47,
+      "length" : 6
+    },
+    {
+      "activity" : "generate1",
+      "start" : 48,
+      "length" : 12
+    },
+    {
+      "activity" : "generate2",
+      "start" : 52,
+      "length" : 29
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Practitioner-mss-practitioner-bal-per-martin.json",
+    "size" : 1170,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 41,
+      "length" : 3
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 43,
+      "length" : 3
+    },
+    {
+      "activity" : "validate",
+      "start" : 47,
+      "length" : 32
+    },
+    {
+      "activity" : "translate",
+      "start" : 47,
+      "length" : 6
+    },
+    {
+      "activity" : "generate1",
+      "start" : 48,
+      "length" : 11
+    },
+    {
+      "activity" : "generate2",
+      "start" : 52,
+      "length" : 27
+    },
+    {
+      "activity" : "generateExampleZip",
+      "start" : 72,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-as-bal-mss-app.json",
+    "size" : 3123,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 41,
+      "length" : 4
+    },
+    {
+      "activity" : "load",
+      "start" : 41,
+      "length" : 12
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 41,
+      "length" : 14
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 43,
+      "length" : 70
+    },
+    {
+      "activity" : "validate",
+      "start" : 43,
+      "length" : 151
+    },
+    {
+      "activity" : "checkConformanceResources",
+      "start" : 47,
+      "length" : 1
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 47,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 47,
+      "length" : 1
+    },
+    {
+      "activity" : "translate",
+      "start" : 47,
+      "length" : 2
+    },
+    {
+      "activity" : "generate1",
+      "start" : 48,
+      "length" : 87
+    },
+    {
+      "activity" : "generate2",
+      "start" : 52,
+      "length" : 1636
+    },
+    {
+      "activity" : "generate2",
+      "start" : 54,
+      "length" : 296
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 72,
+      "length" : 2
+    },
+    {
+      "activity" : "scanProfilesForR5",
+      "start" : 83,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-as-bal-mss-cab.json",
+    "size" : 2244,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 41,
+      "length" : 3
+    },
+    {
+      "activity" : "load",
+      "start" : 41,
+      "length" : 7
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 41,
+      "length" : 12
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 43,
+      "length" : 15
+    },
+    {
+      "activity" : "validate",
+      "start" : 44,
+      "length" : 60
+    },
+    {
+      "activity" : "checkConformanceResources",
+      "start" : 47,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 47,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 48,
+      "length" : 78
+    },
+    {
+      "activity" : "generate2",
+      "start" : 53,
+      "length" : 273
+    },
+    {
+      "activity" : "generate2",
+      "start" : 54,
+      "length" : 94
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 72,
+      "length" : 2
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-as-bal-mss-org.json",
+    "size" : 3135,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 41,
+      "length" : 3
+    },
+    {
+      "activity" : "load",
+      "start" : 41,
+      "length" : 6
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 41,
+      "length" : 12
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 43,
+      "length" : 15
+    },
+    {
+      "activity" : "validate",
+      "start" : 44,
+      "length" : 67
+    },
+    {
+      "activity" : "validate",
+      "start" : 47,
+      "length" : 1
+    },
+    {
+      "activity" : "translate",
+      "start" : 47,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 48,
+      "length" : 92
+    },
+    {
+      "activity" : "generate2",
+      "start" : 54,
+      "length" : 241
+    },
+    {
+      "activity" : "generate2",
+      "start" : 54,
+      "length" : 83
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 72,
+      "length" : 2
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-as-bal-mss-per.json",
+    "size" : 2360,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 41,
+      "length" : 3
+    },
+    {
+      "activity" : "load",
+      "start" : 41,
+      "length" : 6
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 41,
+      "length" : 12
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 43,
+      "length" : 13
+    },
+    {
+      "activity" : "validate",
+      "start" : 44,
+      "length" : 45
+    },
+    {
+      "activity" : "validate",
+      "start" : 47,
+      "length" : 1
+    },
+    {
+      "activity" : "generate1",
+      "start" : 48,
+      "length" : 76
+    },
+    {
+      "activity" : "generate2",
+      "start" : 54,
+      "length" : 219
+    },
+    {
+      "activity" : "generate2",
+      "start" : 54,
+      "length" : 56
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 72,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/fsh-generated/includes/fsh-link-references.md",
+    "size" : 867,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 47,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/fsh-generated/includes/menu.xml",
+    "size" : 2234,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 47,
+      "length" : 1
+    },
+    {
+      "activity" : "generate2",
+      "start" : 54,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/data/features.yml",
+    "size" : 194,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 47,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/change-log.md",
+    "size" : 392,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 47,
+      "length" : 1
+    },
+    {
+      "activity" : "generate2",
+      "start" : 54,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/index.md",
+    "size" : 3211,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 47,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/spec-technique-intro.md",
+    "size" : 4343,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 47,
+      "length" : 1
+    },
+    {
+      "activity" : "generate2",
+      "start" : 54,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/translationinfo.md",
+    "size" : 58,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 47,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/spec-fonctionnelle-intro.md",
+    "size" : 1341,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 47,
+      "length" : 1
+    },
+    {
+      "activity" : "generate2",
+      "start" : 54,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/spec-technique-flux-consommation.md",
+    "size" : 4971,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 47,
+      "length" : 1
+    },
+    {
+      "activity" : "generate2",
+      "start" : 54,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/spec-technique-flux-alimentation.md",
+    "size" : 8754,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 47,
+      "length" : 1
+    },
+    {
+      "activity" : "generate2",
+      "start" : 54,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/spec-fonctionnelle-alimentation.md",
+    "size" : 5748,
+    "processes" : [{
+      "activity" : "scan",
+      "start" : 42,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 47,
+      "length" : 1
+    },
+    {
+      "activity" : "generate2",
+      "start" : 54,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/spec-technique-vue-ensemble.md",
+    "size" : 2424,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 47,
+      "length" : 1
+    },
+    {
+      "activity" : "generate2",
+      "start" : 54,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/template/config",
+    "size" : 0,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 47,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/template/config/_config.yml",
+    "size" : 140,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 47,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/images",
+    "size" : 0,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 47,
+      "length" : 1
+    },
+    {
+      "activity" : "generate2",
+      "start" : 54,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/images/anImage.png",
+    "size" : 36288
+  },
+  {
+    "name" : "/input/images/ci-sis-logo.png",
+    "size" : 61365,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 47,
+      "length" : 1
+    },
+    {
+      "activity" : "generate2",
+      "start" : 54,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/temp/pages/_includes/artifacts.xml",
+    "size" : 216
+  },
+  {
+    "name" : "/temp/pages/_includes/fragment-artifacts-table.html",
+    "size" : 3362,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 54,
+      "length" : 1
+    }]
+  }]
+}

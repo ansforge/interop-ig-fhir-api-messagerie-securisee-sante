@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="mss-bundle-bal-per-elements"/>
+  <language value="en"/>
+  <type value="searchset"/>
+  <total value="2"/>
+  <link>
+    <relation value="self"/>
+    <url value="[base]?_type=Practitioner,PractitionerRole&amp;mailbox-mss-type=https://mos.esante.gouv.fr/NOS/TRE_R256-TypeMessagerie/FHIR/TRE-R256-TypeMessagerie|PER&amp;_elements=identifier,telecom"/>
+  </link>
+  <entry>
+    <fullUrl value="https://gateway.api.esante.gouv.fr/fhir/v1/Practitioner/mss-practitioner-bal-per-dupont-elements"/>
+    <resource>
+      <Practitioner>
+        <id value="mss-practitioner-bal-per-dupont-elements"/>
+        <meta>
+          <lastUpdated value="2025-11-04T09:12:00.000+01:00"/>
+          <tag>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationValue"/>
+            <code value="SUBSETTED"/>
+          </tag>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <identifier>
+          <use value="official"/>
+          <system value="urn:oid:1.2.250.1.71.4.2.1"/>
+          <value value="810003456789"/>
+        </identifier>
+        <telecom>
+          <extension url="https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-ext-mailbox-mss-metadata">
+            <extension url="type">
+              <valueCodeableConcept>
+                <coding>
+                  <system value="https://mos.esante.gouv.fr/NOS/TRE_R257-TypeBAL/FHIR/TRE-R257-TypeBAL"/>
+                  <code value="PER"/>
+                </coding>
+              </valueCodeableConcept>
+            </extension>
+            <extension url="listeRouge">
+              <valueBoolean value="false"/>
+            </extension>
+          </extension>
+          <system value="email"/>
+          <value value="jean-marie.dupont@infirmier.mssante.fr"/>
+        </telecom>
+      </Practitioner>
+    </resource>
+    <search>
+      <mode value="match"/>
+    </search>
+  </entry>
+  <entry>
+    <fullUrl value="https://gateway.api.esante.gouv.fr/fhir/v1/Practitioner/mss-practitioner-bal-per-martin-elements"/>
+    <resource>
+      <Practitioner>
+        <id value="mss-practitioner-bal-per-martin-elements"/>
+        <meta>
+          <lastUpdated value="2025-10-17T14:30:00.000+02:00"/>
+          <tag>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationValue"/>
+            <code value="SUBSETTED"/>
+          </tag>
+        </meta>
+        <language value="en"/>
+        <text>
+          <status value="generated"/>
+        </text>
+        <identifier>
+          <use value="official"/>
+          <system value="urn:oid:1.2.250.1.71.4.2.1"/>
+          <value value="810007654321"/>
+        </identifier>
+        <telecom>
+          <extension url="https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-ext-mailbox-mss-metadata">
+            <extension url="type">
+              <valueCodeableConcept>
+                <coding>
+                  <system value="https://mos.esante.gouv.fr/NOS/TRE_R257-TypeBAL/FHIR/TRE-R257-TypeBAL"/>
+                  <code value="PER"/>
+                </coding>
+              </valueCodeableConcept>
+            </extension>
+            <extension url="listeRouge">
+              <valueBoolean value="false"/>
+            </extension>
+          </extension>
+          <system value="email"/>
+          <value value="sophie.martin@medecin.mssante.fr"/>
+        </telecom>
+      </Practitioner>
+    </resource>
+    <search>
+      <mode value="match"/>
+    </search>
+  </entry>
+</Bundle>

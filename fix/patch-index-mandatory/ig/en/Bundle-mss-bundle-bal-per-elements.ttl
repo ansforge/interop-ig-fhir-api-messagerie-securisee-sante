@@ -1,0 +1,131 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/mss/Bundle/mss-bundle-bal-per-elements> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "mss-bundle-bal-per-elements"] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:Bundle.type [ fhir:value "searchset"] ;
+  fhir:Bundle.total [ fhir:value "2"^^xsd:nonNegativeInteger] ;
+  fhir:Bundle.link [
+     fhir:index -1 ;
+     fhir:Bundle.link.relation [ fhir:value "self" ] ;
+     fhir:Bundle.link.url [ fhir:value "[base]?_type=Practitioner,PractitionerRole&mailbox-mss-type=https://mos.esante.gouv.fr/NOS/TRE_R256-TypeMessagerie/FHIR/TRE-R256-TypeMessagerie|PER&_elements=identifier,telecom" ]
+  ] ;
+  fhir:Bundle.entry [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://gateway.api.esante.gouv.fr/fhir/v1/Practitioner/mss-practitioner-bal-per-dupont-elements" ] ;
+     fhir:Bundle.entry.resource <https://gateway.api.esante.gouv.fr/fhir/v1/Practitioner/mss-practitioner-bal-per-dupont-elements> ;
+     fhir:Bundle.entry.search [
+       fhir:Bundle.entry.search.mode [ fhir:value "match" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "https://gateway.api.esante.gouv.fr/fhir/v1/Practitioner/mss-practitioner-bal-per-martin-elements" ] ;
+     fhir:Bundle.entry.resource <https://gateway.api.esante.gouv.fr/fhir/v1/Practitioner/mss-practitioner-bal-per-martin-elements> ;
+     fhir:Bundle.entry.search [
+       fhir:Bundle.entry.search.mode [ fhir:value "match" ]
+     ]
+  ] .
+
+<https://gateway.api.esante.gouv.fr/fhir/v1/Practitioner/mss-practitioner-bal-per-dupont-elements> a fhir:Practitioner ;
+  fhir:Resource.id [ fhir:value "mss-practitioner-bal-per-dupont-elements"] ;
+  fhir:Resource.meta [
+     fhir:Meta.lastUpdated [ fhir:value "2025-11-04T09:12:00.000+01:00"^^xsd:dateTime ] ;
+     fhir:Meta.tag [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ObservationValue" ] ;
+       fhir:Coding.code [ fhir:value "SUBSETTED" ]
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ]
+  ] ;
+  fhir:Practitioner.identifier [
+     fhir:index -1 ;
+     fhir:Identifier.use [ fhir:value "official" ] ;
+     fhir:Identifier.system [ fhir:value "urn:oid:1.2.250.1.71.4.2.1" ] ;
+     fhir:Identifier.value [ fhir:value "810003456789" ]
+  ] ;
+  fhir:Practitioner.telecom [
+     fhir:index -1 ;
+     fhir:Element.extension [
+       fhir:index -1 ;
+       fhir:Element.extension [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "type" ] ;
+         fhir:Extension.valueCodeableConcept [
+           fhir:CodeableConcept.coding [
+             fhir:index -1 ;
+             fhir:Coding.system [ fhir:value "https://mos.esante.gouv.fr/NOS/TRE_R257-TypeBAL/FHIR/TRE-R257-TypeBAL" ] ;
+             fhir:Coding.code [ fhir:value "PER" ]
+           ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "listeRouge" ] ;
+         fhir:Extension.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+       ] ;
+       fhir:Extension.url [ fhir:value "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-ext-mailbox-mss-metadata" ]
+     ] ;
+     fhir:ContactPoint.system [ fhir:value "email" ] ;
+     fhir:ContactPoint.value [ fhir:value "jean-marie.dupont@infirmier.mssante.fr" ]
+  ] .
+
+<https://gateway.api.esante.gouv.fr/fhir/v1/Practitioner/mss-practitioner-bal-per-martin-elements> a fhir:Practitioner ;
+  fhir:Resource.id [ fhir:value "mss-practitioner-bal-per-martin-elements"] ;
+  fhir:Resource.meta [
+     fhir:Meta.lastUpdated [ fhir:value "2025-10-17T14:30:00.000+02:00"^^xsd:dateTime ] ;
+     fhir:Meta.tag [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ObservationValue" ] ;
+       fhir:Coding.code [ fhir:value "SUBSETTED" ]
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ]
+  ] ;
+  fhir:Practitioner.identifier [
+     fhir:index -1 ;
+     fhir:Identifier.use [ fhir:value "official" ] ;
+     fhir:Identifier.system [ fhir:value "urn:oid:1.2.250.1.71.4.2.1" ] ;
+     fhir:Identifier.value [ fhir:value "810007654321" ]
+  ] ;
+  fhir:Practitioner.telecom [
+     fhir:index -1 ;
+     fhir:Element.extension [
+       fhir:index -1 ;
+       fhir:Element.extension [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "type" ] ;
+         fhir:Extension.valueCodeableConcept [
+           fhir:CodeableConcept.coding [
+             fhir:index -1 ;
+             fhir:Coding.system [ fhir:value "https://mos.esante.gouv.fr/NOS/TRE_R257-TypeBAL/FHIR/TRE-R257-TypeBAL" ] ;
+             fhir:Coding.code [ fhir:value "PER" ]
+           ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "listeRouge" ] ;
+         fhir:Extension.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+       ] ;
+       fhir:Extension.url [ fhir:value "https://interop.esante.gouv.fr/ig/fhir/annuaire/StructureDefinition/as-ext-mailbox-mss-metadata" ]
+     ] ;
+     fhir:ContactPoint.system [ fhir:value "email" ] ;
+     fhir:ContactPoint.value [ fhir:value "sophie.martin@medecin.mssante.fr" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://interop.esante.gouv.fr/ig/fhir/mss/Bundle/mss-bundle-bal-per-elements.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+
