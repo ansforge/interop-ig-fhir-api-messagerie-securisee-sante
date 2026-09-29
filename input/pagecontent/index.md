@@ -21,7 +21,7 @@ This guide describes the FHIR API for retrieving and managing MSSanté mailboxes
 
 ### Introduction
 
-Cet Implementation Guide décrit l'**API FHIR** pour la gestion des **BAL MSSanté** (Boîtes Aux Lettres de la Messagerie Sécurisée de Santé), rattachées aux professionnels de santé et aux structures dans l'Annuaire Santé.
+Ce guide d'implémentation (Implementation Guide - IG) décrit l'**API FHIR** pour la gestion des **BAL MSSanté** (Boîtes Aux Lettres de la Messagerie Sécurisée de Santé), rattachées aux professionnels intervenant de santé et aux structures dans l'Annuaire Santé.
 
 **MSSanté** est le service national de messagerie chiffrée pour les professionnels de santé. Une BAL MSSanté est une adresse mail sécurisée attachée à un professionnel, une situation d'exercice ou une structure de santé.
 

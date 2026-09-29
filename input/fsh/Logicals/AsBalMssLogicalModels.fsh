@@ -9,6 +9,7 @@ Description: "Modèle logique de la boîte aux lettres MSSanté personnelle (PER
 
 * adresse 1..1 string "Adresse BAL" "Adresse de messagerie MSSanté"
 * identifiantPP 1..1 string "Identifiant PP" "Identifiant national du professionnel de santé (RPPS)"
+* description 0..1 string "Description" "Description fonctionnelle de la BAL"
 
 * listeRouge 0..1 boolean "Liste rouge" "Indicateur liste rouge. true : la BAL ne doit pas être publiée ; false : la BAL peut être publiée."
 
@@ -59,6 +60,7 @@ Title: "AS BAL MSS CAB - Modèle logique"
 Description: "Modèle logique de la boîte aux lettres MSSanté de cabinet (CAB)."
 
 * adresse 1..1 string "Adresse BAL" "Adresse de messagerie MSSanté"
+* identifiantPP 1..1 string "Identifiant PP" "Identifiant national du professionnel de santé (RPPS)"
 * description 0..1 string "Description" "Description fonctionnelle de la BAL"
 
 * listeRouge 0..1 boolean "Liste rouge" "Indicateur liste rouge. true : la BAL ne doit pas être publiée ; false : la BAL peut être publiée."
