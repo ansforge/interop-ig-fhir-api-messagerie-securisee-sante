@@ -14,7 +14,7 @@
   "name" : "MSS",
   "title" : "API Messagerie Sécurisée de Santé (MSSanté)",
   "status" : "draft",
-  "date" : "2026-07-10T14:23:27+00:00",
+  "date" : "2026-09-29T07:26:07+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -42,7 +42,7 @@
     }],
     "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
     "packageId" : "hl7.terminology.r4",
-    "version" : "7.2.0"
+    "version" : "7.4.0"
   },
   {
     "id" : "hl7ext",
@@ -64,7 +64,7 @@
     "id" : "ans_fr_terminologies",
     "uri" : "https://interop.esante.gouv.fr/terminologies/ImplementationGuide/ans.fr.terminologies",
     "packageId" : "ans.fr.terminologies",
-    "version" : "1.11.1"
+    "version" : "1.14.0"
   },
   {
     "id" : "ans_fhir_fr_annuaire",
@@ -252,7 +252,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "path-liquid"
+        "valueString" : "path-liquid-template"
       },
       {
         "url" : "value",
@@ -263,7 +263,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "path-liquid"
+        "valueString" : "path-liquid-template"
       },
       {
         "url" : "value",
@@ -658,7 +658,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueCode" : "path-liquid"
+        "valueCode" : "path-liquid-template"
       },
       {
         "url" : "value",
@@ -669,7 +669,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueCode" : "path-liquid"
+        "valueCode" : "path-liquid-template"
       },
       {
         "url" : "value",
@@ -879,6 +879,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:logical"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-as-bal-mss-app.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/as-bal-mss-app"
@@ -891,6 +895,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:logical"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-as-bal-mss-cab.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/as-bal-mss-cab"
@@ -903,6 +911,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:logical"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-as-bal-mss-org.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/as-bal-mss-org"
@@ -915,6 +927,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:logical"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-as-bal-mss-per.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/as-bal-mss-per"
@@ -927,6 +943,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CapabilityStatement"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CapabilityStatement-AsMssServerCapabilityStatement.html"
       }],
       "reference" : {
         "reference" : "CapabilityStatement/AsMssServerCapabilityStatement"
@@ -939,6 +959,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Bundle"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Bundle-mss-bundle-bal-per-full.html"
       }],
       "reference" : {
         "reference" : "Bundle/mss-bundle-bal-per-full"
@@ -951,6 +975,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Bundle"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Bundle-mss-bundle-bal-per-elements.html"
       }],
       "reference" : {
         "reference" : "Bundle/mss-bundle-bal-per-elements"
@@ -963,6 +991,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Practitioner"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Practitioner-mss-practitioner-bal-per-martin.html"
       }],
       "reference" : {
         "reference" : "Practitioner/mss-practitioner-bal-per-martin"
@@ -975,6 +1007,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Practitioner"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Practitioner-mss-practitioner-bal-per-dupont.html"
       }],
       "reference" : {
         "reference" : "Practitioner/mss-practitioner-bal-per-dupont"
@@ -987,6 +1023,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Practitioner"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Practitioner-mss-practitioner-bal-per-martin-elements.html"
       }],
       "reference" : {
         "reference" : "Practitioner/mss-practitioner-bal-per-martin-elements"
@@ -999,6 +1039,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Practitioner"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Practitioner-mss-practitioner-bal-per-dupont-elements.html"
       }],
       "reference" : {
         "reference" : "Practitioner/mss-practitioner-bal-per-dupont-elements"

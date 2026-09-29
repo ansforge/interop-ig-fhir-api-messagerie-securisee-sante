@@ -10,21 +10,17 @@ Le tableau ci-dessous récapitule l'ensemble des données portées par une BAL s
 
 | | | | | |
 | :--- | :--- | :--- | :--- | :--- |
+| Identifiant PP (RPPS) | X |   |   | X |
+| Identifiant national de structure |   | X | X |   |
 | Adresse BAL | X | X | X | X |
 | Type de BAL | X | X | X | X |
 | Liste rouge | X | X | X | X |
 | BAL préférentielle | X | X | X | X |
-| Description |   | X | X | X |
+| Description | X | X | X | X |
 | Service de rattachement |   | X | X |   |
 | Responsable |   | X | X |   |
-| Identifiant PP (RPPS) | X |   |   | X |
-| Identifiant national de structure |   | X | X |   |
 
-Le **discriminant** d'une BAL est son adresse mail, qui l'identifie de façon unique au sein de son porteur.
-
-La **BAL préférentielle** peut être désignée parmi plusieurs BAL d'un même porteur (1 = priorité la plus haute).
-
-L'adresse et le type d'une BAL ne sont **pas modifiables** après création.
+> Le **discriminant** d'une BAL est son adresse mail, qui l'identifie de façon unique au sein de son porteur.La **BAL préférentielle** peut être désignée parmi plusieurs BAL d'un même porteur (1 = priorité la plus haute).L'adresse et le type d'une BAL ne sont **pas modifiables** après création.
 
 -------
 
@@ -38,7 +34,10 @@ Une BAL PER est attachée à l'identité d'un professionnel de santé, identifi�
 | :--- | :--- | :--- |
 | Adresse BAL | 1..1 | Adresse de messagerie MSSanté |
 | Identifiant PP | 1..1 | Identifiant national du professionnel de santé (RPPS) |
+| Type de BAL | 1..1 | Type de la BAL (`PER`), porté par l'extension`as-ext-mailbox-mss-metadata.extension:type`(TRE-R257-TypeBAL) |
 | Liste rouge | 0..1 | `true`: la BAL ne doit pas être publiée |
+| BAL préférentielle | 0..1 | Rang de priorité de la BAL parmi celles du porteur (`ContactPoint.rank`, 1 = priorité la plus haute) |
+| Description | 0..1 | Description fonctionnelle de la BAL |
 
 -------
 
@@ -52,10 +51,12 @@ Une BAL ORG est rattachée à une structure de santé (entité juridique ou enti
 | :--- | :--- | :--- |
 | Adresse BAL | 1..1 | Adresse de messagerie MSSanté |
 | Identifiant national de structure | 1..1 | Identifiant de la structure porteuse (EJ ou EG) |
+| Type de BAL | 1..1 | Type de la BAL (`ORG`), porté par l'extension`as-ext-mailbox-mss-metadata.extension:type`(TRE-R257-TypeBAL) |
+| Liste rouge | 0..1 | `true`: la BAL ne doit pas être publiée |
+| BAL préférentielle | 0..1 | Rang de priorité de la BAL parmi celles du porteur (`ContactPoint.rank`, 1 = priorité la plus haute) |
 | Description | 0..1 | Description fonctionnelle de la BAL |
 | Service de rattachement | 0..1 | Nom et description du service de rattachement |
 | Responsable | 0..1 | Coordonnées de la ou des personnes responsables au niveau opérationnel |
-| Liste rouge | 0..1 | `true`: la BAL ne doit pas être publiée |
 
 -------
 
@@ -69,10 +70,12 @@ Une BAL APP est également rattachée à une structure, mais destinée à un usa
 | :--- | :--- | :--- |
 | Adresse BAL | 1..1 | Adresse de messagerie MSSanté |
 | Identifiant national de structure | 1..1 | Identifiant de la structure porteuse (EJ ou EG) |
+| Type de BAL | 1..1 | Type de la BAL (`APP`), porté par l'extension`as-ext-mailbox-mss-metadata.extension:type`(TRE-R257-TypeBAL) |
+| Liste rouge | 0..1 | `true`: la BAL ne doit pas être publiée |
+| BAL préférentielle | 0..1 | Rang de priorité de la BAL parmi celles du porteur (`ContactPoint.rank`, 1 = priorité la plus haute) |
 | Description | 0..1 | Description fonctionnelle de la BAL |
 | Service de rattachement | 0..1 | Nom et description du service de rattachement |
 | Responsable | 0..1 | Coordonnées de la ou des personnes responsables au niveau opérationnel |
-| Liste rouge | 0..1 | `true`: la BAL ne doit pas être publiée |
 
 -------
 
@@ -87,8 +90,11 @@ Une BAL CAB est rattachée à un professionnel de santé, mais représente une b
 | | | |
 | :--- | :--- | :--- |
 | Adresse BAL | 1..1 | Adresse de messagerie MSSanté |
-| Description | 0..1 | Description fonctionnelle de la BAL |
+| Identifiant PP | 1..1 | Identifiant national du professionnel de santé (RPPS) |
+| Type de BAL | 1..1 | Type de la BAL (`CAB`), porté par l'extension`as-ext-mailbox-mss-metadata.extension:type`(TRE-R257-TypeBAL) |
 | Liste rouge | 0..1 | `true`: la BAL ne doit pas être publiée |
+| BAL préférentielle | 0..1 | Rang de priorité de la BAL parmi celles du porteur (`ContactPoint.rank`, 1 = priorité la plus haute) |
+| Description | 0..1 | Description fonctionnelle de la BAL |
 
 -------
 
@@ -99,7 +105,8 @@ Seules les métadonnées d'une BAL peuvent être mises à jour. L'adresse et le 
 | | | | | |
 | :--- | :--- | :--- | :--- | :--- |
 | Liste rouge | X | X | X | X |
-| Description |   | X | X | X |
+| BAL préférentielle | X | X | X | X |
+| Description | X | X | X | X |
 | Service de rattachement |   | X | X |   |
 | Responsable |   | X | X |   |
 

@@ -10,7 +10,7 @@
 
 Last updated: 2025-10-17 14:30:00+0200
 
-Tag: [subsetted (Details: ObservationValue code SUBSETTED = 'subsetted')](http://terminology.hl7.org/7.2.0/CodeSystem-v3-ObservationValue.html)
+Tag: [subsetted (Details: ObservationValue code SUBSETTED = 'subsetted')](http://terminology.hl7.org/7.4.0/CodeSystem-v3-ObservationValue.html)
 
 **identifier**: `urn:oid:1.2.250.1.71.4.2.1`/810007654321 (use: official, )
 

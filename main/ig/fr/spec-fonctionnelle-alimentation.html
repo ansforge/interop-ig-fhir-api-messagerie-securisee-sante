@@ -255,6 +255,20 @@ Cette page s'adresse à tous les profils. Elle décrit les données associées �
   </thead>
   <tbody>
     <tr>
+      <td>Identifiant PP (RPPS)</td>
+      <td style="text-align: center">X</td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center">X</td>
+    </tr>
+    <tr>
+      <td>Identifiant national de structure</td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center">X</td>
+      <td style="text-align: center">X</td>
+      <td style="text-align: center"> </td>
+    </tr>
+    <tr>
       <td>Adresse BAL</td>
       <td style="text-align: center">X</td>
       <td style="text-align: center">X</td>
@@ -284,7 +298,7 @@ Cette page s'adresse à tous les profils. Elle décrit les données associées �
     </tr>
     <tr>
       <td>Description</td>
-      <td style="text-align: center"> </td>
+      <td style="text-align: center">X</td>
       <td style="text-align: center">X</td>
       <td style="text-align: center">X</td>
       <td style="text-align: center">X</td>
@@ -303,28 +317,15 @@ Cette page s'adresse à tous les profils. Elle décrit les données associées �
       <td style="text-align: center">X</td>
       <td style="text-align: center"> </td>
     </tr>
-    <tr>
-      <td>Identifiant PP (RPPS)</td>
-      <td style="text-align: center">X</td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: center">X</td>
-    </tr>
-    <tr>
-      <td>Identifiant national de structure</td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: center">X</td>
-      <td style="text-align: center">X</td>
-      <td style="text-align: center"> </td>
-    </tr>
   </tbody>
 </table>
 
-<p>Le <strong>discriminant</strong> d'une BAL est son adresse mail, qui l'identifie de façon unique au sein de son porteur.</p>
+<blockquote class="stu-note">
+<p>Le **discriminant** d'une BAL est son adresse mail, qui l'identifie de façon unique au sein de son porteur.</p>
+<p>La **BAL préférentielle** peut être désignée parmi plusieurs BAL d'un même porteur (1 = priorité la plus haute).</p>
+<p>L'adresse et le type d'une BAL ne sont **pas modifiables** après création.</p>
 
-<p>La <strong>BAL préférentielle</strong> peut être désignée parmi plusieurs BAL d'un même porteur (1 = priorité la plus haute).</p>
-
-<p>L'adresse et le type d'une BAL ne sont <strong>pas modifiables</strong> après création.</p>
+</blockquote>
 
 <hr />
 
@@ -354,9 +355,24 @@ Cette page s'adresse à tous les profils. Elle décrit les données associées �
       <td>Identifiant national du professionnel de santé (RPPS)</td>
     </tr>
     <tr>
+      <td>Type de BAL</td>
+      <td>1..1</td>
+      <td>Type de la BAL (<code class="language-plaintext highlighter-rouge">PER</code>), porté par l'extension <code class="language-plaintext highlighter-rouge">as-ext-mailbox-mss-metadata.extension:type</code> (TRE-R257-TypeBAL)</td>
+    </tr>
+    <tr>
       <td>Liste rouge</td>
       <td>0..1</td>
       <td><code class="language-plaintext highlighter-rouge">true</code> : la BAL ne doit pas être publiée</td>
+    </tr>
+    <tr>
+      <td>BAL préférentielle</td>
+      <td>0..1</td>
+      <td>Rang de priorité de la BAL parmi celles du porteur (<code class="language-plaintext highlighter-rouge">ContactPoint.rank</code>, 1 = priorité la plus haute)</td>
+    </tr>
+    <tr>
+      <td>Description</td>
+      <td>0..1</td>
+      <td>Description fonctionnelle de la BAL</td>
     </tr>
   </tbody>
 </table>
@@ -389,6 +405,21 @@ Cette page s'adresse à tous les profils. Elle décrit les données associées �
       <td>Identifiant de la structure porteuse (EJ ou EG)</td>
     </tr>
     <tr>
+      <td>Type de BAL</td>
+      <td>1..1</td>
+      <td>Type de la BAL (<code class="language-plaintext highlighter-rouge">ORG</code>), porté par l'extension <code class="language-plaintext highlighter-rouge">as-ext-mailbox-mss-metadata.extension:type</code> (TRE-R257-TypeBAL)</td>
+    </tr>
+    <tr>
+      <td>Liste rouge</td>
+      <td>0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">true</code> : la BAL ne doit pas être publiée</td>
+    </tr>
+    <tr>
+      <td>BAL préférentielle</td>
+      <td>0..1</td>
+      <td>Rang de priorité de la BAL parmi celles du porteur (<code class="language-plaintext highlighter-rouge">ContactPoint.rank</code>, 1 = priorité la plus haute)</td>
+    </tr>
+    <tr>
       <td>Description</td>
       <td>0..1</td>
       <td>Description fonctionnelle de la BAL</td>
@@ -402,11 +433,6 @@ Cette page s'adresse à tous les profils. Elle décrit les données associées �
       <td>Responsable</td>
       <td>0..1</td>
       <td>Coordonnées de la ou des personnes responsables au niveau opérationnel</td>
-    </tr>
-    <tr>
-      <td>Liste rouge</td>
-      <td>0..1</td>
-      <td><code class="language-plaintext highlighter-rouge">true</code> : la BAL ne doit pas être publiée</td>
     </tr>
   </tbody>
 </table>
@@ -439,6 +465,21 @@ Cette page s'adresse à tous les profils. Elle décrit les données associées �
       <td>Identifiant de la structure porteuse (EJ ou EG)</td>
     </tr>
     <tr>
+      <td>Type de BAL</td>
+      <td>1..1</td>
+      <td>Type de la BAL (<code class="language-plaintext highlighter-rouge">APP</code>), porté par l'extension <code class="language-plaintext highlighter-rouge">as-ext-mailbox-mss-metadata.extension:type</code> (TRE-R257-TypeBAL)</td>
+    </tr>
+    <tr>
+      <td>Liste rouge</td>
+      <td>0..1</td>
+      <td><code class="language-plaintext highlighter-rouge">true</code> : la BAL ne doit pas être publiée</td>
+    </tr>
+    <tr>
+      <td>BAL préférentielle</td>
+      <td>0..1</td>
+      <td>Rang de priorité de la BAL parmi celles du porteur (<code class="language-plaintext highlighter-rouge">ContactPoint.rank</code>, 1 = priorité la plus haute)</td>
+    </tr>
+    <tr>
       <td>Description</td>
       <td>0..1</td>
       <td>Description fonctionnelle de la BAL</td>
@@ -452,11 +493,6 @@ Cette page s'adresse à tous les profils. Elle décrit les données associées �
       <td>Responsable</td>
       <td>0..1</td>
       <td>Coordonnées de la ou des personnes responsables au niveau opérationnel</td>
-    </tr>
-    <tr>
-      <td>Liste rouge</td>
-      <td>0..1</td>
-      <td><code class="language-plaintext highlighter-rouge">true</code> : la BAL ne doit pas être publiée</td>
     </tr>
   </tbody>
 </table>
@@ -488,14 +524,29 @@ Cette page s'adresse à tous les profils. Elle décrit les données associées �
       <td>Adresse de messagerie MSSanté</td>
     </tr>
     <tr>
-      <td>Description</td>
-      <td>0..1</td>
-      <td>Description fonctionnelle de la BAL</td>
+      <td>Identifiant PP</td>
+      <td>1..1</td>
+      <td>Identifiant national du professionnel de santé (RPPS)</td>
+    </tr>
+    <tr>
+      <td>Type de BAL</td>
+      <td>1..1</td>
+      <td>Type de la BAL (<code class="language-plaintext highlighter-rouge">CAB</code>), porté par l'extension <code class="language-plaintext highlighter-rouge">as-ext-mailbox-mss-metadata.extension:type</code> (TRE-R257-TypeBAL)</td>
     </tr>
     <tr>
       <td>Liste rouge</td>
       <td>0..1</td>
       <td><code class="language-plaintext highlighter-rouge">true</code> : la BAL ne doit pas être publiée</td>
+    </tr>
+    <tr>
+      <td>BAL préférentielle</td>
+      <td>0..1</td>
+      <td>Rang de priorité de la BAL parmi celles du porteur (<code class="language-plaintext highlighter-rouge">ContactPoint.rank</code>, 1 = priorité la plus haute)</td>
+    </tr>
+    <tr>
+      <td>Description</td>
+      <td>0..1</td>
+      <td>Description fonctionnelle de la BAL</td>
     </tr>
   </tbody>
 </table>
@@ -525,8 +576,15 @@ Cette page s'adresse à tous les profils. Elle décrit les données associées �
       <td style="text-align: center">X</td>
     </tr>
     <tr>
+      <td>BAL préférentielle</td>
+      <td style="text-align: center">X</td>
+      <td style="text-align: center">X</td>
+      <td style="text-align: center">X</td>
+      <td style="text-align: center">X</td>
+    </tr>
+    <tr>
       <td>Description</td>
-      <td style="text-align: center"> </td>
+      <td style="text-align: center">X</td>
       <td style="text-align: center">X</td>
       <td style="text-align: center">X</td>
       <td style="text-align: center">X</td>
@@ -597,8 +655,8 @@ Cette page s'adresse à tous les profils. Elle décrit les données associées �
           IG © 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  
           Le package ans.fhir.fr.mss#0.1.0-snapshot est basé sur <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
           Date de génération : 
-  <span title="2026-07-10 14:23:00 +0000">
-    2026-07-10
+  <span title="2026-09-29 07:26:00 +0000">
+    2026-09-29
   </span>
 
           <br/>

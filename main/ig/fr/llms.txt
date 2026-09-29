@@ -4,13 +4,13 @@
 
 * [Accueil](index.md)
 * [Introduction technique](spec-technique-intro.md)
-* [Informations sur la traduction](translationinfo.md)
 * [Récupération (GET)](spec-technique-flux-consommation.md)
+* [Modèle de données](spec-fonctionnelle-alimentation.md)
+* [Informations sur la traduction](translationinfo.md)
+* [Vue d'ensemble](spec-fonctionnelle-intro.md)
 * [Architecture de l'API](spec-technique-vue-ensemble.md)
 * [Résumé des artefacts](artifacts.md)
-* [Vue d'ensemble](spec-fonctionnelle-intro.md)
 * [Historique des versions](change-log.md)
-* [Modèle de données](spec-fonctionnelle-alimentation.md)
 * [Écriture (PATCH)](spec-technique-flux-alimentation.md)
 
 ## Resources

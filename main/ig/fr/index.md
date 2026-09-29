@@ -9,7 +9,7 @@
 
 ### Introduction
 
-Cet Implementation Guide décrit l'**API FHIR** pour la gestion des **BAL MSSanté** (Boîtes Aux Lettres de la Messagerie Sécurisée de Santé), rattachées aux professionnels de santé et aux structures dans l'Annuaire Santé.
+Ce guide d'implémentation (Implementation Guide - IG) décrit l'**API FHIR** pour la gestion des **BAL MSSanté** (Boîtes Aux Lettres de la Messagerie Sécurisée de Santé), rattachées aux professionnels intervenant de santé et aux structures dans l'Annuaire Santé.
 
 **MSSanté** est le service national de messagerie chiffrée pour les professionnels de santé. Une BAL MSSanté est une adresse mail sécurisée attachée à un professionnel, une situation d'exercice ou une structure de santé.
 
@@ -61,6 +61,6 @@ This publication includes IP covered under the following statements.
 
 * This material derives from the HL7 Terminology (THO). THO is copyright ©1989+ Health Level Seven International and is made available under the CC0 designation. For more licensing information see: [https://terminology.hl7.org/license.html](https://terminology.hl7.org/license.html)
 
-* [ObservationValue](http://terminology.hl7.org/7.2.0/CodeSystem-v3-ObservationValue.html): [Bundle/mss-bundle-bal-per-elements](Bundle-mss-bundle-bal-per-elements.md), [Practitioner/mss-practitioner-bal-per-dupont-elements](Practitioner-mss-practitioner-bal-per-dupont-elements.md) and [Practitioner/mss-practitioner-bal-per-martin-elements](Practitioner-mss-practitioner-bal-per-martin-elements.md)
+* [ObservationValue](http://terminology.hl7.org/7.4.0/CodeSystem-v3-ObservationValue.html): [Bundle/mss-bundle-bal-per-elements](Bundle-mss-bundle-bal-per-elements.md), [Practitioner/mss-practitioner-bal-per-dupont-elements](Practitioner-mss-practitioner-bal-per-dupont-elements.md) and [Practitioner/mss-practitioner-bal-per-martin-elements](Practitioner-mss-practitioner-bal-per-martin-elements.md)
 
 

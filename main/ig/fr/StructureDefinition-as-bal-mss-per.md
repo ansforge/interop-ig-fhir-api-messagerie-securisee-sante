@@ -57,7 +57,7 @@ Autres représentations du profil : [CSV](../StructureDefinition-as-bal-mss-per.
   "name" : "AsBalMssPerLogicalModel",
   "title" : "AS BAL MSS PER - Modèle logique",
   "status" : "draft",
-  "date" : "2026-07-10T14:23:27+00:00",
+  "date" : "2026-09-29T07:26:07+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
@@ -104,6 +104,17 @@ Autres représentations du profil : [CSV](../StructureDefinition-as-bal-mss-per.
       "short" : "Identifiant PP",
       "definition" : "Identifiant national du professionnel de santé (RPPS)",
       "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "string"
+      }]
+    },
+    {
+      "id" : "as-bal-mss-per.description",
+      "path" : "as-bal-mss-per.description",
+      "short" : "Description",
+      "definition" : "Description fonctionnelle de la BAL",
+      "min" : 0,
       "max" : "1",
       "type" : [{
         "code" : "string"

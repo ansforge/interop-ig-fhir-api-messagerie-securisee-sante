@@ -3,6 +3,8 @@
 ","AS BAL MSS CAB - Modèle logique","Modèle logique de la boîte aux lettres MSSanté de cabinet (CAB).","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
 "as-bal-mss-cab.adresse","as-bal-mss-cab.adresse","","","",1,1,"","","","string {[]} {[]}
 ","Adresse BAL","Adresse de messagerie MSSanté","","","","","","","","","",,,,,"",,,,"as-bal-mss-cab.adresse",1,1,"",""
+"as-bal-mss-cab.identifiantPP","as-bal-mss-cab.identifiantPP","","","",1,1,"","","","string {[]} {[]}
+","Identifiant PP","Identifiant national du professionnel de santé (RPPS)","","","","","","","","","",,,,,"",,,,"as-bal-mss-cab.identifiantPP",1,1,"",""
 "as-bal-mss-cab.description","as-bal-mss-cab.description","","","",0,1,"","","","string {[]} {[]}
 ","Description","Description fonctionnelle de la BAL","","","","","","","","","",,,,,"",,,,"as-bal-mss-cab.description",0,1,"",""
 "as-bal-mss-cab.listeRouge","as-bal-mss-cab.listeRouge","","","",0,1,"","","","boolean {[]} {[]}
