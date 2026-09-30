@@ -1381,7 +1381,7 @@ components:
                     valueInteger:
                       type: integer
                       minimum: 0
-                      description: Position d'insertion (pour name=index) ou rang de priorité de la BAL (pour name=value, opération replace sur `telecom.rank`)
+                      description: Position d'insertion (pour name=index, obligatoire lorsque l'opération est de type `insert`) ou rang de priorité de la BAL (pour name=value, opération replace sur `telecom.rank`)
                     valueContactPoint:
                       $ref: '#/components/schemas/MailboxMSS'
 
