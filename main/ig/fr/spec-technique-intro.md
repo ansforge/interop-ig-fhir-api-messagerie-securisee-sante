@@ -104,3 +104,5 @@ Trois types d'opérations sont supportés :
 | `insert` | Ajouter une nouvelle BAL |
 | `delete` | Supprimer une BAL existante |
 
+> Pour l'opération `insert`, le paramètre `index` est **obligatoire** (voir la [spécification FHIR Patch](https://hl7.org/fhir/R4/fhirpatch.html#operations)).
+

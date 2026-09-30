@@ -96,7 +96,7 @@ Content-Type: application/fhir+json
 
 ### Création
 
-L'ajout d'une nouvelle BAL s'effectue par un `PATCH` avec une opération `insert` dans le tableau `telecom`.
+L'ajout d'une nouvelle BAL s'effectue par un `PATCH` avec une opération `insert` dans le tableau `telecom`. Le paramètre `index` est **obligatoire** pour ce type d'opération, conformément à la [spécification FHIR Patch](https://hl7.org/fhir/R4/fhirpatch.html#operations).
 
 #### Exemple — ajout d'une BAL PER
 

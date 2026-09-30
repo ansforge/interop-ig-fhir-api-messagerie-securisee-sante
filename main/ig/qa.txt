@@ -3,7 +3,7 @@ MSS : Validation Results
 
 err = 0, warn = 62, info = 16
 IG Publisher Version: 2.3.4
-Generated Tue Sep 29 07:27:15 UTC 2026. FHIR version 4.0.1 for ans.fhir.fr.mss#0.1.0-snapshot (canonical = https://interop.esante.gouv.fr/ig/fhir/mss)
+Generated Wed Sep 30 08:42:57 UTC 2026. FHIR version 4.0.1 for ans.fhir.fr.mss#0.1.0-snapshot (canonical = https://interop.esante.gouv.fr/ig/fhir/mss)
  Build Errors : 6 / 1 / 0
  /__w/interop-ig-fhir-api-messagerie-securisee-sante/interop-ig-fhir-api-messagerie-securisee-sante/igSource/fsh-generated/resources/Bundle-mss-bundle-bal-per-elements : 0 / 3 / 3
  /__w/interop-ig-fhir-api-messagerie-securisee-sante/interop-ig-fhir-api-messagerie-securisee-sante/igSource/fsh-generated/resources/Bundle-mss-bundle-bal-per-full : 0 / 3 / 3
