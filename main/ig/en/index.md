@@ -1,4 +1,4 @@
-# Accueil - API Messagerie Sécurisée de Santé (MSSanté) v0.1.0-snapshot
+# Accueil - API Messagerie Sécurisée de Santé (MSSanté) v0.1.0
 
 ## Accueil
 
@@ -7,8 +7,6 @@ There is no translation page available for the current page, so it has been rend
 
  **Implementation Guide for the MSSanté Secure Messaging API (BAL MSSanté)**
  This guide describes the FHIR API for retrieving and managing MSSanté mailboxes (BAL) attached to healthcare professionals and organisations in the French national directory (Annuaire Santé). 
-
-> **Version snapshot — réservée aux développeurs.** Cet IG est en cours de construction. Son contenu est instable et sujet à des modifications importantes. Il ne doit pas être utilisé en dehors d'un contexte de développement ou d'expérimentation. Un swagger sera prochainement ajouté.
 
 ### Introduction
 

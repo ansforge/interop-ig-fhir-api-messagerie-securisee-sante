@@ -1,9 +1,6 @@
-# AS BAL MSS CAB - Modèle logique - API Messagerie Sécurisée de Santé (MSSanté) v0.1.0-snapshot
+# AS BAL MSS CAB - Modèle logique - API Messagerie Sécurisée de Santé (MSSanté) v0.1.0
 
 ## Modèle logique: AS BAL MSS CAB - Modèle logique 
-
- 
-Modèle logique de la boîte aux lettres MSSanté de cabinet (CAB). 
 
 **Utilisations:**
 
@@ -53,11 +50,11 @@ Autres représentations du profil : [CSV](../StructureDefinition-as-bal-mss-cab.
   "resourceType" : "StructureDefinition",
   "id" : "as-bal-mss-cab",
   "url" : "https://interop.esante.gouv.fr/ig/fhir/mss/StructureDefinition/as-bal-mss-cab",
-  "version" : "0.1.0-snapshot",
+  "version" : "0.1.0",
   "name" : "AsBalMssCabLogicalModel",
   "title" : "AS BAL MSS CAB - Modèle logique",
-  "status" : "draft",
-  "date" : "2026-09-30T08:41:32+00:00",
+  "status" : "active",
+  "date" : "2026-10-09T06:18:26+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",

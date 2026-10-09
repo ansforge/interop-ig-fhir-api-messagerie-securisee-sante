@@ -1,13 +1,6 @@
-# AS MSS Server CapabilityStatement - API Messagerie Sécurisée de Santé (MSSanté) v0.1.0-snapshot
+# AS MSS Server CapabilityStatement - API Messagerie Sécurisée de Santé (MSSanté) v0.1.0
 
 ## CapabilityStatement: AS MSS Server CapabilityStatement 
-
- 
-CapabilityStatement décrivant les capacités de l'endpoint dédié à l'écriture des BAL MSSanté. 
-Cet endpoint expose uniquement des opérations d'écriture : 
-* **PATCH FHIRPath** : ajout, modification ou suppression d'un élément `telecom[mailbox-mss]` sur la ressource porteuse, identifiée soit par son ID logique, soit par son identifiant métier (conditional PATCH via `identifier`).
- 
-La sémantique du PATCH suit la spécification [FHIR Patch](https://hl7.org/fhir/R4/http.html#patch) au format `application/fhir+json`. 
 
  [Fichier de définition d'OpenAPI-Swagger](../AsMssServerCapabilityStatement.openapi.json) | [Télécharger](../AsMssServerCapabilityStatement.openapi.json) 
 
@@ -20,7 +13,7 @@ La sémantique du PATCH suit la spécification [FHIR Patch](https://hl7.org/fhir
   "resourceType" : "CapabilityStatement",
   "id" : "AsMssServerCapabilityStatement",
   "url" : "https://interop.esante.gouv.fr/ig/fhir/mss/CapabilityStatement/AsMssServerCapabilityStatement",
-  "version" : "0.1.0-snapshot",
+  "version" : "0.1.0",
   "name" : "AsMssServerCapabilityStatement",
   "title" : "AS MSS Server CapabilityStatement",
   "status" : "active",

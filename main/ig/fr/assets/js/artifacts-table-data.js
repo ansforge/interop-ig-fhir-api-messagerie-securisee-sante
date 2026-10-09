@@ -4,11 +4,12 @@ window.artifactsTableData = {
       "type":        "Type",
       "category":    "Category",
       "useGrouping": "Use grouping",
-      "clearAll":    "Clear all"
+      "clearAll":      "Clear all",
+      "linkToSection": "Link to this section"
     },
     "groupDescriptions": {
       "-dyn-capabilitystatement": "<p>Les artefacts suivants définissent les capacités spécifiques que les différents types de systèmes sont censés posséder pour se conformer au présent guide d'implémentation.  Les systèmes conformes à ce guide d'implémentation sont censés déclarer leur conformité à une ou plusieurs des déclarations de capacité suivantes.</p>\n"
-      ,"-str-logicalmodel": "<p>Ils définissent des modèles de données qui représentent le domaine couvert par ce guide d'implémentation en termes plus conviviaux que les ressources FHIR sous-jacentes.</p>\n"
+      ,"-str-logicalmodel": "<p>Ils définissent des modèles de données qui représentent le domaine couvert par ce guide d'implémentation.</p>\n"
       ,"-ex-example": "<p>Il s'agit d'exemples d'instances qui montrent à quoi peuvent ressembler les données produites et consommées par des systèmes conformes au présent guide d'implémentation.</p>\n"
     },
     "rows": [
@@ -30,7 +31,8 @@ window.artifactsTableData = {
       "type":        "Type",
       "category":    "Category",
       "useGrouping": "Use grouping",
-      "clearAll":    "Clear all"
+      "clearAll":      "Clear all",
+      "linkToSection": "Link to this section"
     },
     "groupDescriptions": {
       "-dyn-capabilitystatement": "<p>The following artifacts define the specific capabilities that different types of systems are expected to have in order to comply with this implementation guide.  Systems conforming to this implementation guide are expected to declare conformance to one or more of the following capability statements.</p>\n"

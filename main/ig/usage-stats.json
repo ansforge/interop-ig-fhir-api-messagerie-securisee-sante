@@ -1,6 +1,6 @@
 {
   "package": "ans.fhir.fr.mss",
-  "version": "0.1.0-snapshot",
+  "version": "0.1.0",
   "fhirVersion": "4.0.1",
   "jurisdiction": "FR",
   "extensions": [],

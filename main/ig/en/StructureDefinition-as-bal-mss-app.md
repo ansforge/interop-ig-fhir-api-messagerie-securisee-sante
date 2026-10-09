@@ -1,9 +1,6 @@
-# AS BAL MSS APP - Modèle logique - API Messagerie Sécurisée de Santé (MSSanté) v0.1.0-snapshot
+# AS BAL MSS APP - Modèle logique - API Messagerie Sécurisée de Santé (MSSanté) v0.1.0
 
 ## Logical Model: AS BAL MSS APP - Modèle logique 
-
- 
-Modèle logique de la boîte aux lettres MSSanté applicative (APP), rattachée à une structure (EJ ou EG). 
 
 **Usages:**
 
@@ -28,11 +25,11 @@ Other representations of profile: [CSV](../StructureDefinition-as-bal-mss-app.cs
   "resourceType" : "StructureDefinition",
   "id" : "as-bal-mss-app",
   "url" : "https://interop.esante.gouv.fr/ig/fhir/mss/StructureDefinition/as-bal-mss-app",
-  "version" : "0.1.0-snapshot",
+  "version" : "0.1.0",
   "name" : "AsBalMssAppLogicalModel",
   "title" : "AS BAL MSS APP - Modèle logique",
-  "status" : "draft",
-  "date" : "2026-09-30T08:41:32+00:00",
+  "status" : "active",
+  "date" : "2026-10-09T06:18:26+00:00",
   "publisher" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",
   "contact" : [{
     "name" : "Agence du Numérique en Santé (ANS) - 2-10 Rue d'Oradour-sur-Glane, 75015 Paris",

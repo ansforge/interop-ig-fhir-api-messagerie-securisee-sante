@@ -1,6 +1,6 @@
 {
-  "version" : "0.1.0-snapshot",
-  "date" : "20260930084132",
+  "version" : "0.1.0",
+  "date" : "20261009061826",
   "notForPublication" : true,
   "name" : "ans.fhir.fr.mss.r4b"
 }
