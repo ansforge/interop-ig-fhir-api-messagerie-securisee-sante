@@ -1,0 +1,15 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)"
+"as-bal-mss-org","as-bal-mss-org","","","",0,*,"","","","null {[]} {[]}
+","AS BAL MSS ORG - Modèle logique","Modèle logique de la boîte aux lettres MSSanté organisationnelle (ORG), rattachée à une structure (EJ ou EG).","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"as-bal-mss-org.adresse","as-bal-mss-org.adresse","","","",1,1,"","","","string {[]} {[]}
+","Adresse BAL","Adresse de messagerie MSSanté","","","","","","","","","",,,,,"",,,,"as-bal-mss-org.adresse",1,1,"",""
+"as-bal-mss-org.idnatStruct","as-bal-mss-org.idnatStruct","","","",1,1,"","","","string {[]} {[]}
+","Identifiant national de structure","Identifiant national de la structure porteuse de la BAL (EJ ou EG)","","","","","","","","","",,,,,"",,,,"as-bal-mss-org.idnatStruct",1,1,"",""
+"as-bal-mss-org.serviceRattachement","as-bal-mss-org.serviceRattachement","","","",0,1,"","","","string {[]} {[]}
+","Service de rattachement","Nom et description du service de rattachement de l'utilisateur de la BAL dans l'organisation","","","","","","","","","",,,,,"",,,,"as-bal-mss-org.serviceRattachement",0,1,"",""
+"as-bal-mss-org.responsable","as-bal-mss-org.responsable","","","",0,1,"","","","string {[]} {[]}
+","Responsable","Coordonnées de la ou des personnes responsables au niveau opérationnel de la BAL","","","","","","","","","",,,,,"",,,,"as-bal-mss-org.responsable",0,1,"",""
+"as-bal-mss-org.description","as-bal-mss-org.description","","","",0,1,"","","","string {[]} {[]}
+","Description","Description fonctionnelle de la BAL","","","","","","","","","",,,,,"",,,,"as-bal-mss-org.description",0,1,"",""
+"as-bal-mss-org.listeRouge","as-bal-mss-org.listeRouge","","","",0,1,"","","","boolean {[]} {[]}
+","Liste rouge","Indicateur liste rouge. true : la BAL ne doit pas être publiée ; false : la BAL peut être publiée.","","","","","","","","","",,,,,"",,,,"as-bal-mss-org.listeRouge",0,1,"",""
